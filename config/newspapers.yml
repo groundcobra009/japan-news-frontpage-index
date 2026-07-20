@@ -49,11 +49,9 @@ newspapers:
     top_page_url: "https://www.sankei.com/"
     robots_txt_url: "https://www.sankei.com/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
-    html_selectors:
-      headline_list: "TBD"
-      headline_text: "TBD"
-      headline_link: "TBD"
-    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
+    article_link_pattern: "/article/"
+    max_items: 20
+    enabled: true
 
   - name: "東京新聞"
     key: "tokyo"
@@ -63,11 +61,9 @@ newspapers:
     top_page_url: "https://www.tokyo-np.co.jp/"
     robots_txt_url: "https://www.tokyo-np.co.jp/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
-    html_selectors:
-      headline_list: "TBD"
-      headline_text: "TBD"
-      headline_link: "TBD"
-    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
+    article_link_pattern: "/article/"
+    max_items: 20
+    enabled: true
 
   - name: "中日新聞"
     key: "chunichi"
@@ -77,8 +73,6 @@ newspapers:
     top_page_url: "https://www.chunichi.co.jp/"
     robots_txt_url: "https://www.chunichi.co.jp/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
-    html_selectors:
-      headline_list: "TBD"
-      headline_text: "TBD"
-      headline_link: "TBD"
-    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
+    article_link_pattern: "/article/"
+    max_items: 20
+    enabled: true
