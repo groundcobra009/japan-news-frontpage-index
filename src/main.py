@@ -12,6 +12,7 @@ from src.collectors.rss_collector import collect_rss
 from src.config_loader import ConfigError, load_config
 from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
+from src.outputs.discord_sender import build_discord_payload, send_discord
 from src.outputs.email_sender import render_email_html, send_email
 from src.outputs.readme_writer import list_archive_dates, render_readme, write_readme
 from src.processors.deduplicate import deduplicate
@@ -25,6 +26,7 @@ REQUIRED_EMAIL_ENV_VARS = (
     "SMTP_USERNAME",
     "SMTP_PASSWORD",
 )
+REPO_README_URL = "https://github.com/groundcobra009/japan-news-frontpage-index"
 
 JST = timezone(timedelta(hours=9))
 
@@ -137,6 +139,7 @@ def run(date: str | None = None) -> None:
         print(f"[ERROR] README更新に失敗しました: {exc}")
 
     _send_email_if_configured(articles, resolved_date, generated_at)
+    _send_discord_if_configured(articles, resolved_date)
 
     _print_summary(configs, articles)
 
@@ -163,6 +166,20 @@ def _send_email_if_configured(articles: list[Article], date: str, generated_at: 
         print("[OK] メールを送信しました")
     except Exception as exc:  # noqa: BLE001 - メール送信失敗が他チャネルを止めないようにする
         print(f"[ERROR] メール送信に失敗しました: {exc}")
+
+
+def _send_discord_if_configured(articles: list[Article], date: str) -> None:
+    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
+    if not webhook_url:
+        print("[SKIP] Discord配信をスキップしました(DISCORD_WEBHOOK_URL未設定)")
+        return
+
+    try:
+        payload = build_discord_payload(articles, date, REPO_README_URL)
+        send_discord(payload, webhook_url)
+        print("[OK] Discordへ投稿しました")
+    except Exception as exc:  # noqa: BLE001 - Discord送信失敗が他チャネル/後続処理を止めないようにする
+        print(f"[ERROR] Discord送信に失敗しました: {exc}")
 
 
 if __name__ == "__main__":
