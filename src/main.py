@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 
@@ -11,9 +12,19 @@ from src.collectors.rss_collector import collect_rss
 from src.config_loader import ConfigError, load_config
 from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
+from src.outputs.email_sender import render_email_html, send_email
 from src.outputs.readme_writer import list_archive_dates, render_readme, write_readme
 from src.processors.deduplicate import deduplicate
 from src.processors.normalize import normalize_article
+
+REQUIRED_EMAIL_ENV_VARS = (
+    "MAIL_TO",
+    "MAIL_FROM",
+    "SMTP_HOST",
+    "SMTP_PORT",
+    "SMTP_USERNAME",
+    "SMTP_PASSWORD",
+)
 
 JST = timezone(timedelta(hours=9))
 
@@ -116,15 +127,42 @@ def run(date: str | None = None) -> None:
     except Exception as exc:  # noqa: BLE001 - CSV書き込み失敗時も後続チャネルの試行は続けたい
         print(f"[ERROR] CSV書き込みに失敗しました: {exc}")
 
+    generated_at = now.strftime("%Y年%m月%d日 %H:%M")
+
     try:
         archive_dates = list_archive_dates()
-        generated_at = now.strftime("%Y年%m月%d日 %H:%M")
-        rendered = render_readme(articles, resolved_date, generated_at, archive_dates)
-        write_readme(rendered)
+        rendered_readme = render_readme(articles, resolved_date, generated_at, archive_dates)
+        write_readme(rendered_readme)
     except Exception as exc:  # noqa: BLE001 - README更新失敗が他チャネルを止めないようにする
         print(f"[ERROR] README更新に失敗しました: {exc}")
 
+    _send_email_if_configured(articles, resolved_date, generated_at)
+
     _print_summary(configs, articles)
+
+
+def _send_email_if_configured(articles: list[Article], date: str, generated_at: str) -> None:
+    missing = [key for key in REQUIRED_EMAIL_ENV_VARS if not os.environ.get(key)]
+    if missing:
+        print(f"[SKIP] メール配信をスキップしました(未設定の環境変数: {', '.join(missing)})")
+        return
+
+    try:
+        html_body = render_email_html(articles, generated_at)
+        subject = f"【朝刊インデックス】全国紙の主要見出し｜{date}"
+        send_email(
+            subject=subject,
+            html_body=html_body,
+            mail_to=os.environ["MAIL_TO"],
+            mail_from=os.environ["MAIL_FROM"],
+            smtp_host=os.environ["SMTP_HOST"],
+            smtp_port=int(os.environ["SMTP_PORT"]),
+            smtp_username=os.environ["SMTP_USERNAME"],
+            smtp_password=os.environ["SMTP_PASSWORD"],
+        )
+        print("[OK] メールを送信しました")
+    except Exception as exc:  # noqa: BLE001 - メール送信失敗が他チャネルを止めないようにする
+        print(f"[ERROR] メール送信に失敗しました: {exc}")
 
 
 if __name__ == "__main__":
