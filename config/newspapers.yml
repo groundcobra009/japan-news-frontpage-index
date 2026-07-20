@@ -1,0 +1,84 @@
+# 新聞社設定ファイル
+#
+# source_type:
+#   rss    - 公式RSSフィードから収集
+#   html   - トップページ等をrobots.txtガード経由で軽量スクレイピング
+#   manual - 自動取得しない(利用規約/robots.txtで自動収集が明示的に禁止されている等)。
+#            常に status=skipped の1件として扱われる。
+#
+# 新聞社の追加・削除はこのファイルの編集のみで行える(コード修正不要)。
+
+newspapers:
+  - name: "読売新聞"
+    key: "yomiuri"
+    category: "全国紙"
+    region: "全国"
+    source_type: "manual"
+    reason: "robots.txtが一般クローラー/AI系UAを名指しで包括的にDisallow。2024年1月のToS改定で自動収集・生成AI学習目的の収集を明示的に禁止しているため、自動取得の対象外とする。"
+    enabled: true
+
+  - name: "朝日新聞"
+    key: "asahi"
+    category: "全国紙"
+    region: "全国"
+    source_type: "rss"
+    rss_url: "https://www.asahi.com/rss/asahi/newsheadlines.rdf"
+    enabled: true
+
+  - name: "毎日新聞"
+    key: "mainichi"
+    category: "全国紙"
+    region: "全国"
+    source_type: "rss"
+    rss_url: "https://mainichi.jp/rss/etc/mainichi-flash.rss"
+    enabled: true
+
+  - name: "日本経済新聞"
+    key: "nikkei"
+    category: "全国紙"
+    region: "全国"
+    source_type: "manual"
+    reason: "公式無料RSSなし。著作権ページで自動収集を明確に禁止しているため、自動取得の対象外とする。"
+    enabled: true
+
+  - name: "産経新聞"
+    key: "sankei"
+    category: "全国紙"
+    region: "全国"
+    source_type: "html"
+    top_page_url: "https://www.sankei.com/"
+    robots_txt_url: "https://www.sankei.com/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    html_selectors:
+      headline_list: "TBD"
+      headline_text: "TBD"
+      headline_link: "TBD"
+    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
+
+  - name: "東京新聞"
+    key: "tokyo"
+    category: "全国紙"
+    region: "全国"
+    source_type: "html"
+    top_page_url: "https://www.tokyo-np.co.jp/"
+    robots_txt_url: "https://www.tokyo-np.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    html_selectors:
+      headline_list: "TBD"
+      headline_text: "TBD"
+      headline_link: "TBD"
+    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
+
+  - name: "中日新聞"
+    key: "chunichi"
+    category: "全国紙"
+    region: "全国"
+    source_type: "html"
+    top_page_url: "https://www.chunichi.co.jp/"
+    robots_txt_url: "https://www.chunichi.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    html_selectors:
+      headline_list: "TBD"
+      headline_text: "TBD"
+      headline_link: "TBD"
+    enabled: true # セレクタはhtml_collector実装時(#1実装順序6)に確定する
