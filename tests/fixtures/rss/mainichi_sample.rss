@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+>
+<channel rdf:about="https://mainichi.jp/rss/etc/mainichi-flash.rss">
+	<title>ニュース速報（総合）</title>
+	<link>https://mainichi.jp/rss/etc/mainichi-flash.rss</link>
+	<description></description>
+	<dc:language>ja</dc:language>
+	<dc:date>2026-07-21T08:00:40+09:00</dc:date>
+	<items>
+		<rdf:Seq>
+<rdf:li rdf:resource="https://mainichi.jp/articles/20260720/k00/00m/050/180000c"/>
+<rdf:li rdf:resource="https://mainichi.jp/articles/20260719/k00/00m/040/155000c"/>
+		</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="https://mainichi.jp/articles/20260720/k00/00m/050/180000c">
+	<title>速報サンプル見出し1</title>
+	<link>https://mainichi.jp/articles/20260720/k00/00m/050/180000c</link>
+	<dc:subject>ニュース</dc:subject>
+	<dc:date>2026-07-21T08:00:00+09:00</dc:date>
+</item>
+<item rdf:about="https://mainichi.jp/articles/20260719/k00/00m/040/155000c">
+	<title>朝ドラの反省、生かした先回り戦略　福井・小浜、聖地化の舞台裏</title>
+	<link>https://mainichi.jp/articles/20260719/k00/00m/040/155000c</link>
+	<dc:subject>ニュース</dc:subject>
+	<dc:date>2026-07-21T07:45:10+09:00</dc:date>
+</item>
+</rdf:RDF>
