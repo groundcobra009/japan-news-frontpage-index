@@ -1,4 +1,5 @@
-import os
+import shutil
+from pathlib import Path
 
 import src.main as main_module
 from src.collectors.robots_guard import RobotsDisallowedError
@@ -122,4 +123,28 @@ def test_run_end_to_end_writes_csv_with_all_statuses(monkeypatch, tmp_path):
     content = daily_csv.read_text(encoding="utf-8")
     assert "朝日新聞" in content
     assert "毎日新聞" in content
+    assert "読売新聞" in content
+
+
+def test_run_end_to_end_updates_readme(monkeypatch, tmp_path):
+    repo_root = Path(__file__).parent.parent
+    shutil.copytree(repo_root / "templates", tmp_path / "templates")
+    monkeypatch.chdir(tmp_path)
+
+    def fake_load_config():
+        return [RSS_CONFIG, MANUAL_CONFIG]
+
+    def fake_collect_rss(config, collected_at, date):
+        return [_sample_article(config["name"])]
+
+    monkeypatch.setattr(main_module, "load_config", fake_load_config)
+    monkeypatch.setattr(main_module, "collect_rss", fake_collect_rss)
+
+    main_module.run(date="2026-07-21")
+
+    readme_path = tmp_path / "README.md"
+    assert readme_path.exists()
+    content = readme_path.read_text(encoding="utf-8")
+    assert "{{" not in content
+    assert "朝日新聞" in content
     assert "読売新聞" in content

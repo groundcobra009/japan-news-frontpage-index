@@ -11,6 +11,7 @@ from src.collectors.rss_collector import collect_rss
 from src.config_loader import ConfigError, load_config
 from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
+from src.outputs.readme_writer import list_archive_dates, render_readme, write_readme
 from src.processors.deduplicate import deduplicate
 from src.processors.normalize import normalize_article
 
@@ -114,6 +115,14 @@ def run(date: str | None = None) -> None:
         append_index_csv(resolved_date, len(articles), ok, skipped, error)
     except Exception as exc:  # noqa: BLE001 - CSV書き込み失敗時も後続チャネルの試行は続けたい
         print(f"[ERROR] CSV書き込みに失敗しました: {exc}")
+
+    try:
+        archive_dates = list_archive_dates()
+        generated_at = now.strftime("%Y年%m月%d日 %H:%M")
+        rendered = render_readme(articles, resolved_date, generated_at, archive_dates)
+        write_readme(rendered)
+    except Exception as exc:  # noqa: BLE001 - README更新失敗が他チャネルを止めないようにする
+        print(f"[ERROR] README更新に失敗しました: {exc}")
 
     _print_summary(configs, articles)
 
