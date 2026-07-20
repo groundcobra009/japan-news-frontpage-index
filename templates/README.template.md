@@ -2,7 +2,7 @@
 
 毎朝7時(JST)に全国紙・地方紙の一面・主要見出しを自動収集し、CSV保存・メール・Discordへ配信するGitHub Actionsプロジェクトです。
 
-最終更新：2026年07月21日 08:12
+最終更新：{{LAST_UPDATED}}
 
 ## 本日の主要ニュース
 
@@ -10,7 +10,7 @@
 
 | 新聞社 | 一面・主要見出し | URL |
 |---|---|---|
-(データがありません)
+{{NATIONAL_TABLE_ROWS}}
 
 ### 地方紙
 
@@ -18,15 +18,13 @@ Phase2で追加予定です([Issue参照](https://github.com/groundcobra009/japa
 
 ## アーカイブ
 
-(まだデータがありません)
+{{ARCHIVE_LIST}}
 
 全データは [data/latest.csv](data/latest.csv) からも参照できます。
 
 ## 取得状況
 
-- 成功：0紙
-- スキップ：0紙
-- 失敗：0紙
+{{STATUS_SUMMARY}}
 
 ## 収集方針について
 

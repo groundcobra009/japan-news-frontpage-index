@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/">
+  <channel rdf:about="http://www3.asahi.com/">
+    <title>朝日新聞</title>
+    <link>http://www.asahi.com/</link>
+    <description>朝日新聞のデジタル版全ジャンルの最新ニュースです。</description>
+    <dc:language>ja</dc:language>
+    <dc:date>2026-07-21T07:52:33+09:00</dc:date>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASV7K1FPCV7KUJUB00CM.html?ref=rss"/>
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASV7B135MV7BUQIP03ZM.html?ref=rss"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://www.asahi.com/articles/ASV7K1FPCV7KUJUB00CM.html?ref=rss">
+    <title>救援物資は「第2の災害」か　発災1年半後も体育館に山積み、古着も</title>
+    <link>http://www.asahi.com/articles/ASV7K1FPCV7KUJUB00CM.html?ref=rss</link>
+    <description></description>
+    <dc:subject>社会</dc:subject>
+    <dc:date>2026-07-21T07:30:00+09:00</dc:date>
+  </item>
+  <item rdf:about="http://www.asahi.com/articles/ASV7B135MV7BUQIP03ZM.html?ref=rss">
+    <title>「自国主義が走る時代こそ」　新宿で樺太引き揚げ者20人の写真展</title>
+    <link>http://www.asahi.com/articles/ASV7B135MV7BUQIP03ZM.html?ref=rss</link>
+    <description></description>
+    <dc:subject>社会</dc:subject>
+    <dc:date>2026-07-21T07:00:00+09:00</dc:date>
+  </item>
+</rdf:RDF>
