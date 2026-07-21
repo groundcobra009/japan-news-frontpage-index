@@ -76,3 +76,135 @@ newspapers:
     article_link_pattern: "/article/"
     max_items: 20
     enabled: true
+
+  # --- 地方紙(Phase2) ---
+  # ブロック(北海道・東北/甲信越・東海/近畿/中国/九州・沖縄)はREADMEの表示グループ名。
+  # src/outputs/readme_writer.py の PREFECTURE_TO_BLOCK が region(都道府県)から自動判定する。
+
+  - name: "北海道新聞"
+    key: "hokkaido"
+    category: "地方紙"
+    region: "北海道"
+    source_type: "manual"
+    reason: "公式RSSはあるが、見出し・本文の公開(再配信)を認めない旨の規約があるため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "河北新報"
+    key: "kahoku"
+    category: "地方紙"
+    region: "宮城"
+    source_type: "manual"
+    reason: "robots.txtが/rss/をDisallowしておりRSS購読不可。私的利用限定・二次利用禁止の規約があるため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "新潟日報"
+    key: "niigata"
+    category: "地方紙"
+    region: "新潟"
+    source_type: "manual"
+    reason: "利用規約でデータマイニング・テキストマイニング・AI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "信濃毎日新聞"
+    key: "shinmai"
+    category: "地方紙"
+    region: "長野"
+    source_type: "html"
+    top_page_url: "https://www.shinmai.co.jp/"
+    robots_txt_url: "https://www.shinmai.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/news/article/"
+    max_items: 20
+    enabled: true
+
+  - name: "静岡新聞"
+    key: "shizuoka"
+    category: "地方紙"
+    region: "静岡"
+    source_type: "html"
+    top_page_url: "https://www.at-s.com/"
+    robots_txt_url: "https://www.at-s.com/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/article/"
+    max_items: 20
+    enabled: true
+
+  - name: "京都新聞"
+    key: "kyoto"
+    category: "地方紙"
+    region: "京都"
+    source_type: "html"
+    top_page_url: "https://www.kyoto-np.co.jp/"
+    robots_txt_url: "https://www.kyoto-np.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/articles/-/"
+    max_items: 20
+    enabled: true
+
+  - name: "神戸新聞"
+    key: "kobe"
+    category: "地方紙"
+    region: "兵庫"
+    source_type: "html"
+    top_page_url: "https://www.kobe-np.co.jp/"
+    robots_txt_url: "https://www.kobe-np.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/news/[a-z]+/\\d{6}/\\d+\\.shtml"
+    max_items: 20
+    enabled: true
+
+  - name: "中国新聞"
+    key: "chugoku"
+    category: "地方紙"
+    region: "広島"
+    source_type: "manual"
+    reason: "利用規約でAI開発目的のディープラーニング等の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "西日本新聞"
+    key: "nishinippon"
+    category: "地方紙"
+    region: "福岡"
+    source_type: "manual"
+    reason: "公式RSSはあるが、利用規約でAI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "熊本日日新聞"
+    key: "kumanichi"
+    category: "地方紙"
+    region: "熊本"
+    source_type: "rss"
+    rss_url: "https://kumanichi.com/rss.xml"
+    enabled: true
+
+  - name: "南日本新聞"
+    key: "minaminippon"
+    category: "地方紙"
+    region: "鹿児島"
+    source_type: "html"
+    top_page_url: "https://373news.com/"
+    robots_txt_url: "https://373news.com/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/detail/\\d+"
+    max_items: 20
+    enabled: true
+
+  - name: "琉球新報"
+    key: "ryukyushimpo"
+    category: "地方紙"
+    region: "沖縄"
+    source_type: "manual"
+    reason: "利用規約で複製・複写・送信・頒布・蓄積・転載等を会社の承認なく行うことを広範に禁止しているため自動取得の対象外とする。"
+    enabled: true
+
+  - name: "沖縄タイムス"
+    key: "okinawatimes"
+    category: "地方紙"
+    region: "沖縄"
+    source_type: "html"
+    top_page_url: "https://www.okinawatimes.co.jp/"
+    robots_txt_url: "https://www.okinawatimes.co.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    article_link_pattern: "/articles/-/"
+    max_items: 20
+    enabled: true
