@@ -6,6 +6,8 @@ TEMPLATE = """# Title
 
 {{NATIONAL_TABLE_ROWS}}
 
+{{LOCAL_TABLES}}
+
 {{ARCHIVE_LIST}}
 
 {{STATUS_SUMMARY}}
@@ -88,6 +90,58 @@ def test_render_readme_archive_list_formats_dates_in_japanese(tmp_path):
 
     assert "2026年7月21日" in rendered
     assert "data/2026/07/2026-07-21.csv" in rendered
+
+
+def test_render_readme_local_papers_grouped_by_block(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(
+            newspaper="北海道新聞", category="地方紙", region="北海道", headline="道内ニュース", url="https://example.com/hokkaido"
+        ),
+        make_article(
+            newspaper="京都新聞", category="地方紙", region="京都", headline="京都のニュース", url="https://example.com/kyoto"
+        ),
+    ]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+
+    assert "#### 北海道・東北" in rendered
+    assert "#### 近畿" in rendered
+    assert rendered.index("#### 北海道・東北") < rendered.index("#### 近畿")
+    assert "道内ニュース" in rendered
+    assert "京都のニュース" in rendered
+
+
+def test_render_readme_national_table_excludes_local_papers(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞", category="全国紙", headline="全国ニュース"),
+        make_article(newspaper="北海道新聞", category="地方紙", region="北海道", headline="道内ニュース"),
+    ]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+
+    # 全国紙テーブルの直前部分に北海道新聞の行が紛れ込んでいないことを確認
+    national_section = rendered.split("#### 北海道・東北")[0]
+    assert "北海道新聞" not in national_section
+    assert "朝日新聞" in national_section
+
+
+def test_render_readme_shows_placeholder_when_no_local_data(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [make_article(newspaper="朝日新聞", category="全国紙")]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+    assert "まだ地方紙のデータがありません" in rendered
 
 
 def test_write_readme_writes_file(tmp_path):

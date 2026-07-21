@@ -14,7 +14,7 @@
 
 ### 地方紙
 
-Phase2で追加予定です([Issue参照](https://github.com/groundcobra009/japan-news-frontpage-index/issues))。
+{{LOCAL_TABLES}}
 
 ## アーカイブ
 
