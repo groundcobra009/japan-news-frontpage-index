@@ -99,6 +99,42 @@ def test_collect_html_respects_max_items(monkeypatch):
     assert len(articles) == 1
 
 
+def test_collect_html_supports_regex_pattern(monkeypatch):
+    import src.collectors.html_collector as module
+
+    _allow_all(monkeypatch, module)
+
+    html = """
+    <html><body>
+      <a href="/common/auth/webnp.shtml?nppaper=morning">朝刊</a>
+      <a href="/news/society/202607/0020613977.shtml">兵庫の公立プール値上げ相次ぐ</a>
+      <a href="/news/akashi/202607/0020613843.shtml">明石歩道橋事故25年</a>
+    </body></html>
+    """
+    config = {
+        "name": "神戸新聞",
+        "key": "kobe",
+        "category": "地方紙",
+        "region": "兵庫",
+        "source_type": "html",
+        "top_page_url": "https://www.kobe-np.co.jp/",
+        "user_agent": "test-bot/1.0",
+        "article_link_pattern": r"/news/[a-z]+/\d{6}/\d+\.shtml",
+        "max_items": 20,
+    }
+
+    articles = collect_html(
+        config,
+        collected_at="2026-07-21T07:05:00+09:00",
+        date="2026-07-21",
+        fetch_html=lambda url, ua: html,
+    )
+
+    assert len(articles) == 2
+    assert all("news" in a.url for a in articles)
+    assert not any("朝刊" == a.headline for a in articles)
+
+
 def test_collect_html_raises_when_robots_disallows(monkeypatch):
     import src.collectors.html_collector as module
 
