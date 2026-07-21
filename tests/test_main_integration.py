@@ -1,5 +1,6 @@
 import shutil
 from pathlib import Path
+from unittest.mock import MagicMock
 
 import src.main as main_module
 from src.collectors.robots_guard import RobotsDisallowedError
@@ -148,3 +149,53 @@ def test_run_end_to_end_updates_readme(monkeypatch, tmp_path):
     assert "{{" not in content
     assert "朝日新聞" in content
     assert "読売新聞" in content
+
+
+def test_run_creates_failure_issue_when_error_and_env_configured(monkeypatch, tmp_path):
+    repo_root = Path(__file__).parent.parent
+    shutil.copytree(repo_root / "templates", tmp_path / "templates")
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "groundcobra009/japan-news-frontpage-index")
+
+    def fake_load_config():
+        return [FAILING_RSS_CONFIG]
+
+    def fake_collect_rss(config, collected_at, date):
+        raise ValueError("network timeout")
+
+    mock_create_issue = MagicMock(return_value={"number": 99})
+    monkeypatch.setattr(main_module, "load_config", fake_load_config)
+    monkeypatch.setattr(main_module, "collect_rss", fake_collect_rss)
+    monkeypatch.setattr(main_module, "create_github_issue", mock_create_issue)
+
+    main_module.run(date="2026-07-21")
+
+    mock_create_issue.assert_called_once()
+    args, kwargs = mock_create_issue.call_args
+    title, body = args[0], args[1]
+    assert "2026-07-21" in title
+    assert "毎日新聞" in body
+
+
+def test_run_skips_failure_issue_when_env_not_configured(monkeypatch, tmp_path):
+    repo_root = Path(__file__).parent.parent
+    shutil.copytree(repo_root / "templates", tmp_path / "templates")
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
+    monkeypatch.delenv("GITHUB_REPOSITORY", raising=False)
+
+    def fake_load_config():
+        return [FAILING_RSS_CONFIG]
+
+    def fake_collect_rss(config, collected_at, date):
+        raise ValueError("network timeout")
+
+    mock_create_issue = MagicMock()
+    monkeypatch.setattr(main_module, "load_config", fake_load_config)
+    monkeypatch.setattr(main_module, "collect_rss", fake_collect_rss)
+    monkeypatch.setattr(main_module, "create_github_issue", mock_create_issue)
+
+    main_module.run(date="2026-07-21")
+
+    mock_create_issue.assert_not_called()
