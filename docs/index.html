@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan News Frontpage Index</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Japan News Frontpage Index</h1>
+  <p>全国紙・地方紙の一面見出しアーカイブです。データは毎朝7時(JST)に自動更新されます。
+  <a href="https://github.com/groundcobra009/japan-news-frontpage-index">GitHubリポジトリ</a></p>
+</header>
+
+<main>
+  <section id="today">
+    <h2>本日の主要ニュース</h2>
+    <p id="today-status">読み込み中...</p>
+    <table id="today-table">
+      <thead><tr><th>区分</th><th>新聞社</th><th>見出し</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="search">
+    <h2>過去ニュース検索</h2>
+    <div class="search-controls">
+      <label>日付
+        <select id="date-select"></select>
+      </label>
+      <label>キーワード(見出し・新聞社名)
+        <input type="text" id="keyword-input" placeholder="例: 台風">
+      </label>
+    </div>
+    <p id="search-status"></p>
+    <table id="search-table">
+      <thead><tr><th>区分</th><th>新聞社</th><th>見出し</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>本サイトは新聞社名・見出し・公式URLのみを扱い、記事全文・紙面画像は保存していません。
+  収集方針の詳細は <a href="https://github.com/groundcobra009/japan-news-frontpage-index#収集方針について">README</a> を参照してください。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

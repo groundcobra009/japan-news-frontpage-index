@@ -2,7 +2,9 @@
 
 毎朝7時(JST)に全国紙・地方紙の一面・主要見出しを自動収集し、CSV保存・メール・Discordへ配信するGitHub Actionsプロジェクトです。
 
-最終更新：2026年07月22日 11:36
+Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
+
+最終更新：2026年07月22日 12:08
 
 ## 本日の主要ニュース
 
