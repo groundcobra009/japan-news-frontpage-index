@@ -38,6 +38,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
             --model claude-sonnet-5
+            --allowedTools "Bash(gh issue comment:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(cat:*),Read,Grep,Glob"
           prompt: |
             このリポジトリ(japan-news-frontpage-index)の週次ヘルスチェックを行い、
             結果をIssue #21へのコメントとして投稿してください。
@@ -53,4 +54,5 @@ jobs:
                西日本新聞・琉球新報)について、RSS再開など状況変化がありそうであれば
                一言コメントしてください(過度な調査は不要、気づいた範囲でよい)。
 
-            コードの変更は行わず、Issue #21へのコメント投稿のみを行ってください。
+            コードの変更は行わず、`gh issue comment 21 --body "..."` コマンドで
+            Issue #21へ直接コメントを投稿してください(コメント投稿が必須の完了条件です)。
