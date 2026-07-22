@@ -21,6 +21,7 @@ CSV_FIELDNAMES = [
     "source_url",
     "status",
     "error_message",
+    "topic",
 ]
 
 
@@ -36,6 +37,7 @@ class Article:
     source_url: str
     status: str
     error_message: str = field(default="")
+    topic: str = field(default="")
 
     def dedup_key(self) -> str:
         """同一新聞社内での重複判定キー。正規化済みURLを優先し、無ければ正規化済み見出しを使う。"""

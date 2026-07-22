@@ -3,6 +3,11 @@
 必ず robots_guard 経由でアクセス許可を確認してから取得する。CSSセレクタはサイト
 構造の変更で壊れやすいため、記事リンクの正規表現パターン(article_link_pattern)を
 config側で管理し、パターンに一致する<a>タグのテキストを見出しとして扱う。
+
+topic_pattern(任意、正規表現1グループ)が設定されている紙は、記事URLからカテゴリ
+セグメントを抽出しArticle.topicに設定する(例: 静岡新聞の`/life/article/...`から
+`life`を抽出)。パターンが設定されていない、またはマッチしない場合はtopicは空文字
+のままにする(無理に推定しない)。
 """
 
 from __future__ import annotations
@@ -43,6 +48,8 @@ def collect_html(
     robots_txt_url = newspaper_config.get("robots_txt_url")
     article_link_pattern = newspaper_config.get("article_link_pattern", "/article/")
     max_items = newspaper_config.get("max_items", DEFAULT_MAX_ITEMS)
+    topic_pattern = newspaper_config.get("topic_pattern")
+    topic_regex = re.compile(topic_pattern) if topic_pattern else None
 
     robots_guard.assert_allowed(top_page_url, user_agent, robots_txt_url)
 
@@ -77,9 +84,19 @@ def collect_html(
                 url=absolute_url,
                 source_url=top_page_url,
                 status=STATUS_OK,
+                topic=_extract_topic(href, topic_regex),
             )
         )
         if len(articles) >= max_items:
             break
 
     return articles
+
+
+def _extract_topic(href: str, topic_regex: re.Pattern | None) -> str:
+    if not topic_regex:
+        return ""
+    match = topic_regex.search(href)
+    if not match or not match.groups():
+        return ""
+    return match.group(1)
