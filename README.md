@@ -4,7 +4,7 @@
 
 Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
 
-最終更新：2026年07月22日 12:27
+最終更新：2026年07月22日 12:31
 
 ## 本日の主要ニュース
 
@@ -120,6 +120,10 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 ## 新聞社の追加・削除
 
 コード修正不要で [config/newspapers.yml](config/newspapers.yml) の編集のみで行えます。`source_type` は `rss` / `html` / `manual` のいずれかです。`html` を追加する場合は、実装前に対象サイトのrobots.txtと利用規約を確認し、汎用UA(`User-agent: *`)に対して取得対象パスが許可されていることを確認してください。
+
+## Claude Code Actionについて
+
+IssueやPRのコメントで `@claude` とメンションすると、Claude Code(Sonnet)が自動で応答・作業します(`.github/workflows/claude-code-action.yml`)。Anthropic APIキー課金(サブスクリプション不要)で運用しており、`ANTHROPIC_API_KEY` をGitHub Secretsに設定する必要があります。
 
 ## ライセンス
 
