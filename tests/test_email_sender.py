@@ -65,26 +65,27 @@ def test_render_email_html_escapes_headline(tmp_path):
     assert "&lt;script&gt;" in rendered
 
 
-def test_send_email_uses_smtp_ssl_and_logs_in(monkeypatch):
-    mock_smtp_instance = MagicMock()
-    mock_smtp_instance.__enter__.return_value = mock_smtp_instance
-    mock_smtp_ssl = MagicMock(return_value=mock_smtp_instance)
-    monkeypatch.setattr("smtplib.SMTP_SSL", mock_smtp_ssl)
+def test_send_email_posts_to_resend_api(monkeypatch):
+    mock_response = MagicMock()
+    mock_post = MagicMock(return_value=mock_response)
+    monkeypatch.setattr("requests.post", mock_post)
 
     send_email(
         subject="件名",
         html_body="<p>本文</p>",
         mail_to="to@example.com",
         mail_from="from@example.com",
-        smtp_host="smtp.gmail.com",
-        smtp_port=465,
-        smtp_username="user",
-        smtp_password="pass",
+        api_key="re_test_key",
     )
 
-    mock_smtp_ssl.assert_called_once_with("smtp.gmail.com", 465)
-    mock_smtp_instance.login.assert_called_once_with("user", "pass")
-    assert mock_smtp_instance.send_message.called
-    sent_message = mock_smtp_instance.send_message.call_args[0][0]
-    assert sent_message["Subject"] == "件名"
-    assert sent_message["To"] == "to@example.com"
+    mock_post.assert_called_once()
+    args, kwargs = mock_post.call_args
+    assert args[0] == "https://api.resend.com/emails"
+    assert kwargs["json"] == {
+        "from": "from@example.com",
+        "to": ["to@example.com"],
+        "subject": "件名",
+        "html": "<p>本文</p>",
+    }
+    assert kwargs["headers"]["Authorization"] == "Bearer re_test_key"
+    mock_response.raise_for_status.assert_called_once()

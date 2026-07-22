@@ -22,10 +22,7 @@ from src.processors.normalize import normalize_article
 REQUIRED_EMAIL_ENV_VARS = (
     "MAIL_TO",
     "MAIL_FROM",
-    "SMTP_HOST",
-    "SMTP_PORT",
-    "SMTP_USERNAME",
-    "SMTP_PASSWORD",
+    "RESEND_API_KEY",
 )
 REPO_README_URL = "https://github.com/groundcobra009/japan-news-frontpage-index"
 
@@ -165,10 +162,7 @@ def _send_email_if_configured(articles: list[Article], date: str, generated_at: 
             html_body=html_body,
             mail_to=os.environ["MAIL_TO"],
             mail_from=os.environ["MAIL_FROM"],
-            smtp_host=os.environ["SMTP_HOST"],
-            smtp_port=int(os.environ["SMTP_PORT"]),
-            smtp_username=os.environ["SMTP_USERNAME"],
-            smtp_password=os.environ["SMTP_PASSWORD"],
+            api_key=os.environ["RESEND_API_KEY"],
         )
         print("[OK] メールを送信しました")
     except Exception as exc:  # noqa: BLE001 - メール送信失敗が他チャネルを止めないようにする
