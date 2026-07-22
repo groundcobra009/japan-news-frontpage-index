@@ -4,7 +4,7 @@
 
 Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
 
-最終更新：2026年07月22日 12:11
+最終更新：2026年07月22日 12:18
 
 ## 本日の主要ニュース
 
@@ -111,11 +111,8 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 | Secret名 | 用途 |
 |---|---|
 | `MAIL_TO` | メール送信先 |
-| `MAIL_FROM` | メール送信元(Gmailアドレス) |
-| `SMTP_HOST` | SMTPホスト(Gmailの場合 `smtp.gmail.com`) |
-| `SMTP_PORT` | SMTPポート(Gmailの場合 `465`) |
-| `SMTP_USERNAME` | SMTPユーザー名(Gmailアドレス) |
-| `SMTP_PASSWORD` | SMTPパスワード(Gmailの場合はアプリパスワード) |
+| `MAIL_FROM` | メール送信元(例: `Japan News Frontpage Index <onboarding@resend.dev>`) |
+| `RESEND_API_KEY` | [Resend](https://resend.com/)のAPIキー |
 | `DISCORD_WEBHOOK_URL` | Discord配信先のWebhook URL |
 
 いずれかが未設定の場合、該当チャネルへの配信はスキップされ(ログに記録)、他の処理は継続します。

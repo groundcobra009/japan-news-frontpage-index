@@ -1,15 +1,20 @@
-"""Gmail SMTPによるメール配信。"""
+"""Resend APIによるメール配信。
+
+https://resend.com/docs/api-reference/emails/send-email
+"""
 
 from __future__ import annotations
 
 import html
-import smtplib
-from email.message import EmailMessage
+
+import requests
 
 from src.models.article import STATUS_OK, Article
 
 DEFAULT_TEMPLATE_PATH = "templates/email.template.html"
 DEFAULT_REPO_URL = "https://github.com/groundcobra009/japan-news-frontpage-index"
+RESEND_API_URL = "https://api.resend.com/emails"
+REQUEST_TIMEOUT_SECONDS = 10
 
 
 def _group_by_newspaper_preserving_order(articles: list[Article]) -> dict[str, list[Article]]:
@@ -53,19 +58,18 @@ def send_email(
     html_body: str,
     mail_to: str,
     mail_from: str,
-    smtp_host: str,
-    smtp_port: int,
-    smtp_username: str,
-    smtp_password: str,
+    api_key: str,
 ) -> None:
-    """Gmail SMTP(SSL)でメールを送信する。呼び出し元main.pyでtry/exceptし、失敗しても他チャネルをブロックしない。"""
-    message = EmailMessage()
-    message["Subject"] = subject
-    message["From"] = mail_from
-    message["To"] = mail_to
-    message.set_content("このメールはHTML形式です。対応するメールクライアントでご覧ください。")
-    message.add_alternative(html_body, subtype="html")
-
-    with smtplib.SMTP_SSL(smtp_host, int(smtp_port)) as smtp:
-        smtp.login(smtp_username, smtp_password)
-        smtp.send_message(message)
+    """Resend APIでメールを送信する。呼び出し元main.pyでtry/exceptし、失敗しても他チャネルをブロックしない。"""
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "from": mail_from,
+        "to": [mail_to],
+        "subject": subject,
+        "html": html_body,
+    }
+    response = requests.post(RESEND_API_URL, json=payload, headers=headers, timeout=REQUEST_TIMEOUT_SECONDS)
+    response.raise_for_status()
