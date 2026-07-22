@@ -8,6 +8,10 @@ TEMPLATE = """# Title
 
 {{LOCAL_TABLES}}
 
+{{TOP_ARTICLES}}
+
+{{KEYWORDS}}
+
 {{ARCHIVE_LIST}}
 
 {{STATUS_SUMMARY}}
@@ -142,6 +146,32 @@ def test_render_readme_shows_placeholder_when_no_local_data(tmp_path):
         articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
     )
     assert "まだ地方紙のデータがありません" in rendered
+
+
+def test_render_readme_includes_top_articles_and_keywords(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞", headline="台風接近で交通機関に影響拡大", url="https://example.com/1"),
+        make_article(newspaper="毎日新聞", headline="台風の進路予想を発表", url="https://example.com/2"),
+    ]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+
+    assert "台風" in rendered
+    assert "記事を読む" in rendered
+
+
+def test_render_readme_shows_placeholder_when_no_keywords_or_top_articles(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_readme([], date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path))
+
+    assert "対象記事がありません" in rendered
+    assert "抽出できるキーワードがありません" in rendered
 
 
 def test_write_readme_writes_file(tmp_path):
