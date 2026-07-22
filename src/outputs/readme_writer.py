@@ -5,6 +5,7 @@ from __future__ import annotations
 import os
 
 from src.models.article import STATUS_ERROR, STATUS_OK, Article
+from src.processors.keywords import rank_top_articles, top_keywords
 
 DEFAULT_TEMPLATE_PATH = "templates/README.template.md"
 DEFAULT_README_PATH = "README.md"
@@ -130,6 +131,32 @@ def _format_date_jp(date: str) -> str:
     return f"{int(year)}年{int(month)}月{int(day)}日"
 
 
+def _build_extra_stopwords(articles: list[Article]) -> frozenset[str]:
+    names = {a.newspaper for a in articles if a.newspaper}
+    regions = {a.region for a in articles if a.region}
+    return frozenset(names | regions)
+
+
+def _build_top_articles_section(articles: list[Article]) -> str:
+    extra_stopwords = _build_extra_stopwords(articles)
+    top_articles = rank_top_articles(articles, extra_stopwords=extra_stopwords)
+    if not top_articles:
+        return "(本日は対象記事がありません)"
+    lines = [
+        f"{i}. **{a.newspaper}**: {a.headline.replace('|', '｜')} ([記事を読む]({a.url}))"
+        for i, a in enumerate(top_articles, start=1)
+    ]
+    return "\n".join(lines)
+
+
+def _build_keywords_section(articles: list[Article]) -> str:
+    extra_stopwords = _build_extra_stopwords(articles)
+    keywords = top_keywords(articles, extra_stopwords=extra_stopwords)
+    if not keywords:
+        return "(本日は抽出できるキーワードがありません)"
+    return "\n".join(f"- {word}" for word in keywords)
+
+
 def render_readme(
     articles: list[Article],
     date: str,
@@ -147,6 +174,8 @@ def render_readme(
     national_rows = "\n".join(_representative_row(name, grouped[name]) for name in order)
 
     local_tables = _build_local_tables(articles)
+    top_articles_section = _build_top_articles_section(articles)
+    keywords_section = _build_keywords_section(articles)
 
     if archive_dates:
         archive_list = "\n".join(
@@ -160,6 +189,8 @@ def render_readme(
     rendered = template.replace("{{LAST_UPDATED}}", generated_at)
     rendered = rendered.replace("{{NATIONAL_TABLE_ROWS}}", national_rows or "(データがありません)")
     rendered = rendered.replace("{{LOCAL_TABLES}}", local_tables)
+    rendered = rendered.replace("{{TOP_ARTICLES}}", top_articles_section)
+    rendered = rendered.replace("{{KEYWORDS}}", keywords_section)
     rendered = rendered.replace("{{ARCHIVE_LIST}}", archive_list)
     rendered = rendered.replace("{{STATUS_SUMMARY}}", status_summary)
     return rendered
