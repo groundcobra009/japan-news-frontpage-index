@@ -11,7 +11,7 @@ from src.collectors.robots_guard import RobotsDisallowedError
 from src.collectors.rss_collector import collect_rss
 from src.config_loader import ConfigError, load_config
 from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
-from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
+from src.outputs.csv_writer import append_index_csv, write_archive_manifest, write_daily_csv, write_latest_csv
 from src.outputs.discord_sender import build_discord_payload, send_discord
 from src.outputs.email_sender import render_email_html, send_email
 from src.outputs.issue_notifier import build_failure_issue, create_github_issue, get_error_newspapers, should_notify
@@ -131,9 +131,14 @@ def run(date: str | None = None) -> None:
         print(f"[ERROR] CSV書き込みに失敗しました: {exc}")
 
     generated_at = now.strftime("%Y年%m月%d日 %H:%M")
+    archive_dates = list_archive_dates()
 
     try:
-        archive_dates = list_archive_dates()
+        write_archive_manifest(archive_dates)
+    except Exception as exc:  # noqa: BLE001 - マニフェスト書き込み失敗が他チャネルを止めないようにする
+        print(f"[ERROR] アーカイブ一覧(archive-index.json)の書き込みに失敗しました: {exc}")
+
+    try:
         rendered_readme = render_readme(articles, resolved_date, generated_at, archive_dates)
         write_readme(rendered_readme)
     except Exception as exc:  # noqa: BLE001 - README更新失敗が他チャネルを止めないようにする

@@ -1,8 +1,9 @@
 import csv
+import json
 import os
 
 from src.models.article import STATUS_ERROR, STATUS_OK, Article
-from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
+from src.outputs.csv_writer import append_index_csv, write_archive_manifest, write_daily_csv, write_latest_csv
 
 
 def make_article(**overrides) -> Article:
@@ -79,3 +80,19 @@ def test_append_index_csv_accumulates_multiple_dates_sorted(tmp_path):
     with open(path, encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
     assert [r["date"] for r in rows] == ["2026-07-21", "2026-07-22"]
+
+
+def test_write_archive_manifest_writes_json_with_dates(tmp_path):
+    path = write_archive_manifest(["2026-07-22", "2026-07-21"], data_dir=str(tmp_path))
+    assert path == str(tmp_path / "archive-index.json")
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    assert data == {"dates": ["2026-07-22", "2026-07-21"]}
+
+
+def test_write_archive_manifest_overwrites_on_rerun(tmp_path):
+    write_archive_manifest(["2026-07-20"], data_dir=str(tmp_path))
+    path = write_archive_manifest(["2026-07-22", "2026-07-21"], data_dir=str(tmp_path))
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["dates"] == ["2026-07-22", "2026-07-21"]

@@ -1,8 +1,9 @@
-"""CSV出力(日付別CSV・latest.csv・月次index.csv)。"""
+"""CSV出力(日付別CSV・latest.csv・月次index.csv・アーカイブ一覧JSON)。"""
 
 from __future__ import annotations
 
 import csv
+import json
 import os
 
 from src.models.article import CSV_FIELDNAMES, Article
@@ -66,4 +67,17 @@ def append_index_csv(
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
+    return path
+
+
+def write_archive_manifest(archive_dates: list[str], data_dir: str = "data") -> str:
+    """docs/(GitHub Pages)がfetchするdata/archive-index.jsonを書く。
+
+    新しい順に並んだ日付文字列のリストをそのままJSONにする単純なマニフェスト。
+    """
+    path = os.path.join(data_dir, "archive-index.json")
+    os.makedirs(data_dir, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"dates": archive_dates}, f, ensure_ascii=False, indent=2)
+        f.write("\n")
     return path
