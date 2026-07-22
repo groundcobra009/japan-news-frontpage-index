@@ -18,6 +18,14 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 {{LOCAL_TABLES}}
 
+## 本日の重要ニュースTOP10
+
+{{TOP_ARTICLES}}
+
+## 今日の主要キーワード
+
+{{KEYWORDS}}
+
 ## アーカイブ
 
 {{ARCHIVE_LIST}}

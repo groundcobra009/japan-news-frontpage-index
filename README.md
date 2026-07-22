@@ -4,7 +4,7 @@
 
 Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
 
-最終更新：2026年07月22日 11:51
+最終更新：2026年07月22日 12:08
 
 ## 本日の主要ニュース
 
@@ -23,6 +23,27 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 ### 地方紙
 
 (まだ地方紙のデータがありません)
+
+## 本日の重要ニュースTOP10
+
+1. **東京新聞**: 〈動画〉望月衣塑子が行く 高市政権の「終わりの始まり」? 支持率下落で痛烈批判...立憲・水岡代表 ([記事を読む](https://www.tokyo-np.co.jp/article/502700))
+2. **朝日新聞**: 下ろされた「健全化の旗」 高市政権で転換した財政運営 骨太の方針 ([記事を読む](http://www.asahi.com/articles/ASV7P2FSSV7PULFA047M.html))
+3. **毎日新聞**: 日英伊の次期戦闘機、カナダが初のオブザーバー 開発費低減狙う ([記事を読む](https://mainichi.jp/articles/20260721/k00/00m/030/409000c))
+4. **産経新聞**: 次期戦闘機にカナダ参加 日英伊、初のオブザーバー 機密共有、輸出先確保へ ([記事を読む](https://www.sankei.com/article/20260722-VU66ELHE3VPW5AVZ5WRXVQLC6U/))
+5. **産経新聞**: 政府が外国と疑われる不審アカウント把握 高市首相「選挙への影... ([記事を読む](https://www.sankei.com/article/20260318-U6PW4754BNE3XKFYBTQWPKM65A/))
+6. **東京新聞**: 日英伊の次期戦闘機にカナダ参加 初のオブザーバー ([記事を読む](https://www.tokyo-np.co.jp/article/502803))
+7. **朝日新聞**: 緑ナンバーで偽装し「白タク営業」疑い、名義貸しか 会社代表ら逮捕 ([記事を読む](http://www.asahi.com/articles/ASV7P52Z7V7PUTIL021M.html))
+8. **朝日新聞**: 殺人事件の被告から「口止め料」脅し取った疑い 無職の男を逮捕 ([記事を読む](http://www.asahi.com/articles/ASV7P34Q4V7PUTIL01XM.html))
+9. **東京新聞**: 政府「骨太方針」で弾薬工場の「公設民営化」検討へ 「平和ブランドを掲げてきた国が...」識者から疑問の声 ([記事を読む](https://www.tokyo-np.co.jp/article/502750))
+10. **毎日新聞**: やまゆり園事件10年:やまゆり園で重傷の息子、今は地域で 父が感じる障害者の幸せ ([記事を読む](https://mainichi.jp/articles/20260721/k00/00m/040/119000c))
+
+## 今日の主要キーワード
+
+- 代表
+- 動画
+- 疑い
+- 政権
+- 高市
 
 ## アーカイブ
 

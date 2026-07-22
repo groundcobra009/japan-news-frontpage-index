@@ -34,6 +34,7 @@ def test_collect_rss_parses_asahi_fixture():
     assert first.source_url == ASAHI_CONFIG["rss_url"]
     assert first.date == "2026-07-21"
     assert first.collected_at == "2026-07-21T07:05:00+09:00"
+    assert first.topic == "社会"
 
 
 def test_collect_rss_parses_mainichi_fixture():
@@ -42,6 +43,7 @@ def test_collect_rss_parses_mainichi_fixture():
     assert len(articles) == 2
     assert articles[0].newspaper == "毎日新聞"
     assert articles[1].headline.startswith("朝ドラの反省")
+    assert articles[0].topic == "ニュース"
 
 
 def test_collect_rss_raises_for_unreachable_feed():
