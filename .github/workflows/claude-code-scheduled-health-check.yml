@@ -1,0 +1,56 @@
+name: Claude Code Scheduled Health Check
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # UTC月曜0時 = JST月曜9時
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+  id-token: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        id: pytest
+        continue-on-error: true
+        run: pytest -q | tee /tmp/pytest-output.txt
+
+      - name: Claude Code Action
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --model claude-sonnet-5
+          prompt: |
+            このリポジトリ(japan-news-frontpage-index)の週次ヘルスチェックを行い、
+            結果をIssue #21へのコメントとして投稿してください。
+
+            以下を確認してください:
+            1. `/tmp/pytest-output.txt` に直近のpytest実行結果があります。全件green
+               かどうか、失敗があれば概要を報告してください。
+            2. 直近1週間程度に「取得失敗通知」というタイトルのIssueが自動起票されて
+               いないか確認し、あれば新聞社名と傾向を報告してください
+               (`gh issue list --search "取得失敗通知" --state all` 等で確認可能)。
+            3. `config/newspapers.yml` で `source_type: manual` になっている新聞社
+               (読売新聞・日本経済新聞・北海道新聞・河北新報・新潟日報・中国新聞・
+               西日本新聞・琉球新報)について、RSS再開など状況変化がありそうであれば
+               一言コメントしてください(過度な調査は不要、気づいた範囲でよい)。
+
+            コードの変更は行わず、Issue #21へのコメント投稿のみを行ってください。

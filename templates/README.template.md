@@ -68,6 +68,8 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 IssueやPRのコメントで `@claude` とメンションすると、Claude Code(Sonnet)が自動で応答・作業します(`.github/workflows/claude-code-action.yml`)。Anthropic APIキー課金(サブスクリプション不要)で運用しており、`ANTHROPIC_API_KEY` をGitHub Secretsに設定する必要があります。
 
+毎週月曜9時(JST)には週次ヘルスチェック(`.github/workflows/claude-code-scheduled-health-check.yml`)も自動実行され、テスト結果や取得失敗の傾向を[Issue #21](https://github.com/groundcobra009/japan-news-frontpage-index/issues/21)へ報告します。
+
 ## ライセンス
 
 [MIT License](LICENSE)
