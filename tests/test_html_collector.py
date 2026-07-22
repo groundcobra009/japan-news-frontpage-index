@@ -135,6 +135,56 @@ def test_collect_html_supports_regex_pattern(monkeypatch):
     assert not any("朝刊" == a.headline for a in articles)
 
 
+def test_collect_html_extracts_topic_when_pattern_configured(monkeypatch):
+    import src.collectors.html_collector as module
+
+    _allow_all(monkeypatch, module)
+
+    html = """
+    <html><body>
+      <a href="/life/article/ats/2011862.html">見出し1</a>
+      <a href="/snews/article/ats/2018433.html">見出し2</a>
+    </body></html>
+    """
+    config = {
+        "name": "静岡新聞",
+        "key": "shizuoka",
+        "category": "地方紙",
+        "region": "静岡",
+        "source_type": "html",
+        "top_page_url": "https://www.at-s.com/",
+        "user_agent": "test-bot/1.0",
+        "article_link_pattern": "/article/",
+        "topic_pattern": r"^/([a-z]+)/article/",
+        "max_items": 20,
+    }
+
+    articles = collect_html(
+        config,
+        collected_at="2026-07-21T07:05:00+09:00",
+        date="2026-07-21",
+        fetch_html=lambda url, ua: html,
+    )
+
+    topics = {a.topic for a in articles}
+    assert topics == {"life", "snews"}
+
+
+def test_collect_html_topic_empty_when_pattern_not_configured(monkeypatch):
+    import src.collectors.html_collector as module
+
+    _allow_all(monkeypatch, module)
+
+    articles = collect_html(
+        TOKYO_CONFIG,
+        collected_at="2026-07-21T07:05:00+09:00",
+        date="2026-07-21",
+        fetch_html=_fixture_fetcher("tokyo_sample.html"),
+    )
+
+    assert all(a.topic == "" for a in articles)
+
+
 def test_collect_html_raises_when_robots_disallows(monkeypatch):
     import src.collectors.html_collector as module
 

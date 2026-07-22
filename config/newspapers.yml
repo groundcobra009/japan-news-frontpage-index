@@ -62,6 +62,7 @@ newspapers:
     robots_txt_url: "https://www.tokyo-np.co.jp/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
     article_link_pattern: "/article/"
+    topic_pattern: "[?&]rct=([a-z_]+)"
     max_items: 20
     enabled: true
 
@@ -74,6 +75,7 @@ newspapers:
     robots_txt_url: "https://www.chunichi.co.jp/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
     article_link_pattern: "/article/"
+    topic_pattern: "[?&]rct=([a-z_]+)"
     max_items: 20
     enabled: true
 
@@ -126,6 +128,7 @@ newspapers:
     robots_txt_url: "https://www.at-s.com/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
     article_link_pattern: "/article/"
+    topic_pattern: "^/([a-z]+)/article/"
     max_items: 20
     enabled: true
 
@@ -186,6 +189,7 @@ newspapers:
     robots_txt_url: "https://373news.com/robots.txt"
     user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
     article_link_pattern: "/detail/\\d+"
+    topic_pattern: "/news/([a-z]+)/detail/"
     max_items: 20
     enabled: true
 

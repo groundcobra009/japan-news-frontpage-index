@@ -31,6 +31,16 @@ def collect_rss(newspaper_config: dict, collected_at: str, date: str) -> list[Ar
                 url=entry.get("link", ""),
                 source_url=rss_url,
                 status=STATUS_OK,
+                topic=_extract_topic(entry),
             )
         )
     return articles
+
+
+def _extract_topic(entry: dict) -> str:
+    """RSSのdc:subject等(feedparserではtags[].term)からカテゴリを取得する。取得できなければ空文字。"""
+    tags = entry.get("tags")
+    if not tags:
+        return ""
+    term = tags[0].get("term", "")
+    return term or ""
