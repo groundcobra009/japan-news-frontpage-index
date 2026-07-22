@@ -11,6 +11,25 @@ DEFAULT_README_PATH = "README.md"
 
 _JP_WEEKDAYS = ["月", "火", "水", "木", "金", "土", "日"]
 
+CATEGORY_LOCAL = "地方紙"
+
+PREFECTURE_TO_BLOCK = {
+    "北海道": "北海道・東北",
+    "宮城": "北海道・東北",
+    "新潟": "甲信越・東海",
+    "長野": "甲信越・東海",
+    "静岡": "甲信越・東海",
+    "京都": "近畿",
+    "兵庫": "近畿",
+    "広島": "中国",
+    "福岡": "九州・沖縄",
+    "熊本": "九州・沖縄",
+    "鹿児島": "九州・沖縄",
+    "沖縄": "九州・沖縄",
+}
+
+BLOCK_ORDER = ["北海道・東北", "甲信越・東海", "近畿", "中国", "九州・沖縄"]
+
 
 def list_archive_dates(data_dir: str = "data", limit: int = 14) -> list[str]:
     """data/YYYY/MM/YYYY-MM-DD.csv を新しい順に走査し、日付文字列のリストを返す。"""
@@ -41,6 +60,40 @@ def _representative_row(newspaper: str, articles_for_paper: list[Article]) -> st
         url = ok_articles[0].url
         return f"| {newspaper} | {headline} | [記事を読む]({url}) |"
     return f"| {newspaper} | (取得できませんでした) | - |"
+
+
+def _representative_row_with_region(newspaper: str, region: str, articles_for_paper: list[Article]) -> str:
+    ok_articles = [a for a in articles_for_paper if a.status == STATUS_OK]
+    if ok_articles:
+        headline = ok_articles[0].headline.replace("|", "｜")
+        url = ok_articles[0].url
+        return f"| {newspaper} | {region} | {headline} | [記事を読む]({url}) |"
+    return f"| {newspaper} | {region} | (取得できませんでした) | - |"
+
+
+def _build_local_tables(articles: list[Article]) -> str:
+    local_articles = [a for a in articles if a.category == CATEGORY_LOCAL]
+    if not local_articles:
+        return "(まだ地方紙のデータがありません)"
+
+    grouped_by_block: dict[str, dict[str, list[Article]]] = {}
+    for article in local_articles:
+        block = PREFECTURE_TO_BLOCK.get(article.region, "その他")
+        grouped_by_block.setdefault(block, {}).setdefault(article.newspaper, []).append(article)
+
+    ordered_blocks = [b for b in BLOCK_ORDER if b in grouped_by_block]
+    ordered_blocks += [b for b in grouped_by_block if b not in ordered_blocks]
+
+    sections = []
+    for block in ordered_blocks:
+        rows = [
+            _representative_row_with_region(newspaper, rows_for_paper[0].region, rows_for_paper)
+            for newspaper, rows_for_paper in grouped_by_block[block].items()
+        ]
+        table = "| 新聞社 | 地域 | 一面・主要見出し | URL |\n|---|---|---|---|\n" + "\n".join(rows)
+        sections.append(f"#### {block}\n\n{table}")
+
+    return "\n\n".join(sections)
 
 
 def _group_by_newspaper_preserving_order(articles: list[Article]) -> dict[str, list[Article]]:
@@ -88,9 +141,12 @@ def render_readme(
     with open(template_path, encoding="utf-8") as f:
         template = f.read()
 
-    grouped = _group_by_newspaper_preserving_order(articles)
+    national_articles = [a for a in articles if a.category != CATEGORY_LOCAL]
+    grouped = _group_by_newspaper_preserving_order(national_articles)
     order = list(grouped.keys())
     national_rows = "\n".join(_representative_row(name, grouped[name]) for name in order)
+
+    local_tables = _build_local_tables(articles)
 
     if archive_dates:
         archive_list = "\n".join(
@@ -103,6 +159,7 @@ def render_readme(
 
     rendered = template.replace("{{LAST_UPDATED}}", generated_at)
     rendered = rendered.replace("{{NATIONAL_TABLE_ROWS}}", national_rows or "(データがありません)")
+    rendered = rendered.replace("{{LOCAL_TABLES}}", local_tables)
     rendered = rendered.replace("{{ARCHIVE_LIST}}", archive_list)
     rendered = rendered.replace("{{STATUS_SUMMARY}}", status_summary)
     return rendered

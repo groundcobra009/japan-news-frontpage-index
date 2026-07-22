@@ -14,6 +14,7 @@ from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.csv_writer import append_index_csv, write_daily_csv, write_latest_csv
 from src.outputs.discord_sender import build_discord_payload, send_discord
 from src.outputs.email_sender import render_email_html, send_email
+from src.outputs.issue_notifier import build_failure_issue, create_github_issue, get_error_newspapers, should_notify
 from src.outputs.readme_writer import list_archive_dates, render_readme, write_readme
 from src.processors.deduplicate import deduplicate
 from src.processors.normalize import normalize_article
@@ -140,6 +141,7 @@ def run(date: str | None = None) -> None:
 
     _send_email_if_configured(articles, resolved_date, generated_at)
     _send_discord_if_configured(articles, resolved_date)
+    _notify_failures_if_needed(articles, resolved_date)
 
     _print_summary(configs, articles)
 
@@ -180,6 +182,29 @@ def _send_discord_if_configured(articles: list[Article], date: str) -> None:
         print("[OK] Discordへ投稿しました")
     except Exception as exc:  # noqa: BLE001 - Discord送信失敗が他チャネル/後続処理を止めないようにする
         print(f"[ERROR] Discord送信に失敗しました: {exc}")
+
+
+def _notify_failures_if_needed(articles: list[Article], date: str) -> None:
+    if not should_notify(articles):
+        return
+
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    error_newspapers = get_error_newspapers(articles)
+
+    if not token or not repo:
+        print(
+            "[SKIP] 取得失敗Issue登録をスキップしました"
+            f"(GITHUB_TOKEN/GITHUB_REPOSITORY未設定、失敗紙: {', '.join(error_newspapers)})"
+        )
+        return
+
+    try:
+        title, body = build_failure_issue(articles, date)
+        create_github_issue(title, body, repo, token, labels=["bug", "auto-generated"])
+        print(f"[OK] 取得失敗Issueを登録しました(失敗紙: {', '.join(error_newspapers)})")
+    except Exception as exc:  # noqa: BLE001 - Issue登録失敗が他の後続処理を止めないようにする
+        print(f"[ERROR] 取得失敗Issue登録に失敗しました: {exc}")
 
 
 if __name__ == "__main__":

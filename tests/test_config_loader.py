@@ -58,11 +58,12 @@ newspapers:
         load_config(str(config_path))
 
 
-def test_real_config_file_loads_and_has_seven_newspapers():
+def test_real_config_file_loads_national_and_local_newspapers():
     result = load_config("config/newspapers.yml")
-    assert len(result) == 7
-    keys = {entry["key"] for entry in result}
-    assert keys == {
+    assert len(result) == 20
+
+    national_keys = {entry["key"] for entry in result if entry["category"] == "全国紙"}
+    assert national_keys == {
         "yomiuri",
         "asahi",
         "mainichi",
@@ -70,4 +71,21 @@ def test_real_config_file_loads_and_has_seven_newspapers():
         "sankei",
         "tokyo",
         "chunichi",
+    }
+
+    local_keys = {entry["key"] for entry in result if entry["category"] == "地方紙"}
+    assert local_keys == {
+        "hokkaido",
+        "kahoku",
+        "niigata",
+        "shinmai",
+        "shizuoka",
+        "kyoto",
+        "kobe",
+        "chugoku",
+        "nishinippon",
+        "kumanichi",
+        "minaminippon",
+        "ryukyushimpo",
+        "okinawatimes",
     }
