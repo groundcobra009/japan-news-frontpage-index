@@ -5,7 +5,13 @@ from __future__ import annotations
 import os
 
 from src.models.article import STATUS_ERROR, STATUS_OK, Article
-from src.processors.keywords import rank_top_articles, top_keywords
+from src.processors.keywords import (
+    build_extra_stopwords,
+    build_keyword_pool,
+    pick_representative_article,
+    rank_top_articles,
+    top_keywords,
+)
 
 DEFAULT_TEMPLATE_PATH = "templates/README.template.md"
 DEFAULT_README_PATH = "README.md"
@@ -54,25 +60,34 @@ def list_archive_dates(data_dir: str = "data", limit: int = 14) -> list[str]:
     return dates[:limit]
 
 
-def _representative_row(newspaper: str, articles_for_paper: list[Article]) -> str:
-    ok_articles = [a for a in articles_for_paper if a.status == STATUS_OK]
-    if ok_articles:
-        headline = ok_articles[0].headline.replace("|", "｜")
-        url = ok_articles[0].url
-        return f"| {newspaper} | {headline} | [記事を読む]({url}) |"
+def _representative_row(
+    newspaper: str,
+    articles_for_paper: list[Article],
+    keyword_pool: set[str],
+    extra_stopwords: frozenset[str],
+) -> str:
+    best = pick_representative_article(articles_for_paper, keyword_pool, extra_stopwords)
+    if best:
+        headline = best.headline.replace("|", "｜")
+        return f"| {newspaper} | {headline} | [記事を読む]({best.url}) |"
     return f"| {newspaper} | (取得できませんでした) | - |"
 
 
-def _representative_row_with_region(newspaper: str, region: str, articles_for_paper: list[Article]) -> str:
-    ok_articles = [a for a in articles_for_paper if a.status == STATUS_OK]
-    if ok_articles:
-        headline = ok_articles[0].headline.replace("|", "｜")
-        url = ok_articles[0].url
-        return f"| {newspaper} | {region} | {headline} | [記事を読む]({url}) |"
+def _representative_row_with_region(
+    newspaper: str,
+    region: str,
+    articles_for_paper: list[Article],
+    keyword_pool: set[str],
+    extra_stopwords: frozenset[str],
+) -> str:
+    best = pick_representative_article(articles_for_paper, keyword_pool, extra_stopwords)
+    if best:
+        headline = best.headline.replace("|", "｜")
+        return f"| {newspaper} | {region} | {headline} | [記事を読む]({best.url}) |"
     return f"| {newspaper} | {region} | (取得できませんでした) | - |"
 
 
-def _build_local_tables(articles: list[Article]) -> str:
+def _build_local_tables(articles: list[Article], keyword_pool: set[str], extra_stopwords: frozenset[str]) -> str:
     local_articles = [a for a in articles if a.category == CATEGORY_LOCAL]
     if not local_articles:
         return "(まだ地方紙のデータがありません)"
@@ -88,7 +103,9 @@ def _build_local_tables(articles: list[Article]) -> str:
     sections = []
     for block in ordered_blocks:
         rows = [
-            _representative_row_with_region(newspaper, rows_for_paper[0].region, rows_for_paper)
+            _representative_row_with_region(
+                newspaper, rows_for_paper[0].region, rows_for_paper, keyword_pool, extra_stopwords
+            )
             for newspaper, rows_for_paper in grouped_by_block[block].items()
         ]
         table = "| 新聞社 | 地域 | 一面・主要見出し | URL |\n|---|---|---|---|\n" + "\n".join(rows)
@@ -131,14 +148,7 @@ def _format_date_jp(date: str) -> str:
     return f"{int(year)}年{int(month)}月{int(day)}日"
 
 
-def _build_extra_stopwords(articles: list[Article]) -> frozenset[str]:
-    names = {a.newspaper for a in articles if a.newspaper}
-    regions = {a.region for a in articles if a.region}
-    return frozenset(names | regions)
-
-
-def _build_top_articles_section(articles: list[Article]) -> str:
-    extra_stopwords = _build_extra_stopwords(articles)
+def _build_top_articles_section(articles: list[Article], extra_stopwords: frozenset[str]) -> str:
     top_articles = rank_top_articles(articles, extra_stopwords=extra_stopwords)
     if not top_articles:
         return "(本日は対象記事がありません)"
@@ -149,8 +159,7 @@ def _build_top_articles_section(articles: list[Article]) -> str:
     return "\n".join(lines)
 
 
-def _build_keywords_section(articles: list[Article]) -> str:
-    extra_stopwords = _build_extra_stopwords(articles)
+def _build_keywords_section(articles: list[Article], extra_stopwords: frozenset[str]) -> str:
     keywords = top_keywords(articles, extra_stopwords=extra_stopwords)
     if not keywords:
         return "(本日は抽出できるキーワードがありません)"
@@ -168,14 +177,19 @@ def render_readme(
     with open(template_path, encoding="utf-8") as f:
         template = f.read()
 
+    extra_stopwords = build_extra_stopwords(articles)
+    keyword_pool = build_keyword_pool(articles, extra_stopwords)
+
     national_articles = [a for a in articles if a.category != CATEGORY_LOCAL]
     grouped = _group_by_newspaper_preserving_order(national_articles)
     order = list(grouped.keys())
-    national_rows = "\n".join(_representative_row(name, grouped[name]) for name in order)
+    national_rows = "\n".join(
+        _representative_row(name, grouped[name], keyword_pool, extra_stopwords) for name in order
+    )
 
-    local_tables = _build_local_tables(articles)
-    top_articles_section = _build_top_articles_section(articles)
-    keywords_section = _build_keywords_section(articles)
+    local_tables = _build_local_tables(articles, keyword_pool, extra_stopwords)
+    top_articles_section = _build_top_articles_section(articles, extra_stopwords)
+    keywords_section = _build_keywords_section(articles, extra_stopwords)
 
     if archive_dates:
         archive_list = "\n".join(

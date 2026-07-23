@@ -4,7 +4,8 @@ from __future__ import annotations
 
 import requests
 
-from src.models.article import STATUS_OK, Article
+from src.models.article import Article
+from src.processors.keywords import build_extra_stopwords, build_keyword_pool, pick_representative_article
 
 DISCORD_EMBED_DESCRIPTION_LIMIT = 4096
 REQUEST_TIMEOUT_SECONDS = 10
@@ -17,17 +18,24 @@ def _group_by_newspaper_preserving_order(articles: list[Article]) -> dict[str, l
     return grouped
 
 
-def _representative_line(newspaper: str, articles_for_paper: list[Article]) -> str:
-    ok_articles = [a for a in articles_for_paper if a.status == STATUS_OK]
-    if ok_articles:
-        return f"・{newspaper}：{ok_articles[0].headline}"
+def _representative_line(
+    newspaper: str,
+    articles_for_paper: list[Article],
+    keyword_pool: set[str],
+    extra_stopwords: frozenset[str],
+) -> str:
+    best = pick_representative_article(articles_for_paper, keyword_pool, extra_stopwords)
+    if best:
+        return f"・{newspaper}：{best.headline}"
     return f"・{newspaper}：(取得できませんでした)"
 
 
 def build_discord_payload(articles: list[Article], date: str, repo_readme_url: str) -> dict:
     """Discord webhook用のJSONペイロード(embed形式)を組み立てる。"""
+    extra_stopwords = build_extra_stopwords(articles)
+    keyword_pool = build_keyword_pool(articles, extra_stopwords)
     grouped = _group_by_newspaper_preserving_order(articles)
-    lines = [_representative_line(name, rows) for name, rows in grouped.items()]
+    lines = [_representative_line(name, rows, keyword_pool, extra_stopwords) for name, rows in grouped.items()]
     description = "\n".join(lines) or "(データがありません)"
     if len(description) > DISCORD_EMBED_DESCRIPTION_LIMIT:
         description = description[: DISCORD_EMBED_DESCRIPTION_LIMIT - 3] + "..."

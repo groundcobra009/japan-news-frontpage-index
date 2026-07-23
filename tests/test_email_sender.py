@@ -43,6 +43,21 @@ def test_render_email_html_includes_headline_and_url(tmp_path):
     assert "{{" not in rendered
 
 
+def test_render_email_html_picks_keyword_scored_headline_over_first(tmp_path):
+    template_path = tmp_path / "email.template.html"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞", headline="猫の写真展が人気", url="https://example.com/1"),
+        make_article(newspaper="朝日新聞", headline="台風接近で交通機関に影響拡大", url="https://example.com/2"),
+        make_article(newspaper="毎日新聞", headline="台風の進路予想を発表", url="https://example.com/3"),
+    ]
+    rendered = render_email_html(articles, generated_at="x", template_path=str(template_path))
+
+    assert "台風接近で交通機関に影響拡大" in rendered
+    assert "猫の写真展が人気" not in rendered
+
+
 def test_render_email_html_shows_placeholder_when_not_ok(tmp_path):
     template_path = tmp_path / "email.template.html"
     template_path.write_text(TEMPLATE, encoding="utf-8")
