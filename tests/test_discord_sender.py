@@ -30,6 +30,19 @@ def test_build_discord_payload_includes_representative_headline():
     assert embed["fields"][0]["value"] == "https://example.com/repo"
 
 
+def test_build_discord_payload_picks_keyword_scored_headline_over_first():
+    articles = [
+        make_article(newspaper="朝日新聞", headline="猫の写真展が人気", url="https://example.com/1"),
+        make_article(newspaper="朝日新聞", headline="台風接近で交通機関に影響拡大", url="https://example.com/2"),
+        make_article(newspaper="毎日新聞", headline="台風の進路予想を発表", url="https://example.com/3"),
+    ]
+    payload = build_discord_payload(articles, date="2026-07-21", repo_readme_url="https://example.com/repo")
+    description = payload["embeds"][0]["description"]
+
+    assert "朝日新聞：台風接近で交通機関に影響拡大" in description
+    assert "猫の写真展が人気" not in description
+
+
 def test_build_discord_payload_shows_placeholder_when_not_ok():
     articles = [make_article(newspaper="読売新聞", status=STATUS_SKIPPED, headline="", url="")]
     payload = build_discord_payload(articles, date="2026-07-21", repo_readme_url="https://example.com/repo")
