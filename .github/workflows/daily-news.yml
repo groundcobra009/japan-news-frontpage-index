@@ -2,7 +2,9 @@ name: Daily News Collection
 
 on:
   schedule:
-    - cron: "0 22 * * *" # UTC 22:00 = JST 7:00
+    - cron: "0 21 * * *" # UTC 21:00(前日) = JST 6:00
+    - cron: "0 3 * * *" # UTC 3:00 = JST 12:00
+    - cron: "0 10 * * *" # UTC 10:00 = JST 19:00
   workflow_dispatch: {}
 
 permissions:
