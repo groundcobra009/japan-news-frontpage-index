@@ -56,3 +56,30 @@ jobs:
 
             コードの変更は行わず、`gh issue comment 21 --body "..."` コマンドで
             Issue #21へ直接コメントを投稿してください(コメント投稿が必須の完了条件です)。
+
+      - name: 週次ヘルスチェック結果をメール送信
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+        run: |
+          gh issue view 21 --json comments --jq '.comments[-1].body' > /tmp/health-check-comment.txt
+          python - <<'PYEOF'
+          import html
+          import os
+
+          from src.outputs.email_sender import send_email
+
+          with open("/tmp/health-check-comment.txt", encoding="utf-8") as f:
+              body = f.read()
+
+          html_body = '<pre style="white-space: pre-wrap; font-family: sans-serif;">' + html.escape(body) + "</pre>"
+          send_email(
+              subject="【週次ヘルスチェック】japan-news-frontpage-index",
+              html_body=html_body,
+              mail_to=os.environ["MAIL_TO"],
+              mail_from=os.environ["MAIL_FROM"],
+              api_key=os.environ["RESEND_API_KEY"],
+          )
+          PYEOF
