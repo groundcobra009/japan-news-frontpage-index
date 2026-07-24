@@ -1,6 +1,6 @@
 # Japan News Frontpage Index
 
-毎朝7時(JST)に全国紙・地方紙の一面・主要見出しを自動収集し、CSV保存・メール・Discordへ配信するGitHub Actionsプロジェクトです。
+毎日3回(6時・12時・19時、JST)に全国紙・地方紙の一面・主要見出しを自動収集し、CSV保存・メール・Discordへ配信するGitHub Actionsプロジェクトです。
 
 Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
 
@@ -36,9 +36,18 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 {{STATUS_SUMMARY}}
 
+## 定期実行スケジュール
+
+| ジョブ | 頻度 | 内容 |
+|---|---|---|
+| 全国紙・地方紙の収集(`daily-news.yml`) | 毎日6時・12時・19時(JST) | ニュース収集・CSV保存・README更新・メール/Discord配信 |
+| 週次ヘルスチェック(`claude-code-scheduled-health-check.yml`) | 毎週月曜9時(JST) | テスト実行・取得失敗の傾向確認をClaude(Sonnet)が行い、[Issue #21](https://github.com/groundcobra009/japan-news-frontpage-index/issues/21)へのコメントとメールで報告 |
+
+いずれも`workflow_dispatch`で手動実行・再実行が可能です。
+
 ## 収集方針について
 
-各新聞社のrobots.txt・利用規約を確認したうえで、公式RSSまたはrobots.txtで許可された範囲のトップページのみを低頻度(1日1回)で取得しています。新聞紙面そのものの画像や記事全文は保存せず、新聞社名・見出し・公式URL・取得日時のみを扱います。robots.txtで自動収集が許可されていない、または利用規約で自動収集が明示的に禁止されている新聞社は取得対象から除外しています(manual扱いの新聞社は取得対象外)。
+各新聞社のrobots.txt・利用規約を確認したうえで、公式RSSまたはrobots.txtで許可された範囲のトップページのみを低頻度で取得しています(1日3回、各紙へのアクセスは1回あたり1リクエスト)。新聞紙面そのものの画像や記事全文は保存せず、新聞社名・見出し・公式URL・取得日時のみを扱います。robots.txtで自動収集が許可されていない、または利用規約で自動収集が明示的に禁止されている新聞社は取得対象から除外しています(manual扱いの新聞社は取得対象外)。
 
 取得エラー(ネットワーク障害・パース失敗等)が発生した場合は、自動でGitHub Issueが起票されます(manual紙やrobots.txt Disallowによるスキップは想定内の挙動のため対象外)。
 
@@ -66,9 +75,7 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 ## Claude Code Actionについて
 
-IssueやPRのコメントで `@claude` とメンションすると、Claude Code(Sonnet)が自動で応答・作業します(`.github/workflows/claude-code-action.yml`)。Anthropic APIキー課金(サブスクリプション不要)で運用しており、`ANTHROPIC_API_KEY` をGitHub Secretsに設定する必要があります。
-
-毎週月曜9時(JST)には週次ヘルスチェック(`.github/workflows/claude-code-scheduled-health-check.yml`)も自動実行され、テスト結果や取得失敗の傾向を[Issue #21](https://github.com/groundcobra009/japan-news-frontpage-index/issues/21)へ報告します。
+IssueやPRのコメントで `@claude` とメンションすると、Claude Code(Sonnet)が自動で応答・作業します(`.github/workflows/claude-code-action.yml`)。Anthropic APIキー課金(サブスクリプション不要)で運用しており、`ANTHROPIC_API_KEY` をGitHub Secretsに設定する必要があります。週次ヘルスチェックについては上記「定期実行スケジュール」を参照してください。
 
 ## ライセンス
 
