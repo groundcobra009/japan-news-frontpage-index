@@ -62,6 +62,13 @@ def _ok_headlines(articles: list[Article]) -> list[Article]:
     return [a for a in articles if a.status == STATUS_OK and a.headline]
 
 
+def build_extra_stopwords(articles: list[Article]) -> frozenset[str]:
+    """新聞社名・地域名を動的にストップワード化する(見出しに紙名等が含まれてもノイズにしない)。"""
+    names = {a.newspaper for a in articles if a.newspaper}
+    regions = {a.region for a in articles if a.region}
+    return frozenset(names | regions)
+
+
 def count_keywords(articles: list[Article], extra_stopwords: frozenset[str] = frozenset()) -> Counter:
     """当日の見出し(status=okのみ)から名詞の出現回数を集計する。"""
     stopwords = STOPWORDS | extra_stopwords
@@ -84,6 +91,42 @@ def top_keywords(
     return [word for word, _ in counts.most_common(limit)]
 
 
+def build_keyword_pool(
+    articles: list[Article],
+    extra_stopwords: frozenset[str] = frozenset(),
+    pool_size: int = DEFAULT_KEYWORD_POOL_SIZE,
+) -> set[str]:
+    """当日の見出し全体から頻出語上位pool_size件の集合を作る(代表記事選定・TOP10で共用)。"""
+    counts = count_keywords(articles, extra_stopwords)
+    return {word for word, _ in counts.most_common(pool_size)}
+
+
+def pick_representative_article(
+    articles_for_paper: list[Article],
+    keyword_pool: set[str],
+    extra_stopwords: frozenset[str] = frozenset(),
+) -> Article | None:
+    """新聞社内で、当日の頻出キーワードとの一致数が最も高い記事を代表として返す。
+
+    全記事が同点(0件一致を含む)の場合は最初に取得できた記事を優先する
+    (Python の max() はタイ時に最初の要素を保持するため、追加の分岐は不要)。
+    status=okの記事が1件もなければNoneを返す。
+    """
+    ok_articles = _ok_headlines(articles_for_paper)
+    if not ok_articles:
+        return None
+
+    stopwords = STOPWORDS | extra_stopwords
+    scored = []
+    for article in ok_articles:
+        nouns = {n for n in _extract_nouns(article.headline) if n not in stopwords}
+        score = len(nouns & keyword_pool)
+        scored.append((score, article))
+
+    _, best_article = max(scored, key=lambda pair: pair[0])
+    return best_article
+
+
 def rank_top_articles(
     articles: list[Article],
     extra_stopwords: frozenset[str] = frozenset(),
@@ -96,8 +139,7 @@ def rank_top_articles(
     1新聞社あたりper_newspaper_cap件までに制限し、見出し数の多い新聞社に偏らないようにする。
     """
     stopwords = STOPWORDS | extra_stopwords
-    counts = count_keywords(articles, extra_stopwords)
-    pool = {word for word, _ in counts.most_common(keyword_pool_size)}
+    pool = build_keyword_pool(articles, extra_stopwords, keyword_pool_size)
 
     scored: list[tuple[int, Article]] = []
     for article in _ok_headlines(articles):

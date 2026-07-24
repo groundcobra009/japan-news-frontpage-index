@@ -9,7 +9,8 @@ import html
 
 import requests
 
-from src.models.article import STATUS_OK, Article
+from src.models.article import Article
+from src.processors.keywords import build_extra_stopwords, build_keyword_pool, pick_representative_article
 
 DEFAULT_TEMPLATE_PATH = "templates/email.template.html"
 DEFAULT_REPO_URL = "https://github.com/groundcobra009/japan-news-frontpage-index"
@@ -24,12 +25,17 @@ def _group_by_newspaper_preserving_order(articles: list[Article]) -> dict[str, l
     return grouped
 
 
-def _render_newspaper_section(newspaper: str, articles_for_paper: list[Article]) -> str:
-    ok_articles = [a for a in articles_for_paper if a.status == STATUS_OK]
+def _render_newspaper_section(
+    newspaper: str,
+    articles_for_paper: list[Article],
+    keyword_pool: set[str],
+    extra_stopwords: frozenset[str],
+) -> str:
     name = html.escape(newspaper)
-    if ok_articles:
-        headline = html.escape(ok_articles[0].headline)
-        url = html.escape(ok_articles[0].url)
+    best = pick_representative_article(articles_for_paper, keyword_pool, extra_stopwords)
+    if best:
+        headline = html.escape(best.headline)
+        url = html.escape(best.url)
         return f'<p><strong>{name}</strong><br>見出し：{headline}<br>URL：<a href="{url}">{url}</a></p>'
     return f"<p><strong>{name}</strong><br>（取得できませんでした）</p>"
 
@@ -44,8 +50,12 @@ def render_email_html(
     with open(template_path, encoding="utf-8") as f:
         template = f.read()
 
+    extra_stopwords = build_extra_stopwords(articles)
+    keyword_pool = build_keyword_pool(articles, extra_stopwords)
     grouped = _group_by_newspaper_preserving_order(articles)
-    sections = "\n".join(_render_newspaper_section(name, rows) for name, rows in grouped.items())
+    sections = "\n".join(
+        _render_newspaper_section(name, rows, keyword_pool, extra_stopwords) for name, rows in grouped.items()
+    )
 
     rendered = template.replace("{{NEWSPAPER_SECTIONS}}", sections or "<p>(データがありません)</p>")
     rendered = rendered.replace("{{REPO_URL}}", repo_url)
