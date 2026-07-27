@@ -9,13 +9,15 @@ import html
 
 import requests
 
-from src.models.article import Article
+from src.models.article import NEWSPAPER_CATEGORIES, Article
 from src.processors.keywords import build_extra_stopwords, build_keyword_pool, pick_representative_article
 
 DEFAULT_TEMPLATE_PATH = "templates/email.template.html"
 DEFAULT_REPO_URL = "https://github.com/groundcobra009/japan-news-frontpage-index"
 RESEND_API_URL = "https://api.resend.com/emails"
 REQUEST_TIMEOUT_SECONDS = 10
+
+SUMMARY_FALLBACK_TEXT = "(本日のまとめは生成できませんでした)"
 
 
 def _group_by_newspaper_preserving_order(articles: list[Article]) -> dict[str, list[Article]]:
@@ -43,6 +45,7 @@ def _render_newspaper_section(
 def render_email_html(
     articles: list[Article],
     generated_at: str,
+    summary: str = "",
     repo_url: str = DEFAULT_REPO_URL,
     template_path: str = DEFAULT_TEMPLATE_PATH,
 ) -> str:
@@ -52,12 +55,18 @@ def render_email_html(
 
     extra_stopwords = build_extra_stopwords(articles)
     keyword_pool = build_keyword_pool(articles, extra_stopwords)
-    grouped = _group_by_newspaper_preserving_order(articles)
+    # アグリゲーター経由の「その他メディア」は紙別セクションには並べない。
+    grouped = _group_by_newspaper_preserving_order(
+        [a for a in articles if a.category in NEWSPAPER_CATEGORIES]
+    )
     sections = "\n".join(
         _render_newspaper_section(name, rows, keyword_pool, extra_stopwords) for name, rows in grouped.items()
     )
 
     rendered = template.replace("{{NEWSPAPER_SECTIONS}}", sections or "<p>(データがありません)</p>")
+    rendered = rendered.replace(
+        "{{DAILY_SUMMARY}}", html.escape(summary.strip() or SUMMARY_FALLBACK_TEXT)
+    )
     rendered = rendered.replace("{{REPO_URL}}", repo_url)
     rendered = rendered.replace("{{GENERATED_AT}}", generated_at)
     return rendered

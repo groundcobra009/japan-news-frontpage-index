@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>カテゴリ : 政治 | Ceek.jp News</title>
+    <link>https://news.ceek.jp/?search.cgi?q=</link>
+    <description>最新ニュース記事の一覧サイト。</description>
+    <opensearch:totalResults>206021</opensearch:totalResults>
+
+    <item>
+      <title>「世論頼み」の政策推進に限界 首相は丁寧な与野党議論を (日本経済新聞)</title>
+      <link>https://www.nikkei.com/article/DGXZQOFL270A4TX20C26A7000000/</link>
+      <guid isPermaLink="true">https://www.nikkei.com/article/DGXZQOFL270A4TX20C26A7000000/</guid>
+      <description>国内債券市場で日本の財政運営や日銀の利上げが後手に回るとの警戒感がくすぶり続けている。この本文抜粋は保存されてはならない。</description>
+      <pubDate>Tue, 28 Jul 2026 04:30:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>国会が閉会 与党は経済対策の取りまとめへ (読売新聞)</title>
+      <link>https://www.yomiuri.co.jp/politics/20260728-OYT1T50000/</link>
+      <guid isPermaLink="true">https://www.yomiuri.co.jp/politics/20260728-OYT1T50000/</guid>
+      <description>本文抜粋その2。これも保存されてはならない。</description>
+      <pubDate>Tue, 28 Jul 2026 04:29:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>県議会が新条例を可決 来年4月施行へ (沖縄タイムス)</title>
+      <link>https://www.okinawatimes.co.jp/articles/-/1234567</link>
+      <guid isPermaLink="true">https://www.okinawatimes.co.jp/articles/-/1234567</guid>
+      <description>本文抜粋その3。</description>
+      <pubDate>Tue, 28 Jul 2026 04:28:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>市長が定例会見 港湾整備の進捗を説明 (釧路新聞)</title>
+      <link>https://kushironews.jp/?p=99999</link>
+      <guid isPermaLink="true">https://kushironews.jp/?p=99999</guid>
+      <description>本文抜粋その4。</description>
+      <pubDate>Tue, 28 Jul 2026 04:27:00 +0900</pubDate>
+      <category>地方・地域</category>
+    </item>
+
+    <item>
+      <title>首相が記者会見「反省点は特にない」 (FNN : フジテレビ)</title>
+      <link>https://www.fnn.jp/articles/-/900000</link>
+      <guid isPermaLink="true">https://www.fnn.jp/articles/-/900000</guid>
+      <description>本文抜粋その5。</description>
+      <pubDate>Tue, 28 Jul 2026 04:26:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>参院選の投票率が過去最低を更新 (47NEWS : 共同通信)</title>
+      <link>https://www.47news.jp/12345678.html</link>
+      <guid isPermaLink="true">https://www.47news.jp/12345678.html</guid>
+      <description>本文抜粋その6。</description>
+      <pubDate>Tue, 28 Jul 2026 04:25:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>（速報）内閣改造を検討 首相が意向 (毎日新聞)</title>
+      <link>https://mainichi.jp/articles/20260728/k00/00m/010/000000c</link>
+      <guid isPermaLink="true">https://mainichi.jp/articles/20260728/k00/00m/010/000000c</guid>
+      <description>本文抜粋その7。</description>
+      <pubDate>Tue, 28 Jul 2026 04:24:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>媒体名のない見出し</title>
+      <link>https://example.com/no-outlet</link>
+      <guid isPermaLink="true">https://example.com/no-outlet</guid>
+      <description>本文抜粋その8。</description>
+      <pubDate>Tue, 28 Jul 2026 04:23:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+
+    <item>
+      <title>リンクのない記事 (朝日新聞)</title>
+      <link></link>
+      <guid isPermaLink="false">no-link-item</guid>
+      <description>本文抜粋その9。</description>
+      <pubDate>Tue, 28 Jul 2026 04:22:00 +0900</pubDate>
+      <category>政治</category>
+    </item>
+  </channel>
+</rss>

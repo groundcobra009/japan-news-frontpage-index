@@ -4,6 +4,10 @@ from src.outputs.readme_writer import list_archive_dates, render_readme, write_r
 TEMPLATE = """# Title
 最終更新：{{LAST_UPDATED}}
 
+## 本日のまとめ
+
+{{DAILY_SUMMARY}}
+
 {{NATIONAL_TABLE_ROWS}}
 
 {{LOCAL_TABLES}}
@@ -192,3 +196,73 @@ def test_list_archive_dates_scans_data_dir_sorted_desc(tmp_path):
 
 def test_list_archive_dates_returns_empty_when_no_data_dir(tmp_path):
     assert list_archive_dates(data_dir=str(tmp_path / "does_not_exist")) == []
+
+
+def test_render_readme_includes_summary(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_readme(
+        [make_article()],
+        date="2026-07-21",
+        generated_at="x",
+        archive_dates=[],
+        summary="本日は台風の話題が中心でした。",
+        template_path=str(template_path),
+    )
+    assert "本日は台風の話題が中心でした。" in rendered
+    assert "{{" not in rendered
+
+
+def test_render_readme_shows_placeholder_when_summary_empty(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_readme(
+        [make_article()], date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+    assert "(本日のまとめは生成できませんでした)" in rendered
+    assert "{{" not in rendered
+
+
+def test_render_readme_excludes_other_media_from_national_table(tmp_path):
+    """アグリゲーター経由の通信社・放送局が全国紙テーブルに混入しないこと。"""
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞", headline="全国紙の見出し"),
+        make_article(newspaper="共同通信", category="その他メディア", region="", headline="通信社の見出し"),
+    ]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+    # 紙別テーブルの行としては出さない。
+    assert "| 朝日新聞 |" in rendered
+    assert "| 共同通信 |" not in rendered
+    # ただし横断ランキング(TOP10)には載せる(網羅性のため)。
+    assert "**共同通信**" in rendered
+
+
+def test_status_summary_counts_only_newspapers(tmp_path):
+    template_path = tmp_path / "README.template.md"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞"),
+        make_article(newspaper="共同通信", category="その他メディア", region=""),
+    ]
+    rendered = render_readme(
+        articles, date="2026-07-21", generated_at="x", archive_dates=[], template_path=str(template_path)
+    )
+    assert "成功：1紙" in rendered
+
+
+def test_list_archive_dates_ignores_summary_json(tmp_path):
+    month_dir = tmp_path / "2026" / "07"
+    month_dir.mkdir(parents=True)
+    (month_dir / "2026-07-21.csv").write_text("", encoding="utf-8")
+    (month_dir / "2026-07-21.summary.json").write_text("{}", encoding="utf-8")
+    (month_dir / "index.csv").write_text("", encoding="utf-8")
+
+    assert list_archive_dates(data_dir=str(tmp_path)) == ["2026-07-21"]

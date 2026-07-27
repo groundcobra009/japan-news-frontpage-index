@@ -68,3 +68,44 @@ def test_send_discord_posts_payload_and_raises_for_http_error(monkeypatch):
     assert args[0] == "https://discord.example/webhook"
     assert kwargs["json"] == {"embeds": []}
     mock_response.raise_for_status.assert_called_once()
+
+
+def test_build_discord_payload_puts_summary_first():
+    articles = [make_article(newspaper="朝日新聞", headline="朝日の見出し")]
+    payload = build_discord_payload(
+        articles, date="2026-07-21", repo_readme_url="https://example.com/repo",
+        summary="本日は台風の話題が中心でした。",
+    )
+    description = payload["embeds"][0]["description"]
+    assert description.startswith("**本日のまとめ**")
+    assert description.index("本日は台風") < description.index("朝日新聞：")
+
+
+def test_build_discord_payload_keeps_summary_when_headlines_overflow():
+    """見出しが上限を超えても、まとめが切り落とされないこと。"""
+    articles = [make_article(newspaper=f"新聞{i}", headline="あ" * 200) for i in range(60)]
+    summary = "ま" * 350
+    payload = build_discord_payload(
+        articles, date="2026-07-21", repo_readme_url="https://example.com/repo", summary=summary
+    )
+    description = payload["embeds"][0]["description"]
+    assert summary in description
+    assert len(description) <= 4096
+    assert description.endswith("...")
+
+
+def test_build_discord_payload_without_summary_has_no_header():
+    articles = [make_article()]
+    payload = build_discord_payload(articles, date="2026-07-21", repo_readme_url="https://example.com/repo")
+    assert "**本日のまとめ**" not in payload["embeds"][0]["description"]
+
+
+def test_build_discord_payload_excludes_other_media():
+    articles = [
+        make_article(newspaper="朝日新聞", headline="全国紙の見出し"),
+        make_article(newspaper="共同通信", category="その他メディア", region="", headline="通信社の見出し"),
+    ]
+    payload = build_discord_payload(articles, date="2026-07-21", repo_readme_url="https://example.com/repo")
+    description = payload["embeds"][0]["description"]
+    assert "朝日新聞：全国紙の見出し" in description
+    assert "共同通信" not in description

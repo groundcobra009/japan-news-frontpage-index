@@ -4,6 +4,7 @@ from src.models.article import STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.email_sender import render_email_html, send_email
 
 TEMPLATE = """<html><body>
+{{DAILY_SUMMARY}}
 {{NEWSPAPER_SECTIONS}}
 {{REPO_URL}}
 {{GENERATED_AT}}
@@ -104,3 +105,48 @@ def test_send_email_posts_to_resend_api(monkeypatch):
     }
     assert kwargs["headers"]["Authorization"] == "Bearer re_test_key"
     mock_response.raise_for_status.assert_called_once()
+
+
+def test_render_email_html_includes_summary(tmp_path):
+    template_path = tmp_path / "email.template.html"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_email_html(
+        [make_article()], generated_at="x", summary="本日は台風の話題が中心でした。",
+        template_path=str(template_path)
+    )
+    assert "本日は台風の話題が中心でした。" in rendered
+    assert "{{" not in rendered
+
+
+def test_render_email_html_escapes_summary(tmp_path):
+    template_path = tmp_path / "email.template.html"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_email_html(
+        [make_article()], generated_at="x", summary='<b>x</b> & "y"', template_path=str(template_path)
+    )
+    assert "&lt;b&gt;" in rendered
+    assert "<b>x</b>" not in rendered
+
+
+def test_render_email_html_shows_placeholder_when_summary_empty(tmp_path):
+    template_path = tmp_path / "email.template.html"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    rendered = render_email_html([make_article()], generated_at="x", template_path=str(template_path))
+    assert "(本日のまとめは生成できませんでした)" in rendered
+    assert "{{" not in rendered
+
+
+def test_render_email_html_excludes_other_media_sections(tmp_path):
+    template_path = tmp_path / "email.template.html"
+    template_path.write_text(TEMPLATE, encoding="utf-8")
+
+    articles = [
+        make_article(newspaper="朝日新聞", headline="全国紙の見出し"),
+        make_article(newspaper="共同通信", category="その他メディア", region="", headline="通信社の見出し"),
+    ]
+    rendered = render_email_html(articles, generated_at="x", template_path=str(template_path))
+    assert "全国紙の見出し" in rendered
+    assert "共同通信" not in rendered

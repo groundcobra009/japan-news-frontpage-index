@@ -6,6 +6,10 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 最終更新：{{LAST_UPDATED}}
 
+## 本日のまとめ
+
+{{DAILY_SUMMARY}}
+
 ## 本日の主要ニュース
 
 ### 全国紙
@@ -49,6 +53,16 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 各新聞社のrobots.txt・利用規約を確認したうえで、公式RSSまたはrobots.txtで許可された範囲のトップページのみを低頻度で取得しています(1日3回、各紙へのアクセスは1回あたり1リクエスト)。新聞紙面そのものの画像や記事全文は保存せず、新聞社名・見出し・公式URL・取得日時のみを扱います。robots.txtで自動収集が許可されていない、または利用規約で自動収集が明示的に禁止されている新聞社は取得対象から除外しています(manual扱いの新聞社は取得対象外)。
 
+### アグリゲーターからの横断収集
+
+上記の紙別収集に加えて、ニュースアグリゲーター [Ceek.jp News](https://news.ceek.jp/) のカテゴリ別RSSからも横断的に収集しています([config/aggregators.yml](config/aggregators.yml))。取得するのは**見出しと元記事URLのみ**で、フィードに含まれる本文抜粋(`<description>`)はパース時点で破棄し保存しません。ceek.jpのrobots.txtが指定する `Crawl-Delay: 600` を守るため、カテゴリ取得の間に600秒の待機を挟みます(設定値とrobots.txtの申告値のうち長い方を採用)。
+
+アグリゲーター経由で入る通信社・放送局など、`config/newspapers.yml` に登録のない媒体は「その他メディア」として扱い、CSVとWeb版の検索対象には含めますが、本ページの全国紙/地方紙テーブルには並べません。
+
+### 本日のまとめについて
+
+冒頭の「本日のまとめ」は、収集した**見出し(新聞社名と見出し文字列)のみ**をAnthropic社の[Claude API](https://www.anthropic.com/api)へ送信して生成しています。記事全文・紙面画像は送信しません。APIキー未設定時やAPI障害時は、外部送信を一切行わない抽出型のまとめへ自動的にフォールバックします。
+
 取得エラー(ネットワーク障害・パース失敗等)が発生した場合は、自動でGitHub Issueが起票されます(manual紙やrobots.txt Disallowによるスキップは想定内の挙動のため対象外)。
 
 ## セットアップ
@@ -66,6 +80,7 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 | `MAIL_FROM` | メール送信元(例: `Japan News Frontpage Index <onboarding@resend.dev>`) |
 | `RESEND_API_KEY` | [Resend](https://resend.com/)のAPIキー |
 | `DISCORD_WEBHOOK_URL` | Discord配信先のWebhook URL |
+| `ANTHROPIC_API_KEY` | 「本日のまとめ」の生成([Claude API](https://www.anthropic.com/api))。未設定時は抽出型へ自動フォールバック |
 
 いずれかが未設定の場合、該当チャネルへの配信はスキップされ(ログに記録)、他の処理は継続します。
 

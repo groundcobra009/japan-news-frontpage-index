@@ -14,6 +14,9 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    # ceek.jpのCrawl-Delay(600秒)を守るためカテゴリ取得の間に待機が入り、
+    # 5カテゴリで約40分かかる。ハングしたfetchが何時間も回らないよう上限を置く。
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -31,6 +34,8 @@ jobs:
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # 「本日のまとめ」の生成に使う。未設定でも抽出型へ自動フォールバックする。
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m src.main
 

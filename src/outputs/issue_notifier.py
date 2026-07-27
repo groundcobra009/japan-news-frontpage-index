@@ -49,6 +49,39 @@ def build_failure_issue(articles: list[Article], date: str) -> tuple[str, str]:
     return title, body
 
 
+def find_open_issue_by_title(title: str, repo: str, token: str) -> dict | None:
+    """同じタイトルのopen Issueがあれば返す。無ければNone。
+
+    1日3回実行するため、同一原因(例: 静岡新聞の405)で毎回起票すると
+    Issueが際限なく溜まる。起票前に既存のopen Issueを確認する。
+    """
+    url = f"{GITHUB_API_BASE}/repos/{repo}/issues"
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    response = requests.get(
+        url,
+        headers=headers,
+        params={"state": "open", "per_page": 100},
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+    response.raise_for_status()
+    for issue in response.json():
+        # pull_request キーを持つものはPRなので除外する。
+        if "pull_request" in issue:
+            continue
+        if issue.get("title") == title:
+            return issue
+    return None
+
+
+def add_issue_comment(issue_number: int, body: str, repo: str, token: str) -> dict:
+    """既存Issueへコメントを追加する(重複起票の代わりに経過を残す)。"""
+    url = f"{GITHUB_API_BASE}/repos/{repo}/issues/{issue_number}/comments"
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    response = requests.post(url, json={"body": body}, headers=headers, timeout=REQUEST_TIMEOUT_SECONDS)
+    response.raise_for_status()
+    return response.json()
+
+
 def create_github_issue(title: str, body: str, repo: str, token: str, labels: list[str] | None = None) -> dict:
     """GitHub REST APIでIssueを作成する。呼び出し元main.pyでtry/exceptし、失敗しても他処理をブロックしない。"""
     url = f"{GITHUB_API_BASE}/repos/{repo}/issues"

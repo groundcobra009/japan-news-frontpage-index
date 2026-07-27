@@ -141,6 +141,25 @@ async function loadArchiveIndex() {
   }
 }
 
+async function fetchSummary(path) {
+  // まとめの取得失敗は表の表示を妨げない(未生成の日は404になる)。
+  try {
+    const response = await fetch(REPO_RAW_BASE + path, { cache: "no-store" });
+    if (!response.ok) return null;
+    const data = await response.json();
+    return typeof data.summary === "string" && data.summary ? data.summary : null;
+  } catch (err) {
+    return null;
+  }
+}
+
+async function loadTodaySummary() {
+  const el = document.getElementById("summary-text");
+  const summary = await fetchSummary("data/summary-latest.json");
+  // textContent を使う(モデル生成テキストなのでHTMLとして解釈させない)。
+  el.textContent = summary || "本日のまとめはまだ生成されていません";
+}
+
 async function loadDate(date) {
   const statusEl = document.getElementById("search-status");
   const [year, month] = date.split("-");
@@ -148,6 +167,11 @@ async function loadDate(date) {
     currentSearchArticles = await fetchCsv(`data/${year}/${month}/${date}.csv`);
     statusEl.textContent = `${date} のデータ(${currentSearchArticles.length}件)を読み込みました`;
     applyKeywordFilter();
+
+    const summaryEl = document.getElementById("search-summary");
+    const summary = await fetchSummary(`data/${year}/${month}/${date}.summary.json`);
+    summaryEl.textContent = summary || "";
+    summaryEl.hidden = !summary;
   } catch (err) {
     statusEl.textContent = "データの取得に失敗しました: " + err.message;
   }
@@ -166,6 +190,7 @@ function applyKeywordFilter() {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadToday();
+  loadTodaySummary();
   loadArchiveIndex();
   document.getElementById("date-select").addEventListener("change", (e) => loadDate(e.target.value));
   document.getElementById("keyword-input").addEventListener("input", applyKeywordFilter);

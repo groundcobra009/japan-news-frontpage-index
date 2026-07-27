@@ -4,7 +4,14 @@ from __future__ import annotations
 
 import os
 
-from src.models.article import STATUS_ERROR, STATUS_OK, Article
+from src.models.article import (
+    CATEGORY_LOCAL,
+    CATEGORY_NATIONAL,
+    NEWSPAPER_CATEGORIES,
+    STATUS_ERROR,
+    STATUS_OK,
+    Article,
+)
 from src.processors.keywords import (
     build_extra_stopwords,
     build_keyword_pool,
@@ -16,9 +23,18 @@ from src.processors.keywords import (
 DEFAULT_TEMPLATE_PATH = "templates/README.template.md"
 DEFAULT_README_PATH = "README.md"
 
+SUMMARY_FALLBACK_TEXT = "(本日のまとめは生成できませんでした)"
+
 _JP_WEEKDAYS = ["月", "火", "水", "木", "金", "土", "日"]
 
-CATEGORY_LOCAL = "地方紙"
+
+def newspaper_articles(articles: list[Article]) -> list[Article]:
+    """紙別テーブルに載せる記事(全国紙・地方紙)だけに絞る。
+
+    アグリゲーター経由で入る通信社・放送局などの「その他メディア」はCSVと
+    GitHub Pagesの検索対象には残すが、紙別テーブルには並べない。
+    """
+    return [a for a in articles if a.category in NEWSPAPER_CATEGORIES]
 
 PREFECTURE_TO_BLOCK = {
     "北海道": "北海道・東北",
@@ -130,7 +146,7 @@ def _classify_newspaper_status(articles_for_paper: list[Article]) -> str:
 
 
 def _build_status_summary(articles: list[Article]) -> str:
-    grouped = _group_by_newspaper_preserving_order(articles)
+    grouped = _group_by_newspaper_preserving_order(newspaper_articles(articles))
     ok_count = skipped_count = error_count = 0
     for rows in grouped.values():
         status = _classify_newspaper_status(rows)
@@ -171,6 +187,7 @@ def render_readme(
     date: str,
     generated_at: str,
     archive_dates: list[str],
+    summary: str = "",
     template_path: str = DEFAULT_TEMPLATE_PATH,
 ) -> str:
     """テンプレートのプレースホルダを当日データで置換した文字列を返す(純粋関数)。"""
@@ -180,7 +197,7 @@ def render_readme(
     extra_stopwords = build_extra_stopwords(articles)
     keyword_pool = build_keyword_pool(articles, extra_stopwords)
 
-    national_articles = [a for a in articles if a.category != CATEGORY_LOCAL]
+    national_articles = [a for a in articles if a.category == CATEGORY_NATIONAL]
     grouped = _group_by_newspaper_preserving_order(national_articles)
     order = list(grouped.keys())
     national_rows = "\n".join(
@@ -201,6 +218,9 @@ def render_readme(
     status_summary = _build_status_summary(articles)
 
     rendered = template.replace("{{LAST_UPDATED}}", generated_at)
+    # 置換は必ず行う(空でもプレースホルダを残さない)。統合テストが実テンプレートに対して
+    # "{{" が残っていないことをassertしているため。
+    rendered = rendered.replace("{{DAILY_SUMMARY}}", summary.strip() or SUMMARY_FALLBACK_TEXT)
     rendered = rendered.replace("{{NATIONAL_TABLE_ROWS}}", national_rows or "(データがありません)")
     rendered = rendered.replace("{{LOCAL_TABLES}}", local_tables)
     rendered = rendered.replace("{{TOP_ARTICLES}}", top_articles_section)

@@ -41,6 +41,20 @@ def is_allowed(url: str, user_agent: str, robots_txt_url: str | None = None) -> 
         return False
 
 
+def get_crawl_delay(url: str, user_agent: str, robots_txt_url: str | None = None) -> float | None:
+    """robots.txtが指定するCrawl-Delay(秒)を返す。未指定または取得失敗時はNone。
+
+    設定値と突き合わせて厳しい方を採用するために使う(相手のrobots.txtが待機時間を
+    引き上げた場合に、こちらの設定を直さなくても自動で追従できる)。
+    """
+    try:
+        parser = _fetch_robots_parser(robots_txt_url or _derive_robots_url(url))
+        delay = parser.crawl_delay(user_agent)
+    except Exception:
+        return None
+    return float(delay) if delay is not None else None
+
+
 def assert_allowed(url: str, user_agent: str, robots_txt_url: str | None = None) -> None:
     """Disallow(または取得失敗)の場合 RobotsDisallowedError を送出する。"""
     if not is_allowed(url, user_agent, robots_txt_url):
