@@ -1,5 +1,4 @@
 date,collected_at,category,region,newspaper,headline,url,source_url,status,error_message,topic
-2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,読売新聞,,,,skipped,robots.txtが一般クローラー/AI系UAを名指しで包括的にDisallow。2024年1月のToS改定で自動収集・生成AI学習目的の収集を明示的に禁止しているため、自動取得の対象外とする。,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,朝日新聞,病室での「入学式」直後に娘は亡くなった 「病気に勝つ」父は米国へ,http://www.asahi.com/articles/ASV7P03NTV7PUTIL00TM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,朝日新聞,臓器移植あっせん事件、別の患者からも対価か 元NPO理事再逮捕へ,http://www.asahi.com/articles/ASV7W1T3DV7WUTIL00CM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,朝日新聞,海保、同志社国際高校を家宅捜索 遺族が告訴、辺野古事故,http://www.asahi.com/articles/ASV7W4CBGV7WUTIL02GM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
@@ -60,7 +59,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,毎日新聞,外部販売ルール緩和、アップルとグーグルが方針転換 公取委確認,https://mainichi.jp/articles/20260727/k00/00m/020/325000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,毎日新聞,中国半導体大手CXMTが上場 生産力増強で米韓3強追う,https://mainichi.jp/articles/20260727/k00/00m/020/316000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,毎日新聞,最低賃金、全国平均で時給1100円台後半なるか 労使に隔たりも,https://mainichi.jp/articles/20260727/k00/00m/020/307000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
-2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,日本経済新聞,,,,skipped,公式無料RSSなし。著作権ページで自動収集を明確に禁止しているため、自動取得の対象外とする。,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,産経新聞,高市首相、維新への義理と傾斜 衆院選圧勝で自信、連立合意の忠実な実行に自民の不満募る,https://www.sankei.com/article/20260727-3LBDMVYAYBNCZFSQOLZBBNDMYY/,https://www.sankei.com/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,産経新聞,政府が外国と疑われる不審アカウント把握 高市首相「選挙への影...,https://www.sankei.com/article/20260318-U6PW4754BNE3XKFYBTQWPKM65A/,https://www.sankei.com/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,産経新聞,衆院選で国会議員の部屋割り一変 小沢、岡田、安住氏ら自民に明...,https://www.sankei.com/article/20260304-C5JCVB743FEVZMNEAU76GY4VNQ/,https://www.sankei.com/,ok,,
@@ -121,9 +119,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,中日新聞,【動画】賤機山に降り注ぐ緑 臨済寺庭園(静岡市) 中部の庭園特集「庭~THE GARDEN」,https://www.chunichi.co.jp/article/1280655,https://www.chunichi.co.jp/,ok,,video
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,中日新聞,【動画】三重・紀北町できほく燈籠祭 大仕掛け「彩雲孔雀」などに歓声,https://www.chunichi.co.jp/article/1286417,https://www.chunichi.co.jp/,ok,,video
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,中日新聞,地上に舞い降りたUFO!? 愛西市の田園地帯に防災倉庫,https://www.chunichi.co.jp/article/1286615,https://www.chunichi.co.jp/,ok,,tag_photo
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,北海道,北海道新聞,,,,skipped,公式RSSはあるが、見出し・本文の公開(再配信)を認めない旨の規約があるため自動取得の対象外とする。,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,宮城,河北新報,,,,skipped,robots.txtが/rss/をDisallowしておりRSS購読不可。私的利用限定・二次利用禁止の規約があるため自動取得の対象外とする。,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,新潟,新潟日報,,,,skipped,利用規約でデータマイニング・テキストマイニング・AI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,長野県の夏休み、やっぱり短かった 近隣8県と比較、浮かんだ“信州ならでは”の事情07/27 06:05冷涼とされてきた信州の夏休みは短い。かつては盆明けに多くの公立小中学校で2学期が始まった。その後、学習指導要領改定による授業時間数削減や温暖化の影響で長期化。だが今年の夏休みを近隣8県と比べると、最大で15日間も短かった。夏休みが始まったタイミングに合わせ、事情を探った。(木暮 有紀子),https://www.shinmai.co.jp/news/article/gf01d9iqrn2374791srbsrf0,https://www.shinmai.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,諏訪湖スマートIC開通1年、残る安全面の課題 「アクセス県道が諏訪側に通じれば...」願う地元07/28 06:02,https://www.shinmai.co.jp/news/article/gf01d9jjqabobcmkr5fn01eg,https://www.shinmai.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,長野県と新潟県境の「信越トレイル」で熊の生態を調査 利用者減を受け、判断材料提供へ07/28 06:01,https://www.shinmai.co.jp/news/article/gf01d9jkkrrobcmkr5fn06lg,https://www.shinmai.co.jp/,ok,,
@@ -144,7 +139,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,学校登山を手伝いに北アルプスの女王・燕岳へ 大きな事故なく下山して思ったこと長野県社会信州の山ウェブオリジナル北アルプスタカシが行く安曇野市07/23 18:00,https://www.shinmai.co.jp/news/article/gf01d9g8c5bbbaif2vd4sps0,https://www.shinmai.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,「まっちゃん」の足跡を追って長野県くらし・話題東信ウェブオリジナルイブニング信毎コラム「硬面軟面」上田市07/23 06:05,https://www.shinmai.co.jp/news/article/gf01d9gbmkrbbaif2vd4tnbg,https://www.shinmai.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,長野,信濃毎日新聞,【4コマ】「長野県民の海」で運命の出会い!?【ここがわからんばい!信州】長野県主要くらし・話題ウェブオリジナルここがわからんばい!信州07/21 11:30,https://www.shinmai.co.jp/news/article/gf01d9fbqjjbbaif2vd4nbu0,https://www.shinmai.co.jp/,ok,,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,静岡,静岡新聞,,,https://www.at-s.com/,skipped,robots.txtによりアクセスが許可されていません: https://www.at-s.com/ (UA=japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)),
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,京都,京都新聞,人事異動ポータル,https://www.kyoto-np.co.jp/articles/-/1250583,https://www.kyoto-np.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,京都,京都新聞,速報NY株続伸、262ドル高,https://www.kyoto-np.co.jp/articles/-/1760047,https://www.kyoto-np.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,京都,京都新聞,京都市北区の大学が持つ「笑い」の力は「ノーベル化学賞級」? タレント多数輩出、その理由を探る4:50市内1965年に天文学者の荒木俊馬(1897-1978)が創立し、昨年で60周年を迎えた京都産業大学(京都市北区)。特集「大学解剖 京産大編」...,https://www.kyoto-np.co.jp/articles/-/1756949,https://www.kyoto-np.co.jp/,ok,,
@@ -185,9 +179,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,兵庫,神戸新聞,神戸市垂水区の「危ない交差点」 住宅街につながる路地、鋭角で交差 高い急ブレーキ発生率,https://www.kobe-np.co.jp/news/richb/202607/0020617389.shtml,https://www.kobe-np.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,兵庫,神戸新聞,<近日公開 7月のオススメ記事>王位戦、4コマ漫画「ねえ、ぴよちゃん」、高校野球兵庫大会...etc.,https://www.kobe-np.co.jp/news/richa/202606/0020513434.shtml,https://www.kobe-np.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,兵庫,神戸新聞,明石への思いを込めた新曲、Masacoさんが披露 8月16日、子午線ホールでコンサート,https://www.kobe-np.co.jp/news/akashi/202607/0020640089.shtml,https://www.kobe-np.co.jp/,ok,,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,広島,中国新聞,,,,skipped,利用規約でAI開発目的のディープラーニング等の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,福岡,西日本新聞,,,,skipped,公式RSSはあるが、利用規約でAI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,熊本,熊本日日新聞,,,https://kumanichi.com/rss.xml,error,RSSの取得/パースに失敗しました: https://kumanichi.com/rss.xml (<unknown>:5:2: mismatched tag),
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,鹿児島市の貼り絵作家・横手さん、長島美術館で企画展――なつかしいおもちゃ、レトロなたばこ屋...昭和にタイムスリップ鹿児島市の貼り絵作家・横手順子さん(56)の企画展が、同市の長島美術館で開かれている。「昭和へのオマージュ」をメインテーマに、立体的な貼り絵や消しゴムはんこなど手仕事ならではの温かみあふれる約100点が並ぶ。 会場入り口にレトロなたばこ屋のオブジェが置かれ、昭和のおもちゃや電化製品などの作品を展示する一角を設ける。横手さんは粘土型に和紙を貼り重ねて作る「張り子」にも取り組んでおり、「人工7月27日 14:30,https://373news.com/news/local/detail/237055/,https://373news.com/,ok,,local
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,島津家と西本願寺、浄土真宗禁制は「門徒の団結力を恐れたから」 尚古集成館元館長が歴史の背景ひもとく7月27日 20:30,https://373news.com/news/local/detail/237113/,https://373news.com/,ok,,local
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,アミュプラザ鹿児島1階 開業以来初の大幅改装 フロア面積の6割対象 27年春に完成7月27日 20:10,https://373news.com/news/local/detail/237132/,https://373news.com/,ok,,local
@@ -208,7 +199,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,10ヒマワリ6万6000本見頃――鹿児島市都市農業センター 25・26日、8月2日に「ひまわりマルシェ」...キッチンカー出店、地元野菜販売,https://373news.com/news/local/detail/237045/,https://373news.com/,ok,,local
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,「あって当然」「心の中に踏み込むようだ」...国会で審議続く国旗損壊罪 「日の丸のふるさと」鹿児島の人たちの思いはさまざま7月6日 14:48,https://373news.com/lineup/kotimina/detail/236152/,https://373news.com/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,鹿児島,南日本新聞,【独自】外国勢力の不当干渉に刑罰 自民、法制化求める提言へ7月27日 21:00,https://373news.com/news/national/detail/2026072701001434/,https://373news.com/,ok,,national
-2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,沖縄,琉球新報,,,,skipped,利用規約で複製・複写・送信・頒布・蓄積・転載等を会社の承認なく行うことを広範に禁止しているため自動取得の対象外とする。,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,沖縄,沖縄タイムス,国民会議、消費減税の集約を断念 首相が近く是非判断 飲食料品1%案が有力7月28日 4:47消費税飲食料品の消費税減税を議論する超党派の社会保障国民会議は27日の実務者会議で、意見集約を断念し、高市早苗首相に減税の是非の判断を委ねることで合意した。,https://www.okinawatimes.co.jp/articles/-/1889557,https://www.okinawatimes.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,沖縄,沖縄タイムス,ヤンバルクイナ、名護で2年連続確認 沖縄県「個体数増加では」 マングース防除策奏功か5:27#ヤンバルクイナ,https://www.okinawatimes.co.jp/articles/-/1889560,https://www.okinawatimes.co.jp/,ok,,
 2026-07-28,2026-07-28T06:02:24.770311+09:00,地方紙,沖縄,沖縄タイムス,最低賃金1100円台後半か 国の審議会、物価高配慮で引き上げへ5:06有料#最低賃金,https://www.okinawatimes.co.jp/articles/-/1889559,https://www.okinawatimes.co.jp/,ok,,
@@ -676,3 +666,197 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-07-28,2026-07-28T06:02:24.770311+09:00,その他メディア,,山口新聞,【山口県】首長の予定/2026年7月28日,https://yama.minato-yamaguchi.co.jp/e-yama/articles/108847,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
 2026-07-28,2026-07-28T06:02:24.770311+09:00,その他メディア,,山口新聞,【山口県】知事の予定/2026年7月28日,https://yama.minato-yamaguchi.co.jp/e-yama/articles/108846,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
 2026-07-28,2026-07-28T06:02:24.770311+09:00,全国紙,全国,朝日新聞,自分ならどちらを選択? 高校バレーに新風、タイプ違う2チーム誕生,https://www.asahi.com/articles/ASV7H1HJ8V7HPTQP013M.html,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,読売新聞,,,,skipped,robots.txtが一般クローラー/AI系UAを名指しで包括的にDisallow。2024年1月のToS改定で自動収集・生成AI学習目的の収集を明示的に禁止しているため、自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,毎日新聞,窃盗容疑で逮捕のさいたま市協会職員 前職で20万円私的流用か,https://mainichi.jp/articles/20260727/k00/00m/040/266000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,,,,skipped,公式無料RSSなし。著作権ページで自動収集を明確に禁止しているため、自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,<産経抄>二人のファーストドーター,https://www.sankei.com/article/20260728-MBV467BDV5OEVF6DQMND4VJNSI/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,<主張>特別国会の閉幕 「国の基本」で前進あった,https://www.sankei.com/article/20260728-KLLIWPBJCZJNPDEHAQ27TG7YCU/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,「声」の法的保護を明記 AIで権利侵害事例 法務省検討会が指針案,https://www.sankei.com/article/20260728-7JFE76W4YRJP3IDKRMHLXAU6PE/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,権利侵害疑い、2カ月で4万件超 「リソース不足」事務所側把握に課題も,https://www.sankei.com/article/20260728-ERE4YW4JEJLAVK4WPJLSOD57G4/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,NiziU・RIO、活動休止を発表 体調不良か,https://www.sankei.com/article/20260727-MBUPYVNNH5IYJORIIN7WUKAUMQ/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,<主張>成田で土地収用 国際空港の整備を着実に,https://www.sankei.com/article/20260728-XKGWIN6NMJORLKFXXQAQ5HENPI-2/,https://www.sankei.com/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,八王子実践を初の甲子園に導いた「ロバートさん」の教え...「ないないづくし」でも向上心忘れず旋風を起こす,https://www.tokyo-np.co.jp/article/504095,https://www.tokyo-np.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,足を骨折した記者は想像して震えた...「もし災害が来たら」 支援は受けられる?調べてみた結果は,https://www.tokyo-np.co.jp/article/504132,https://www.tokyo-np.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,「核戦力に触れざるを得ない」小泉進次郎防衛相の発言が波紋 安保3文書改定を前に踏み込んだ意図は何か,https://www.tokyo-np.co.jp/article/504135,https://www.tokyo-np.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,北海道,北海道新聞,,,,skipped,公式RSSはあるが、見出し・本文の公開(再配信)を認めない旨の規約があるため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,宮城,河北新報,,,,skipped,robots.txtが/rss/をDisallowしておりRSS購読不可。私的利用限定・二次利用禁止の規約があるため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,新潟,新潟日報,,,,skipped,利用規約でデータマイニング・テキストマイニング・AI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,長野,信濃毎日新聞,10周辺県より最大15日も短い長野県の夏休み 昔より長くなったが、これ以上延ばしにくい理由,https://www.shinmai.co.jp/news/article/gf01d9iv3ba374791srbtkf0,https://www.shinmai.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,長野,信濃毎日新聞,暑すぎる夏に新たな呼称が誕生 40度以上の「酷暑日」にどう対応するか長野県社会気象・災害ウェブオリジナルイブニング信毎語る@信州長野地方気象台07/21 06:02,https://www.shinmai.co.jp/news/article/gf01d9bo84jbbaif2vd47bf0,https://www.shinmai.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,長野,信濃毎日新聞,入山者であふれる夏の上高地 登山ガイドが教える現地で困らない役立ちアイテム長野県社会信州の山ウェブオリジナルイブニング信毎北アルプス小谷村タカシが行く松本市07/20 08:00,https://www.shinmai.co.jp/news/article/gf01d9eb9jtnt8tr77sesqvg,https://www.shinmai.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,静岡,静岡新聞,,,https://www.at-s.com/,error,405 Client Error: Not Allowed for url: https://www.at-s.com/,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,京都,京都新聞,速報NY円、163円70~80銭,https://www.kyoto-np.co.jp/articles/-/1760064,https://www.kyoto-np.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,,,,skipped,利用規約でAI開発目的のディープラーニング等の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,福岡,西日本新聞,,,,skipped,公式RSSはあるが、利用規約でAI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,NY円、163円70~80銭,https://kumanichi.com/articles/2018417,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,NY原油大幅続落、82ドル台,https://kumanichi.com/articles/2018416,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,NY株続伸、262ドル高,https://kumanichi.com/articles/2018414,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,為替相場 28日(日本時間 6時),https://kumanichi.com/articles/2018370,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,中国、唐山地震から50年,https://kumanichi.com/articles/2018415,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,臓器あっせん疑い再逮捕へ,https://kumanichi.com/articles/2018406,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,米の麻薬船攻撃、効果限定的か,https://kumanichi.com/articles/2018413,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,千葉県警「踊ってみた動画」話題,https://kumanichi.com/articles/2018411,https://kumanichi.com/rss.xml,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,鹿児島,南日本新聞,強豪率い21年 春夏7度、甲子園に導く 鹿児島実・宮下監督が辞任へ7月28日 06:30,https://373news.com/news/local/detail/237143/,https://373news.com/,ok,,local
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,鹿児島,南日本新聞,10「煙が上がっている」近くの住民が119番...住家の2階部分焼く 霧島市,https://373news.com/news/local/detail/237034/,https://373news.com/,ok,,local
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,鹿児島,南日本新聞,NY原油大幅続落、82ドル台 米イランの攻撃中断受け7月28日 06:25,http://373news.com/news/national/detail/2026072801000077/,https://373news.com/,ok,,national
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,沖縄,琉球新報,,,,skipped,利用規約で複製・複写・送信・頒布・蓄積・転載等を会社の承認なく行うことを広範に禁止しているため自動取得の対象外とする。,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,沖縄,沖縄タイムス,NY円、163円70~80銭6:45#全国の経済,https://www.okinawatimes.co.jp/articles/-/1889606,https://www.okinawatimes.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,沖縄,沖縄タイムス,NY原油大幅続落、82ドル台 米イランの攻撃中断受け6:40#イラン情勢,https://www.okinawatimes.co.jp/articles/-/1889605,https://www.okinawatimes.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,沖縄,沖縄タイムス,【沖縄の天気】7月28日から29日 沖縄本島地方・宮古島地方・八重山地方・大東島地方6:24#天気,https://www.okinawatimes.co.jp/articles/-/1889604,https://www.okinawatimes.co.jp/,ok,,
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,【動画】Pickup NEWS(7月28日),https://news.web.nhk/newsweb/na/na-k10015187471000,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,アサ芸プラス,モバイルバッテリーの「新たな大問題」実はたった10分の1「容量偽装」の落とし穴と「機内持ち込み」審査,https://www.asagei.com/excerpt/348847,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,集英社オンライン,〈支持率急落でも「原因は分からない」〉高市総理に党内から不満噴出...8月内閣改造で囁かれる「維新議員入閣」が新たな火種に,https://shueisha.online/articles/-/258235,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,"“ニセ社長詐欺""で現金9600万円だまし取られる 社長名乗る人物から「振込を優先して」とメッセージ 山口市の法人が被害",https://www.fnn.jp/articles/-/1083043,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,「少しなら大丈夫だと思った」公立病院の職員が酒気帯び運転で事故 自宅で飲酒後車を運転 広島・尾道市,https://www.fnn.jp/articles/-/1083042,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ポストセブン,《鹿児島5歳男児不明・現場のいま》「お客さまは例年の3分の1に...」現場温泉施設が明かした苦悩と、あえて過剰な対策をしない理由「窓を出られないような固定化はしない」,https://www.news-postseven.com/archives/20260728_2123241.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,毎日新聞,「隠せるわけがない」合致した2人の供述 ロッキード事件50年,https://mainichi.jp/articles/20260727/k00/00m/040/265000c,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ポストセブン,"金銭授受問題に揺れる“福岡県政のドン""蔵内勇夫・県議会議長に新疑惑浮上 地元に整備した筑後広域公園の指定管理者は身内企業、利益相反の可能性",https://www.news-postseven.com/archives/20260728_2122755.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ポストセブン,【福岡県議会2000万円金銭授受疑惑】告発者の吉松源昭県議を直撃 「麻生太郎氏が渦中の県議会議長の失脚を狙った」との陰謀説への見解は,https://www.news-postseven.com/archives/20260728_2122754.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,小中学生の柔道・剣道大会に約2000人が参加 筒井警視総監「心身ともに強くたくましく成長を」,https://www.fnn.jp/articles/-/1083041,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,東北~九州 局地的に非常に激しい雨 西日本中心に危険な暑さ,https://news.web.nhk/newsweb/na/na-k10015187561000,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,高校で写真部の秋篠宮さま、ご夫妻で高校生の作品を鑑賞 撮影方法などたずね笑顔で交流 全国高校総合文化祭,https://www.fnn.jp/articles/-/1083040,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,アサ芸プラス,札幌ドーム「黒字化」を支える「宗教大会からYOASOBI公演まで」稼働率アップはこれからも続くのか,https://www.asagei.com/excerpt/348846,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,木造2階建てアパートで火災 火元とみられる部屋から男性遺体 東京・立川市,https://www.fnn.jp/articles/-/1083039,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,大麻所持疑いで中3男子生徒(15)を逮捕 自宅から乾燥大麻や大麻タバコを押収 仙台市,https://www.fnn.jp/articles/-/1083034,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,【アイヌ民族の遺骨収集問題】北大総長「心を痛められた全てのアイヌの人々に対して、心からおわび申し上げます」北大は1000体を超える遺骨を保管〈北海道〉,https://www.fnn.jp/articles/-/1083037,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,「13秒、前向かずに運転できますか?」新名神高速で6人が死亡した追突事故 遺族たちが初めて明かした胸の内,https://www.fnn.jp/articles/-/1083035,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,「数値基準超え」で全国初 危険運転致死疑いで62歳男を逮捕 飲酒運転で青信号の横断歩道わたる女性を死亡させた疑い 東京・江東区,https://www.fnn.jp/articles/-/1083033,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,日刊ゲンダイ,高市首相は悲願に掲げた飲食料品の消費減税「公約」を自ら骨抜き...国民との約束を反故でもへっちゃらの厚顔,https://www.nikkan-gendai.com/articles/view/news/390917,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,日刊ゲンダイ,カルト体質の高市早苗、バカがバレた小泉進次郎、自己愛の河野太郎ならカブトムシの方がマシ,https://www.nikkan-gendai.com/articles/view/news/390676,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,日刊ゲンダイ,内閣改造へ維新がポスト要求...大阪都構想に前のめり「馬場総務相」爆誕に自民が手ぐすね引く理由,https://www.nikkan-gendai.com/articles/view/news/390885,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,"“焼果""や“グリーンバック""が次々に...連日の猛暑で農園のトマトに『異変』ニワトリも“熱中症""卵は一回り小さく",https://www.fnn.jp/articles/-/1083026,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,日刊ゲンダイ,なぜイランはダメでサウジはいいのか? 米核合意が生む「新たな脅威」,https://www.nikkan-gendai.com/articles/view/news/390900,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,テレビ朝日,アパート火災で男性遺体 32歳父親と連絡取れず 東京・立川市,https://news.tv-asahi.co.jp/news_society/articles/000522214.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,共同通信,臓器あっせん疑い再逮捕へ 患者から850万円受領か,https://www.47news.jp/14694923.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,共同通信,第五福竜丸、絵本で伝える 黒田征太郎さん、体験交え,https://www.47news.jp/14695068.html,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,欧州株式、続伸 米イランの応酬停止で原油価格が値下がり、投資家心理が改善,https://www.sankei.com/article/20260728-AETABCUVVRIT7JSI6Y4NCEZ2WY/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,シカゴ穀物市場 大豆、トウモロコシ、小麦が軒並み下落 中東情勢緩和に期待感,https://www.sankei.com/article/20260728-2J6HSDLKARLX3CTVNU546MTGHA/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,英首相「ウクライナと100%共にある」支援継続を強調,https://news.web.nhk/newsweb/na/na-k10015187661000,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,NY円、163円台後半 前週末比12銭円高ドル安 米イラン情勢受けドル売り円買い,https://www.sankei.com/article/20260728-NQP5DXADSZL77IG2SNNPV5DMNM/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,オーストリア、兵役期間を3カ月延長 ロシア対抗で防衛力強化にかじ,https://www.nikkei.com/article/DGXZQOGR280330Y6A720C2000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,イラン、対米交渉否定 協議要請報道は「米国の捏造」 ペルシャ湾岸諸国とは「敵意なし」,https://www.sankei.com/article/20260728-XJ76BSSXOBJFXKT3OR7UJBVJME/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ブラジル日報,第2アリアンサ=鳥取村入植100周年を祝う=先人の開拓精神を次世代へ継承=約600人集い日伯の絆を再確認,https://brasilnippou.com/ja/articles/260728-21colonia,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ブラジル日報,第2アリアンサ移住地誕生=鳥取県が描いた計画移住の理想郷,https://brasilnippou.com/ja/articles/260728-23colonia,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ブラジル日報,死線を乗り越え原野耕して百年=アリアンサ開拓者・水村義男さん=未来へ残した最大の財産は「教育」,https://brasilnippou.com/ja/articles/260728-22colonia,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ブラジル日報,マイゾウ・メーノス(まあーまあー)の世界ブラジル(71)=サンパウロ 梅津久,https://brasilnippou.com/ja/articles/260728-31colonia,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ブラジル日報,ミレイ=ルーラに「社会主義のクズ」発言=伯亜外交危機勃発、大使召喚=対トランプ戦略が南米分断,https://brasilnippou.com/ja/articles/260728-11brasil,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,ニューズウィーク,進む「同盟国」のロシア離れ...「とある国」が行った、プーチンがうなだれる程の厳しい諫言の内容,https://www.newsweekjapan.jp/articles/-/329476,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,Forbes JAPAN,橋を破壊するロ・ウクライナ両軍、膠着長期化を想定か 大規模な機動・突破はますます困難に,https://forbesjapan.com/articles/detail/101759,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,朝日新聞,はるかなラテンの国の歌、日本で知られたあのメロディー 特派員メモ,https://www.asahi.com/articles/ASV7S5FHRV7SUHBI01BM.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,トランプ氏、トルコのF35購入計画復帰に「問題なし」 イスラエル首相は反対,https://www.sankei.com/article/20260728-45JGK2I4YJKMBKKODHP2TBEWNU/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,TBSテレビ,"トランプ政権の“麻薬運搬船""への攻撃 コカインの流入減に繋がらず 米紙報道 密輸組織は対策を強化",https://newsdig.tbs.co.jp/articles/-/2830324?display=1,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,テレビ朝日,"パリ路上で“両手に刃物男""が妊婦含む女性3人を襲撃 拘束時「アッラーに命じられた」",https://news.tv-asahi.co.jp/news_international/articles/000522222.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,VIETJO,初のベトナム産アルミインゴット誕生、冶金産業の歴史的節目,https://www.viet-jo.com/news/economy/260727150019.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,NY原油先物相場 大幅続落、82ドル台 米イランの攻撃中断が影響し、売り注文膨らむ,https://www.sankei.com/article/20260728-SEQ3Q3K3S5JRRLAVPMTZ6BI3LI/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,ロシアの対イラン軍事支援は「ほとんど影響ない」 トランプ氏、深刻視せず,https://www.sankei.com/article/20260728-2JF5WP5HXFMLLASZDLWVBAMVN4/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,"トランプ大統領 “金利引き下げられるべき"" FRB会合前に圧力",https://news.web.nhk/newsweb/na/na-k10015187671000,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,トランプ氏「問題起きれば対処せざるを得ない」親イランのフーシ派とサウジ応酬で,https://www.sankei.com/article/20260728-4CICALUOXBNCVESYMKQNG6Y37Y/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,TBSテレビ,消防士足りず地元住民らが自ら消火活動... フランス南西部で続く山火事 火元の街は180軒以上が焼失 今夏4度目の熱波襲来でさらなる拡大の懸念も,https://newsdig.tbs.co.jp/articles/-/2830318?display=1,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,テレビ朝日,原油先物価格が急落 米イラン戦闘停止で NYダウも一時600ドル高,https://news.tv-asahi.co.jp/news_international/articles/000522221.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,JBpress,"OpenAI最新モデル“暴走""の事実が突き付けた現実、AIの進化がサイバーセキュリティにもたらす破滅的リスク",https://jbpress.ismedia.jp/articles/-/96146,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,テレビ朝日,フーシ派の海上封鎖で影響広がる 日本へのタンカーも喜望峰を迂回,https://news.tv-asahi.co.jp/news_international/articles/000522212.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,テレビ朝日,スペイン山火事 再び熱波予想 火災の危険性「極めて高い」,https://news.tv-asahi.co.jp/news_international/articles/000522213.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,Pars Today,シオニスト評論家;「イスラエルはイランとの長期的な対決に耐える力はない」,https://parstoday.ir/ja/news/west_asia-i133856,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,トランプ氏「FRBは政治的」 議長周辺への批判で利上げ論台頭に警戒,https://www.nikkei.com/article/DGXZQOGN27A3H0X20C26A7000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,共同通信,タイで国籍不正取得が横行 子1400人、中国人疑い,https://www.47news.jp/14695055.html,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,NVIDIA、OpenAIのデータセンター利用に41兆円資金保証 WSJ報道,https://www.nikkei.com/article/DGXZQOGN279RH0X20C26A7000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,NVIDIA、サイバー防衛でオープン型AI推進組織 GPT「暴走」事故受け,https://www.nikkei.com/article/DGXZQOGN279VH0X20C26A7000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,日本経済新聞,日本のGDP、レアアース止まれば2.3%減 主要国で最大とIMF試算,https://www.nikkei.com/article/DGXZQOGN2700G0X20C26A7000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,辺野古沖転覆事故 遺族が校長や船長所属団体共同代表など告訴,https://news.web.nhk/newsweb/na/nb-5090036146,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,辺野古沖転覆事故 遺族が校長や船長所属団体共同代表など告訴,https://news.web.nhk/newsweb/na/nb-2010025324,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,熱中症警戒アラートが発表されています!,https://www.saga-s.co.jp/articles/-/1758190,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,岐阜 「クビアカツヤカミキリ」確認相次ぐ 県が駆除呼びかけ,https://news.web.nhk/newsweb/na/nb-3080019406,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,辺野古沖転覆事故 遺族が校長や船長所属団体共同代表など告訴,https://news.web.nhk/newsweb/na/nb-2000104496,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,"“連携協約で副首都指定目指すのが有力な選択肢""大阪吉村知事",https://news.web.nhk/newsweb/na/nb-2000104492,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,伊万里市の住宅火災 「家族仲よかった」突然の別れに関係者悲痛,https://www.saga-s.co.jp/articles/-/1758120,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民友新聞,肝臓病治療薬製造へ、白河のEAファーマ福島事業所 生産棟建設で地鎮祭,https://www.minyu-net.com/news/detail/2026072807262752858,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,徳島県内での犬の殺処分 昨年度は初のゼロに,https://news.web.nhk/newsweb/na/nb-8020026581,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,名鉄西尾線 運転再開,https://news.web.nhk/newsweb/na/nb-3000050073,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,JR四国「お盆期間」の指定席予約率 去年上回る29.4%,https://news.web.nhk/newsweb/na/nb-8030023965,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,中日新聞,電子妨害装置技術を共有 英ウクライナ首脳初会談,https://www.chunichi.co.jp/article/1287580,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,電子妨害装置技術を共有,https://www.chugoku-np.co.jp/articles/-/869938,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,朝日放送,原付きバイクの16歳高校生 出合い頭に車と衝突し死亡 車運転の男逮捕 京都・木津川市,https://www.asahi.co.jp/webnews/pages/abc_61782.html,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,"高知 “初めての場所苦手な人にも"" 文化施設のガイドブック",https://news.web.nhk/newsweb/na/nb-8010027211,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,「都内産エコ農産物」 麻布十番にマルシェ 来月6日オープン,https://www.tokyo-np.co.jp/article/504164,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,松山 ハワイ大の学生と伊予高校生徒が交流 互いの文化を紹介,https://news.web.nhk/newsweb/na/nb-8000026663,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,JR四国「お盆期間」の指定席予約率 去年上回る29.4%,https://news.web.nhk/newsweb/na/nb-8000026660,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,カープ遠藤淳志投手 オールスター初出場「パ・リーグの強打者にも得意のストレートで勝負を」山内泰幸,https://www.fnn.jp/articles/-/1083046,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,歌舞伎町の「駆け込み寺」 夏休み24時間相談対応 簡易ベッドも用意「困ったらいつでも」,https://www.tokyo-np.co.jp/article/504160,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,お盆の新幹線 混雑ピーク下り8月8日上り16日 JR東日本,https://news.web.nhk/newsweb/na/nb-6080030555,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,お盆の新幹線 混雑ピーク下り8月8日上り16日 JR東日本,https://news.web.nhk/newsweb/na/nb-6050034086,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福井新聞,福井県内で7月28日昼前から落雷や竜巻に注意、警報級の大雨恐れも 予想降水量一覧 福井地方気象台発表,https://www.fukuishimbun.co.jp/articles/-/2661223,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,広島 2つの大学法人が連携し学生確保へ 人口減踏まえ協定,https://news.web.nhk/newsweb/na/nb-4000035163,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,町田の草場さんチュニジアへ 海外協力隊で2年間 市長訪問「草の根交流したい」,https://www.tokyo-np.co.jp/article/504158,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,お盆の新幹線 混雑ピーク下り8月8日上り16日 JR東日本,https://news.web.nhk/newsweb/na/nb-6040030894,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,中国地方5県に熱中症警戒アラート 対策徹底を 雷雨にも注意,https://news.web.nhk/newsweb/na/nb-4060026912,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,お盆の新幹線 混雑ピーク下り8月8日上り16日 JR東日本,https://news.web.nhk/newsweb/na/nb-6020027765,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,中日新聞,オープンAIに信用保証か 米エヌビディア、拠点確保,https://www.chunichi.co.jp/article/1287582,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,オープンAIに信用保証か,https://www.chugoku-np.co.jp/articles/-/869937,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,お盆の新幹線 混雑ピーク下り8月8日上り16日 JR東日本,https://news.web.nhk/newsweb/na/nb-6010028652,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,中国地方5県に熱中症警戒アラート 対策徹底を 雷雨にも注意,https://news.web.nhk/newsweb/na/nb-4040023844,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,まいどなニュース,日本と言えば...持ってきてくれるよね? オランダの学校ピクニックで母は朝6時から手作り弁当 「きれいすぎ」「お寿司屋さんになれるよ!」,https://maidonanews.jp/article/16741970,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,伊万里市の住宅火災 一家襲った火災、現場騒然 のどかな地域、住民に衝撃,https://www.saga-s.co.jp/articles/-/1758098,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,中国地方5県に熱中症警戒アラート 対策徹底を 雷雨にも注意,https://news.web.nhk/newsweb/na/nb-4030025357,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,中日新聞,ポルシェが5千人を追加削減 2035年までに、競争力強化,https://www.chunichi.co.jp/article/1287581,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,中国地方5県に熱中症警戒アラート 対策徹底を 雷雨にも注意,https://news.web.nhk/newsweb/na/nb-4020027156,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,彫刻家平櫛田中が生前所蔵の1500年余前の石像を修復 井原,https://news.web.nhk/newsweb/na/nb-4020027155,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,ポルシェが5千人を追加削減,https://www.chugoku-np.co.jp/articles/-/869934,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,中国地方5県に熱中症警戒アラート 対策徹底を 雷雨にも注意,https://news.web.nhk/newsweb/na/nb-4000035166,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,沖縄,沖縄タイムス,玉城知事 那覇市長選で立民・社大の知念覚氏推薦に理解 「丁寧な手続きを踏まえた判断」,https://www.okinawatimes.co.jp/articles/-/1889466,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民報,果物王国のモモ守れるか 福島県内で盗難相次ぎ悲憤 見回りなど自衛に限界,https://www.minpo.jp/articles/-/191046,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,東北自動車道 通行止め解除,https://news.web.nhk/newsweb/na/nb-6050034085,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民友新聞,ビーエイブル、29日に東証スタンダード上場 廃炉受託企業「浜通りの活性化に」,https://www.minyu-net.com/news/detail/2026072807210052857,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,山陽新聞,大森俊之さん率いる音楽集団来演 8月8日、浅口市制20年記念演奏会,https://www.sanyonews.jp/article/1961584/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,熊本の「松橋事件」国に加え県の責任も認める判決 福岡高裁,https://news.web.nhk/newsweb/na/nb-5010034455,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,東京新聞,〈私の東京物語〉難波弘之(1) 巣鴨で産声を上げる,https://www.tokyo-np.co.jp/article/504163,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民報,インターハイ・バド女子複 上野・伴野組(ふたば未来)優勝,https://www.minpo.jp/articles/-/190904,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,熱中症警戒アラート情報,https://www.saga-s.co.jp/articles/-/1758182,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,29日の天気(西日本),https://www.chugoku-np.co.jp/articles/-/869931,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,愛媛新聞,[経済やわらかゼミ]経済界、訪中団再開目指す,https://www.ehime-np.co.jp/article/news202607280004,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,29日の天気(東日本),https://www.chugoku-np.co.jp/articles/-/869930,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,大阪都構想「区割り」急ぐ維新 市民の関心高く 来春知事選と同日の住民投票前提で懸念も,https://www.sankei.com/article/20260728-7BQFQ5GKYJPSPMOKZULJFBAA5Q/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,世界遺産に飛鳥・藤原 守り残す営み、さらに強化を,https://www.chugoku-np.co.jp/articles/-/869738,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,朝日新聞,3連覇の健大高崎、際立つ投打の力 高校野球群馬大会を振り返る,https://www.asahi.com/articles/ASV7W3SY3V7WUHNB00PM.html,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,産経新聞,平成は遠くなりにけり...人口減少時代の「令和の合併」 茨城で起きた自治体再編論議の行方,https://www.sankei.com/article/20260728-RZIFPSBKXVPI7II3MMHXD4YZGE/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民友新聞,従業員の昼食、無償で提供...浪江の双葉不動産、冷凍宅配食で家計負担減と健康増進,https://www.minyu-net.com/news/detail/2026072807073752856,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,熊本,熊本日日新聞,熊本県に7月28日「熱中症警戒アラート」,https://kumanichi.com/articles/2018420,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,伊万里市で民家火災、4人死亡 家族4人暮らし、1階から出火か,https://www.saga-s.co.jp/articles/-/1758096,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,朝日新聞,豪雨被害の足利に全国からボランティア 復旧へ「被災者に笑顔を」,https://www.asahi.com/articles/ASV7W35XDV7WUUHB00ZM.html,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,朝日新聞,八戸に来て驚いたこと...34年後、ヴァンラーレの選手も同感,https://www.asahi.com/articles/ASV7W35LNV7WUBNB00CM.html,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,TBSテレビ,甲羅をむしってガブリ! 国の天然記念物「ケナガネズミ」がカニを食べる光景を鳥獣保護区管理員が撮影 県内初確認,https://newsdig.tbs.co.jp/articles/-/2830160?display=1,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,招待(ヒロシマ賞),https://www.chugoku-np.co.jp/articles/-/869771,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,福岡県議会 第三者委に慎重姿勢も 調査の透明性確保が焦点に,https://news.web.nhk/newsweb/na/nb-5010034452,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,"埼玉 八潮の道路陥没受けた対策 16市町が“期限内は困難""",https://news.web.nhk/newsweb/na/nb-1100023455,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福井新聞,台風13号...気象庁の予想進路、米軍・ヨーロッパの見方 日本への影響は,https://www.fukuishimbun.co.jp/articles/-/2660468,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1100023454,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1090023246,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,中日新聞,NY円、163円台後半,https://www.chunichi.co.jp/article/1287578,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1080028024,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民報,朝ドラ誘致へ推進協設置 須賀川商議所と市2029年度放送目指す 円谷英二監督と妻・マサノさん題材,https://www.minpo.jp/articles/-/190920,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1070031159,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1060022518,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ土砂災害など警戒,https://news.web.nhk/newsweb/na/nb-1050025734,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,NY円、163円台後半,https://www.chugoku-np.co.jp/articles/-/869929,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,まいどなニュース,"98円の本マグロの「頭とカマ」......がんばったら、意外な“ごちそう""に プロの技に「錬金術師だ」「夢ありすぎます」",https://maidonanews.jp/article/16738050,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福島民報,復興への思い発信決意 ナショナルサイクルルート 指定受けセレモニー 浜サイの魅力、多くの人に,https://www.minpo.jp/articles/-/190918,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,和歌山市で震度2 津波の心配なし(6:00),https://news.web.nhk/newsweb/na/nb-2000104498,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,地方紙,広島,中国新聞,NY円、163円70~80銭,https://www.chugoku-np.co.jp/articles/-/869928,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,Lmaga.jp,"『にゃんこ大戦争』と京都の“銭湯""がコラボ、府知事もメロメロに「ネコの力はすごい」限定桶も登場",https://www.lmaga.jp/news/2026/07/1082797/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,掛川 中学校で救助袋使った避難訓練 東京の小学校火災受け,https://news.web.nhk/newsweb/na/nb-3030032973,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,TBSテレビ,実在しないアフィリエイト事業を持ちかけ...計278万円をだまし取った詐欺などの疑い 男2人逮捕 20代の男性を狙って勧誘か,https://newsdig.tbs.co.jp/articles/-/2830322?display=1,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,北陸3県の在留外国人 7万1000人余 各県で前年より増加,https://news.web.nhk/newsweb/na/nb-3060023932,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,名古屋テレビ,【速報】名鉄西尾線の西尾駅~新安城駅間・上下線が運転見合わせ 午前7時ごろ運転再開見込み,https://www.nagoyatv.com/news/?id=036515,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,北陸3県の在留外国人 7万1000人余 各県で前年より増加,https://news.web.nhk/newsweb/na/nb-3050024084,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,北陸3県の在留外国人 7万1000人余 各県で前年より増加,https://news.web.nhk/newsweb/na/nb-3020028401,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ 十分注意を,https://news.web.nhk/newsweb/na/nb-1040030538,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,スペインの世界的画家 ダリの作品集めた企画展 南アルプス,https://news.web.nhk/newsweb/na/nb-1040030537,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,山梨 来春の県議会議員選挙 選挙区の議員定数を現状維持で,https://news.web.nhk/newsweb/na/nb-1040030536,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,和歌山市で震度2 津波の心配なし(6:00),https://news.web.nhk/newsweb/na/nb-2040022877,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,福井新聞,北陸地方、28日は警報級の大雨恐れ 福井・石川・富山・新潟の予想雨量一覧,https://www.fukuishimbun.co.jp/articles/-/2660744,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ 十分注意を,https://news.web.nhk/newsweb/na/nb-1030037333,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,「良寛」と交流あった人たちに焦点当てた企画展 長岡,https://news.web.nhk/newsweb/na/nb-1030037332,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,長野 軽井沢町植物園 ユウスゲやヤマユリの花が見頃,https://news.web.nhk/newsweb/na/nb-1010038982,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,NHK,関東甲信越 局地的に非常に激しい雨のおそれ 十分注意を,https://news.web.nhk/newsweb/na/nb-1010038992,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,全国紙,全国,中日新聞,NY原油大幅続落、82ドル台 米イランの攻撃中断受け,https://www.chunichi.co.jp/article/1287577,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,フジテレビ,32回続いたいたち川の灯籠流し、今年で最後 資金難と高齢化で幕を下ろす 富山大空襲の犠牲者を慰霊,https://www.fnn.jp/articles/-/1083038,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-07-28,2026-07-28T06:54:51.528191+09:00,その他メディア,,佐賀新聞,<玄海町長選・回顧>「核のごみ」論戦深まらず 現町政への評価争点に,https://www.saga-s.co.jp/articles/-/1758062,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
