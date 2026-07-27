@@ -51,4 +51,5 @@ def normalize_article(article: Article) -> Article:
         source_url=article.source_url,
         status=article.status,
         error_message=article.error_message,
+        topic=article.topic,
     )

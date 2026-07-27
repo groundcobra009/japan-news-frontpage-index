@@ -2,8 +2,10 @@ from unittest.mock import MagicMock
 
 from src.models.article import STATUS_ERROR, STATUS_OK, STATUS_SKIPPED, Article
 from src.outputs.issue_notifier import (
+    add_issue_comment,
     build_failure_issue,
     create_github_issue,
+    find_open_issue_by_title,
     get_error_newspapers,
     should_notify,
 )
@@ -75,3 +77,46 @@ def test_create_github_issue_posts_expected_payload(monkeypatch):
     assert kwargs["json"] == {"title": "件名", "body": "本文", "labels": ["bug"]}
     assert kwargs["headers"]["Authorization"] == "Bearer tok"
     mock_response.raise_for_status.assert_called_once()
+
+
+def test_find_open_issue_by_title_returns_matching_issue(monkeypatch):
+    response = MagicMock()
+    response.json.return_value = [
+        {"number": 1, "title": "別のIssue"},
+        {"number": 7, "title": "【japan-news-frontpage-index】取得失敗通知: 2026-07-21"},
+    ]
+    monkeypatch.setattr("requests.get", MagicMock(return_value=response))
+
+    found = find_open_issue_by_title(
+        "【japan-news-frontpage-index】取得失敗通知: 2026-07-21", "owner/repo", "token"
+    )
+    assert found["number"] == 7
+
+
+def test_find_open_issue_by_title_ignores_pull_requests(monkeypatch):
+    response = MagicMock()
+    response.json.return_value = [{"number": 3, "title": "同じ題名", "pull_request": {"url": "x"}}]
+    monkeypatch.setattr("requests.get", MagicMock(return_value=response))
+
+    assert find_open_issue_by_title("同じ題名", "owner/repo", "token") is None
+
+
+def test_find_open_issue_by_title_returns_none_when_absent(monkeypatch):
+    response = MagicMock()
+    response.json.return_value = []
+    monkeypatch.setattr("requests.get", MagicMock(return_value=response))
+
+    assert find_open_issue_by_title("題名", "owner/repo", "token") is None
+
+
+def test_add_issue_comment_posts_to_comments_endpoint(monkeypatch):
+    response = MagicMock()
+    post = MagicMock(return_value=response)
+    monkeypatch.setattr("requests.post", post)
+
+    add_issue_comment(7, "本文", "owner/repo", "token")
+
+    args, kwargs = post.call_args
+    assert args[0] == "https://api.github.com/repos/owner/repo/issues/7/comments"
+    assert kwargs["json"] == {"body": "本文"}
+    response.raise_for_status.assert_called_once()

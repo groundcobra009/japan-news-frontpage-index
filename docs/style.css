@@ -96,3 +96,17 @@ th {
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+.summary-box {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--link);
+  border-radius: 4px;
+  padding: 0.75rem 0.9rem;
+  margin-top: 0.75rem;
+  line-height: 1.7;
+}
+
+.archive-summary {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

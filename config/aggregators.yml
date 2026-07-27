@@ -1,0 +1,43 @@
+# ニュースアグリゲーターからの横断収集設定。
+#
+# config/newspapers.yml が「1エントリ=1新聞社」なのに対し、こちらは1エントリが
+# 多数の媒体のArticleを生成する。分けている理由は、失敗時に架空の新聞社が
+# 紙別テーブルへ混入するのを避けるため(詳細はsrc/main.pyのcollect_aggregators)。
+#
+# robots.txt遵守: news.ceek.jp は User-Agent:* に対して /search.cgi を許可しているが
+# Crawl-Delay: 600 を指定している。crawl_delay_seconds はこれに合わせること。
+# カテゴリを増やすとジョブ時間が (カテゴリ数-1) x 600秒 伸びる点に注意。
+
+aggregators:
+  - name: "Ceek.jp News"
+    key: "ceek"
+    source_type: "ceek"
+    feed_url_template: "https://news.ceek.jp/search.cgi?category_id={category_id}&feed=1"
+    robots_txt_url: "https://news.ceek.jp/robots.txt"
+    user_agent: "japan-news-frontpage-index-bot/1.0 (+https://github.com/groundcobra009/japan-news-frontpage-index)"
+    respect_robots: true
+    request_timeout_seconds: 15
+
+    # 設定値とrobots.txtの申告値のうち厳しい方を採用する(get_crawl_delay参照)。
+    crawl_delay_seconds: 600
+
+    # 取得順。カテゴリ間に待機が入るため、5カテゴリで約40分かかる。
+    # 増減はこのリストの編集のみで可能(コード修正不要)。
+    categories:
+      - "politics" # 政治
+      - "business" # 経済
+      - "national" # 社会
+      - "world" # 国際
+      - "local" # 地方・地域
+      # 既定では取得しない: it / science / sports / entertainment / etc / obituaries / triple
+
+    max_items_per_category: 100
+
+    # ceekの媒体表記 -> config/newspapers.yml の name への読み替え。
+    # 完全一致は自動解決されるため、ここには表記ゆれのみを書く。
+    # 2026-07-28時点の実フィードでは 読売新聞・朝日新聞・毎日新聞・日本経済新聞・
+    # 産経新聞・東京新聞・沖縄タイムス がいずれも完全一致で解決できたため空にしている。
+    # "47NEWS : 共同通信" のような表記は区切りの後半が自動採用される。
+    outlet_aliases: {}
+
+    enabled: true

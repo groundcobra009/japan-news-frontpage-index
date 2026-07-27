@@ -9,11 +9,16 @@
 <body>
 <header>
   <h1>Japan News Frontpage Index</h1>
-  <p>全国紙・地方紙の一面見出しアーカイブです。データは毎朝7時(JST)に自動更新されます。
+  <p>全国紙・地方紙の見出しアーカイブです。データは毎日3回(6時・12時・19時、JST)に自動更新されます。
   <a href="https://github.com/groundcobra009/japan-news-frontpage-index">GitHubリポジトリ</a></p>
 </header>
 
 <main>
+  <section id="summary">
+    <h2>本日のまとめ</h2>
+    <p id="summary-text" class="summary-box">読み込み中...</p>
+  </section>
+
   <section id="today">
     <h2>本日の主要ニュース</h2>
     <p id="today-status">読み込み中...</p>
@@ -34,6 +39,7 @@
       </label>
     </div>
     <p id="search-status"></p>
+    <p id="search-summary" class="summary-box archive-summary" hidden></p>
     <table id="search-table">
       <thead><tr><th>区分</th><th>新聞社</th><th>見出し</th></tr></thead>
       <tbody></tbody>

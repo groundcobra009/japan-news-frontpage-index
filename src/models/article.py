@@ -10,6 +10,16 @@ STATUS_OK = "ok"
 STATUS_SKIPPED = "skipped"
 STATUS_ERROR = "error"
 
+# 記事の区分。全国紙/地方紙は「紙」として各出力のテーブルに並べる対象で、
+# その他メディア(通信社・放送局・アグリゲーター経由の未登録媒体)はCSVと
+# GitHub Pagesの検索対象にはなるが、README/メール/Discordの紙別テーブルには載せない。
+CATEGORY_NATIONAL = "全国紙"
+CATEGORY_LOCAL = "地方紙"
+CATEGORY_OTHER_MEDIA = "その他メディア"
+
+# 紙別テーブルに表示する区分。
+NEWSPAPER_CATEGORIES = frozenset({CATEGORY_NATIONAL, CATEGORY_LOCAL})
+
 CSV_FIELDNAMES = [
     "date",
     "collected_at",
