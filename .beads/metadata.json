@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "jnfi",
+  "project_id": "20113f56-4b41-4c92-8e3e-1e3f83ec2269"
+}
