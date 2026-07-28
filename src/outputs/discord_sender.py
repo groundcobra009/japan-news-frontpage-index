@@ -35,7 +35,7 @@ def _representative_line(
 
 
 def build_discord_payload(
-    articles: list[Article], date: str, repo_readme_url: str, summary: str = ""
+    articles: list[Article], date: str, repo_readme_url: str, summary: str = "", time_label: str = ""
 ) -> dict:
     """Discord webhook用のJSONペイロード(embed形式)を組み立てる。"""
     extra_stopwords = build_extra_stopwords(articles)
@@ -59,7 +59,10 @@ def build_discord_payload(
     return {
         "embeds": [
             {
-                "title": f"📰 {date}の朝刊インデックス",
+                # 1日3回配信するため、どの回かが分かるよう時刻を入れる。
+                "title": f"📰 {date} {time_label} のニュースインデックス"
+                if time_label
+                else f"📰 {date}のニュースインデックス",
                 "description": description,
                 "fields": [
                     {"name": "詳細", "value": repo_readme_url, "inline": False},

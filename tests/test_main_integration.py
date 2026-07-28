@@ -1,4 +1,5 @@
 import json
+import re
 import shutil
 from pathlib import Path
 from unittest.mock import MagicMock
@@ -376,3 +377,24 @@ def test_run_comments_on_existing_failure_issue_instead_of_duplicating(monkeypat
     mock_create_issue.assert_not_called()
     mock_comment.assert_called_once()
     assert mock_comment.call_args.args[0] == 42
+
+
+def test_email_subject_includes_time_and_no_morning_edition(monkeypatch, tmp_path):
+    """1日3回配信するため、件名に時刻を入れてスレッドが畳まれないようにする。"""
+    _setup_repo(monkeypatch, tmp_path)
+    monkeypatch.setenv("MAIL_TO", "to@example.com")
+    monkeypatch.setenv("MAIL_FROM", "from@example.com")
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+
+    sent = {}
+
+    def fake_send_email(subject, html_body, mail_to, mail_from, api_key):
+        sent["subject"] = subject
+
+    monkeypatch.setattr(main_module, "send_email", fake_send_email)
+    main_module.run(date="2026-07-21")
+
+    assert "朝刊" not in sent["subject"]
+    assert "2026-07-21" in sent["subject"]
+    # HH:MM が入っていること
+    assert re.search(r"\d{2}:\d{2}", sent["subject"])
