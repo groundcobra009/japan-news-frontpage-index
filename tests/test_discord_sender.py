@@ -109,3 +109,22 @@ def test_build_discord_payload_excludes_other_media():
     description = payload["embeds"][0]["description"]
     assert "朝日新聞：全国紙の見出し" in description
     assert "共同通信" not in description
+
+
+def test_build_discord_payload_title_includes_time_and_no_morning_edition():
+    payload = build_discord_payload(
+        [make_article()], date="2026-07-21", repo_readme_url="https://example.com/repo", time_label="19:00"
+    )
+    title = payload["embeds"][0]["title"]
+    assert "19:00" in title
+    # 1日3回配信なので「朝刊」表記はしない。
+    assert "朝刊" not in title
+
+
+def test_build_discord_payload_title_falls_back_without_time():
+    payload = build_discord_payload(
+        [make_article()], date="2026-07-21", repo_readme_url="https://example.com/repo"
+    )
+    title = payload["embeds"][0]["title"]
+    assert "2026-07-21" in title
+    assert "朝刊" not in title

@@ -242,15 +242,16 @@ def run(date: str | None = None) -> None:
     except Exception as exc:  # noqa: BLE001 - README更新失敗が他チャネルを止めないようにする
         print(f"[ERROR] README更新に失敗しました: {exc}")
 
-    _send_email_if_configured(daily_articles, resolved_date, generated_at, summary)
-    _send_discord_if_configured(daily_articles, resolved_date, summary)
+    time_label = now.strftime("%H:%M")
+    _send_email_if_configured(daily_articles, resolved_date, generated_at, summary, time_label)
+    _send_discord_if_configured(daily_articles, resolved_date, summary, time_label)
     _notify_failures_if_needed(articles, resolved_date)
 
     _print_summary(configs, daily_articles)
 
 
 def _send_email_if_configured(
-    articles: list[Article], date: str, generated_at: str, summary: str = ""
+    articles: list[Article], date: str, generated_at: str, summary: str = "", time_label: str = ""
 ) -> None:
     missing = [key for key in REQUIRED_EMAIL_ENV_VARS if not os.environ.get(key)]
     if missing:
@@ -259,7 +260,11 @@ def _send_email_if_configured(
 
     try:
         html_body = render_email_html(articles, generated_at, summary=summary)
-        subject = f"【朝刊インデックス】全国紙の主要見出し｜{date}"
+        # 1日3回配信するため件名に時刻を入れる。時刻がないと3通が同一件名になり、
+        # Gmail等で1スレッドに畳まれて後の配信が埋もれる。
+        subject = f"【ニュースインデックス】主要見出し｜{date}"
+        if time_label:
+            subject = f"{subject} {time_label}"
         send_email(
             subject=subject,
             html_body=html_body,
@@ -272,14 +277,18 @@ def _send_email_if_configured(
         print(f"[ERROR] メール送信に失敗しました: {exc}")
 
 
-def _send_discord_if_configured(articles: list[Article], date: str, summary: str = "") -> None:
+def _send_discord_if_configured(
+    articles: list[Article], date: str, summary: str = "", time_label: str = ""
+) -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
     if not webhook_url:
         print("[SKIP] Discord配信をスキップしました(DISCORD_WEBHOOK_URL未設定)")
         return
 
     try:
-        payload = build_discord_payload(articles, date, REPO_README_URL, summary=summary)
+        payload = build_discord_payload(
+            articles, date, REPO_README_URL, summary=summary, time_label=time_label
+        )
         send_discord(payload, webhook_url)
         print("[OK] Discordへ投稿しました")
     except Exception as exc:  # noqa: BLE001 - Discord送信失敗が他チャネル/後続処理を止めないようにする
