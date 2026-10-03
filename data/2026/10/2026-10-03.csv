@@ -1,5 +1,4 @@
 date,collected_at,category,region,newspaper,headline,url,source_url,status,error_message,topic
-2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,読売新聞,,,,skipped,robots.txtが一般クローラー/AI系UAを名指しで包括的にDisallow。2024年1月のToS改定で自動収集・生成AI学習目的の収集を明示的に禁止しているため、自動取得の対象外とする。,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,朝日新聞,熊本の山中で血を流した男性死亡 額付近に傷、シカに襲われたか,http://www.asahi.com/articles/ASVB24FM0VB2TNAB00CM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,朝日新聞,富山市の人口2千人水増し疑惑、担当部長の異動を発表 市長が会見で,http://www.asahi.com/articles/ASVB216DCVB2OXIE03HM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,朝日新聞,「ものすごい爆発音」津市の住宅全焼で4遺体、取り残された子どもか,http://www.asahi.com/articles/ASVB23K05VB2OIPE00ZM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
@@ -59,7 +58,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,毎日新聞,「事実なら大問題」 簗農相「地元予算カット」発言で野党批判,https://mainichi.jp/articles/20261002/k00/00m/010/327000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,毎日新聞,脳腫瘍公表の広島市長、質問によどみなく 「まずは治療に専念」,https://mainichi.jp/articles/20261002/k00/00m/310/318000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,毎日新聞,襲撃された立花孝志氏、被告に直接質問「謝罪する気持ちは?」,https://mainichi.jp/articles/20261002/k00/00m/040/326000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
-2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,日本経済新聞,,,,skipped,公式無料RSSなし。著作権ページで自動収集を明確に禁止しているため、自動取得の対象外とする。,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,産経新聞,<独自>成田新滑走路 12月にも事業認定申請へ NAA、土地収用へ28日から説明会,https://www.sankei.com/article/20261002-LD2QFAGJZ5KQZCQ3UHA4CJ2AWQ/,https://www.sankei.com/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,産経新聞,世界遺産認定 快挙生んだ考古学者の苦闘 百年にわたる魂の系譜...,https://www.sankei.com/article/20260815-QFGOV26NZFOPTOI5VG332AGYEA/?outputType=theme_election2026,https://www.sankei.com/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,産経新聞,政府が外国と疑われる不審アカウント把握 高市首相「選挙への影...,https://www.sankei.com/article/20260318-U6PW4754BNE3XKFYBTQWPKM65A/?outputType=theme_election2026,https://www.sankei.com/,ok,,
@@ -119,9 +117,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,中日新聞,【動画・連日更新】アジア大会メダリストセレブレーション,https://www.chunichi.co.jp/article/1317675,https://www.chunichi.co.jp/,ok,,video
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,中日新聞,【動画】黒部宇奈月キャニオンルートを記者が一足早く体験 難工事の軌跡、身近に,https://www.chunichi.co.jp/article/1318223,https://www.chunichi.co.jp/,ok,,video
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,中日新聞,黄金の翼、早起きをすれば見られるかも パークアリーナ小牧,https://www.chunichi.co.jp/article/1316931,https://www.chunichi.co.jp/,ok,,tag_photo
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,北海道,北海道新聞,,,,skipped,公式RSSはあるが、見出し・本文の公開(再配信)を認めない旨の規約があるため自動取得の対象外とする。,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,宮城,河北新報,,,,skipped,robots.txtが/rss/をDisallowしておりRSS購読不可。私的利用限定・二次利用禁止の規約があるため自動取得の対象外とする。,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,新潟,新潟日報,,,,skipped,利用規約でデータマイニング・テキストマイニング・AI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,「ラーメン二郎」が松本市にオープンへ 長野県で初か 開店時期は未定10/02 20:18人気ラーメン店「ラーメン二郎」の松本店が松本市内にオープンすることが2日、分かった。県内初出店とみられる。「ラーメン二郎松本店」と記された黄色い看板が現れたことをきっかけにSNS(交流サイト)で情報が広がっており、市民やファンの間で「楽しみ」と期待が高まっている。開店時期は・・・,https://www.shinmai.co.jp/news/article/gf01davp2gonn8tk86f6pd1g,https://www.shinmai.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,長野県石油組合に「業務改善チーム」 カルテル再発防止や組織改革を協議10/02 21:49,https://www.shinmai.co.jp/news/article/gf01davqbb8nn8tk86f6ppgg,https://www.shinmai.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,【動画付き】北アルプス涸沢で紅葉が最盛期 登山客「圧巻の景色」10/02 20:42,https://www.shinmai.co.jp/news/article/gf01davoftgnn8tk86f6p6v0,https://www.shinmai.co.jp/,ok,,
@@ -142,7 +137,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,信州「山の日程」(2026年10月)〈山と人と信州と〉長野県社会信州の山ウェブオリジナル山と人と信州と10/01 06:04,https://www.shinmai.co.jp/news/article/gf01dastrl0nn8tk86f66k50,https://www.shinmai.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,ライチョウ20羽との出会いに驚き 北アルプス白馬岳で深まりゆく秋を堪能【動画付き】長野県社会主要信州の山ウェブオリジナル北アルプスタカシが行くライチョウ09/29 17:46,https://www.shinmai.co.jp/news/article/gf01datdjulblj4h2lnc0smg,https://www.shinmai.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,長野,信濃毎日新聞,【4コマ】上杉謙信も食べた?飯山の笹ずし【ここがわからんばい!信州】長野県主要くらし・話題ウェブオリジナルここがわからんばい!信州飯山市09/29 11:30,https://www.shinmai.co.jp/news/article/gf01dast42tblj4h2lnbtmp0,https://www.shinmai.co.jp/,ok,,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,静岡,静岡新聞,,,https://www.at-s.com/,error,405 Client Error: Not Allowed for url: https://www.at-s.com/,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,京都,京都新聞,人事異動ポータル,https://www.kyoto-np.co.jp/articles/-/1250583,https://www.kyoto-np.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,京都,京都新聞,速報米韓合意に含まれずと韓国当局者,https://www.kyoto-np.co.jp/articles/-/1801597,https://www.kyoto-np.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,京都,京都新聞,京都市バスの「市民優先価格」、専門家は「観光が下火にならないか」と懸念 二重価格の波及は?10月2日市内京都市が1日明らかにした市バスの市民優先価格について、オーバーツーリズムを中心とした観光政策や世界遺産に詳しい「みらい観光文化リサーチベー...,https://www.kyoto-np.co.jp/articles/-/1800854,https://www.kyoto-np.co.jp/,ok,,
@@ -183,8 +177,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,兵庫,神戸新聞,中学部活の地域展開「あかしタイム」、2027年9月に全面移行へ 「段階的に」から転換,https://www.kobe-np.co.jp/news/akashi/202609/0020855522.shtml,https://www.kobe-np.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,兵庫,神戸新聞,芦屋市の「危ない交差点」 広めの路側帯、後ろのバイクに注意 左折時の巻き込み事故相次ぐ,https://www.kobe-np.co.jp/news/richb/202609/0020875070.shtml,https://www.kobe-np.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,兵庫,神戸新聞,<近日公開 10月のオススメ記事>秋祭り、美術展との連動企画、高校野球秋季大会...etc.,https://www.kobe-np.co.jp/news/richa/202609/0020872865.shtml,https://www.kobe-np.co.jp/,ok,,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,広島,中国新聞,,,,skipped,利用規約でAI開発目的のディープラーニング等の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,福岡,西日本新聞,,,,skipped,公式RSSはあるが、利用規約でAI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,熊本,熊本日日新聞,成田新滑走路12月にも申請,https://kumanichi.com/articles/2042430,https://kumanichi.com/rss.xml,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,熊本,熊本日日新聞,米韓合意に含まれずと韓国当局者,https://kumanichi.com/articles/2042429,https://kumanichi.com/rss.xml,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,熊本,熊本日日新聞,成田空港巡り、12月にも事業認定申請へ,https://kumanichi.com/articles/2042428,https://kumanichi.com/rss.xml,ok,,
@@ -215,7 +207,6 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,鹿児島,南日本新聞,9阿久根「光礁」に朱塗りの鳥居が復活――崩壊から1年余り、今度は安全・大漁・五穀豊穣の象徴「三柱鳥居」で再建,https://373news.com/news/local/detail/240408/,https://373news.com/,ok,,local
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,鹿児島,南日本新聞,10国道220号が霧島市福山で片側通行,https://373news.com/news/local/detail/240414/,https://373news.com/,ok,,local
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,鹿児島,南日本新聞,渋滞の先頭で合流の車に鹿児島県民「イラッ」「モヤモヤ」...ズルく見える「ファスナー合流」 渋滞緩和に推奨でも6割「知らない」9月21日 10:20,https://373news.com/lineup/kotimina/detail/239874/,https://373news.com/,ok,,
-2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,沖縄,琉球新報,,,,skipped,利用規約で複製・複写・送信・頒布・蓄積・転載等を会社の承認なく行うことを広範に禁止しているため自動取得の対象外とする。,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,沖縄,沖縄タイムス,副知事の選任も 古謝県政が40議案を提出へ 6日開会の県議会、何が決まる?10月2日 19:29古謝県政始動沖縄県は2日の庁議で、副知事選任の同意議案(先議案件)など40議案を、6日開会の県議会10月定例会に提出することを決めた。,https://www.okinawatimes.co.jp/articles/-/1936727,https://www.okinawatimes.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,沖縄,沖縄タイムス,ジャングリア沖縄の人材育成支援「観光振興に重要」 葉梨沖縄担当相、運営会社173億円赤字受け 沖縄関係予算で1億9千万円交付13:10有料#ジャングリア沖縄,https://www.okinawatimes.co.jp/articles/-/1936413,https://www.okinawatimes.co.jp/,ok,,
 2026-10-03,2026-10-03T01:00:42.205548+09:00,地方紙,沖縄,沖縄タイムス,競技用車いすの車道通行「例外的に認められる」 上与那原さん死亡事故で警察庁が見解11:58#事件・事故,https://www.okinawatimes.co.jp/articles/-/1936369,https://www.okinawatimes.co.jp/,ok,,
@@ -663,3 +654,141 @@ date,collected_at,category,region,newspaper,headline,url,source_url,status,error
 2026-10-03,2026-10-03T01:00:42.205548+09:00,その他メディア,,NEWSつくば,常総学院、8回に暗転 決勝進出ならず 秋季関東高校野球県大会,https://newstsukuba.jp/62551/02/10/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
 2026-10-03,2026-10-03T01:00:42.205548+09:00,全国紙,全国,中日新聞,スポーツクライミングの男子リード予選、鈴木音生選手が決勝に進出 「堅実に高度を伸ばせた」,https://www.chunichi.co.jp/article/1319918,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
 2026-10-03,2026-10-03T01:00:42.205548+09:00,その他メディア,,山陽新聞,交通空白解消へ意見交換 自治体と事業者、マッチングイベント,https://www.sanyonews.jp/article/1998736/,https://news.ceek.jp/search.cgi?category_id=local&feed=1,ok,,地方・地域
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,読売新聞,,,,skipped,robots.txtが一般クローラー/AI系UAを名指しで包括的にDisallow。2024年1月のToS改定で自動収集・生成AI学習目的の収集を明示的に禁止しているため、自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,北朝鮮から弾道ミサイルが発射 日本の排他的経済水域外に落下,http://www.asahi.com/articles/ASVB27GGLVB2UTFL001M.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,都内の空き家狙いの侵入盗が5倍増 貴重品の片付けなど対策呼び掛け,http://www.asahi.com/articles/ASVB204MGVB2UTIL01PM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,内戦で逃れた故郷からの「便り」 アジア大会、シリア人スタッフに,http://www.asahi.com/articles/ASVB13S3PVB1OIPE00JM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,茨城県日立市の小川市長、3期目限りで引退へ 来春の選挙に出馬せず,http://www.asahi.com/articles/ASVB27D8LVB2UJHB00JM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,政治
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,結集軸なき野党、消費減税の国会審議にどう臨む 政権は切り崩し狙う,http://www.asahi.com/articles/ASVB23VKYVB2UTFK00BM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,政治
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,国王も従わせた「法の支配」 人を守る世界共通ルールは築けるのか,http://www.asahi.com/articles/ASV9Z3386V9ZUHBI00TM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,「民主党の方が私を離れたのだ」工場の町が感じ取ったエリートの嘲笑,http://www.asahi.com/articles/ASV9Q425KV9QUHMC002M.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,赤く染まるトランプの道「ルート66」走破 アメリカの叫びを聞いた,http://www.asahi.com/articles/ASV9Q0D9SV9QUHMC001M.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,米中間選挙1カ月前の情勢 トランプ氏の支持率低迷、民主に追い風,http://www.asahi.com/articles/ASVB133NZVB1UHBI00HM.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,ロシア新型ドローンは時速2倍超、イラン製改良重ね プーチン氏視察,http://www.asahi.com/articles/ASVB26JLVVB2UHBI028M.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,朝日新聞,ミセス大森元貴さんが語る音楽観 「ライラック」イントロが長い意味,http://www.asahi.com/articles/ASVB11S22VB1UCVL015M.html,https://www.asahi.com/rss/asahi/newsheadlines.rdf,ok,,文化芸能
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,ポッドキャスト:ナチスの記憶はどこへ ドイツ極右政党躍進が意味するもの,https://mainichi.jp/articles/20260930/k00/00m/030/246000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,音楽フェスでの子どもの難聴、耳当てで防ぐ 広がる貸し出し,https://mainichi.jp/articles/20260930/k00/00m/310/133000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,なぜ人は推し活やセカイ系にハマるのか? 気鋭の人類学者が迫る,https://mainichi.jp/articles/20260930/k00/00m/200/144000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,「幻のモグラ」はなぜモフモフ? 白神山地で初確認、SNSで大人気,https://mainichi.jp/articles/20260929/k00/00m/310/295000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,「映像で残ってるなら...」 簗農相、予算カット発言巡る会見詳報,https://mainichi.jp/articles/20261003/k00/00m/010/001000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,福岡・大任がIR誘致へ 町長「生き残る起死回生の一手」,https://mainichi.jp/articles/20261002/k00/00m/310/026000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,北朝鮮が弾道ミサイル発射か 既に落下 防衛省,https://mainichi.jp/articles/20261003/k00/00m/030/020000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,チャイムに座高測定器、懐かしい「昭和の学校」 大分で企画展,https://mainichi.jp/articles/20260929/k00/00m/310/334000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,ノーベル賞発表へ 今年は誰の手に? 注目の有力候補を徹底予想,https://mainichi.jp/articles/20261001/k00/00m/040/268000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,仏の高校生ら1000校以上で「学習環境改善」要求デモ 一部暴徒化,https://mainichi.jp/articles/20261003/k00/00m/030/013000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,「区画の角の家、特に気をつけて」 専門家と学ぶ防犯術 東京,https://mainichi.jp/articles/20261002/k00/00m/310/019000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,「今の自分のリアルな姿」深める 朝ドラヒロインの石橋静河さん,https://mainichi.jp/articles/20260929/k00/00m/200/181000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,江戸時代にタイムスリップ 屏風などで松山城の変遷たどる特別展,https://mainichi.jp/articles/20260929/k00/00m/310/119000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,進む右傾化 斎藤幸平さんが問うリベラル左派の「古臭い説教」,https://mainichi.jp/articles/20261002/k00/00m/200/039000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,秋田・鹿角市、行政事務を郵便局に一部委託 人口減で5支所廃止,https://mainichi.jp/articles/20261002/k00/00m/310/008000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,半島の入り組んだ道もスイスイ 伊豆バス、軽タクシーの運行開始,https://mainichi.jp/articles/20261001/k00/00m/310/171000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,毎日新聞,G7が石油備蓄協調放出で合意 選挙控えるトランプ氏の要請受け,https://mainichi.jp/articles/20261003/k00/00m/030/009000c,https://mainichi.jp/rss/etc/mainichi-flash.rss,ok,,ニュース
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,日本経済新聞,,,,skipped,公式無料RSSなし。著作権ページで自動収集を明確に禁止しているため、自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,中国で薄れる「内乱」の記憶、賛美する若年世代 密告奨励に「文革2.0」への警戒感,https://www.sankei.com/article/20261003-GTY54K7VTVO6JBTIBNPPNAYNLA/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,4時間続いた保護者説明会、止まらぬ質問 校外活動再開の同志社国際高,https://www.sankei.com/article/20261003-XOJOAM3JXRLDZIDPNUJMRUARVI/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,<主張>簗農水相 資質疑うお粗末な発言だ,https://www.sankei.com/article/20261003-SRVHOUXBYBKEVKOZWDDXNCUPOY/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,広瀬アリス「こんなに先が楽しみなのは初めて」 8年ぶり単独主演映画で見つめた生き方,https://www.sankei.com/article/20261003-T7EU4DBU4ZOHVA7RNZVO74AWPA/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,横浜市長選4日告示 パワハラ辞職の前職や女性弁護士ら7人表明で混戦、全員IR誘致否定,https://www.sankei.com/article/20261003-4AOGKMEHBNN47OIN2XIDVCSKSE/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,北朝鮮が日本海に弾道ミサイル発射 地雷爆発事故めぐり南北対立、日本のEEZ外に落下か,https://www.sankei.com/article/20261003-DXACKHW75VJRLPMDXC3JGX2SUA/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,<産経抄>議員外交で独裁者、習近平主席の意向は変わらない,https://www.sankei.com/article/20261003-B7TNEPQ2I5J57B3HVRHGO4KWTE/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,インバウンド呼び込みで自転車観光が人気 交通空白地を周遊、長期滞在で消費額増も利点に,https://www.sankei.com/article/20261003-DRWJN45ENBAVDM65R37DI2ZQDU/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,産経新聞,対米配慮では早苗ノミクス危うい 田村秀男,https://www.sankei.com/article/20261003-VPOV4L6I5ZA2RDDJVJC6WK6MRM/,https://www.sankei.com/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,自称パイロットが「独身偽装」で5人の女性を不幸に...「女性の幸せな顔が自分の満足」の独りよがり,https://www.tokyo-np.co.jp/article/519275,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,「次期マイナカード」導入延期の理由は「業者がいなかった」と古川俊治デジタル相,https://www.tokyo-np.co.jp/article/519222,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,原発被災地に836億円投じた産業団地...補助金ありきの企業誘致と住民帰還のギャップに揺れる復興の姿,https://www.tokyo-np.co.jp/article/519202,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,高市政権発足から1年、ジェンダー平等は「逆行」...政治や社会を変える「新たな風」吹かせるためには,https://www.tokyo-np.co.jp/article/519281,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,北朝鮮が弾道ミサイル発射 日本のEEZ外に落下か,https://www.tokyo-np.co.jp/article/519347,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,減らない「いきなりエイズ」...国が「骨太方針」で対策強化 市民団体は高額な予防薬の負担軽減を訴え,https://www.tokyo-np.co.jp/article/519261,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,市場に空爆、50人死亡...救援に駆けつけた男性が見た惨状 「虐殺続けるミャンマー国軍に国際社会の声を」,https://www.tokyo-np.co.jp/article/519214,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,「チャンスを得られない若者の絶望」...トランプ氏の言う「アメリカンドリーム復活」にはほど遠い米南部の街,https://www.tokyo-np.co.jp/article/519252,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,〈社説〉データセンター 紛争予防へ法整備急げ,https://www.tokyo-np.co.jp/article/519350,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,下院で多数派の確保があやしく...逆風のトランプ共和党 アメリカ中間選挙まで1カ月、現在の情勢は,https://www.tokyo-np.co.jp/article/519240,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,〈ぎろんの森〉国勢調査、統計を偽る罪深さ,https://www.tokyo-np.co.jp/article/519349,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,〈コラム 筆洗〉「第一印象がとても悪そうな男だが、深く付き合ってみればそう...,https://www.tokyo-np.co.jp/article/519322,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,東京新聞,地球温暖化で雨量5~15%増加 台風25号、洪水対策強化が必要,https://www.tokyo-np.co.jp/article/519307,https://www.tokyo-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,中日新聞,男女混合、体重もばらばら...アジア大会新種目「バーチャルテコンドー」 病気で一線退いた選手も「分身」で再起,https://www.chunichi.co.jp/article/1319912,https://www.chunichi.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,中日新聞,重度障害者の「ウルトラ・ユニバーサル野球大会」参加者増 寝たきりでも遠隔操作で「打席」に,https://www.chunichi.co.jp/article/1319938,https://www.chunichi.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,中日新聞,名古屋時計店強盗でほう助疑いの少年1人を不処分 名古屋家裁岡崎支部、「非行なし」判断,https://www.chunichi.co.jp/article/1319959,https://www.chunichi.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,北海道,北海道新聞,,,,skipped,公式RSSはあるが、見出し・本文の公開(再配信)を認めない旨の規約があるため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,宮城,河北新報,,,,skipped,robots.txtが/rss/をDisallowしておりRSS購読不可。私的利用限定・二次利用禁止の規約があるため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,新潟,新潟日報,,,,skipped,利用規約でデータマイニング・テキストマイニング・AI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,宿泊施設やカフェ、モンベルも出店 塩尻市の旧楢川中改修の複合施設、きょう3日オープン10/03 06:05■かつての学校の雰囲気を残し 2021年度末に閉校した旧楢川中学校(塩尻市奈良井)が、宿泊施設やベーカリーカフェ、工房などを備えた複合施設「yama―niwa(ヤマニワ)」に生まれ変わった。3日の営業開始を前に2日、現地で竣工式と内覧会があった。 2棟ある教室棟の内、1棟は宿泊施設とベーカリーカ...,https://www.shinmai.co.jp/news/article/gf01davon5gnn8tk86f6p9kg,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,日本酒を蒸留した「浄酎」、善光寺門前で生産へ 原料や熟成期間で付加価値、海外展開も視野10/03 06:04,https://www.shinmai.co.jp/news/article/gf01davrbh5blj4h2lnch3e0,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,長野県の「急性期拠点」候補は4病院 高度医療へのアクセス難の可能性に懸念の声10/03 06:03,https://www.shinmai.co.jp/news/article/gf01davr480nn8tk86f6pupg,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,児童ら7人ハチに刺される 伊那市高遠で校外学習中 重い症状なし10/03 06:02,https://www.shinmai.co.jp/news/article/gf01davoo4dblj4h2lncge20,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,中央アルプス恵みの超軟水「のめるぷす」誕生 飯島町が70年記念し製品化10/03 06:01,https://www.shinmai.co.jp/news/article/gf01davjb50nn8tk86f6nd10,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,おくやみ(10月3日付)10/03 06:00,https://www.shinmai.co.jp/news/article/gf01davolo0nn8tk86f6p8q0,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,5長野県縦断駅伝、14チームが出場 オープン参加なし,https://www.shinmai.co.jp/news/article/gf01davpsi5blj4h2lncgnm0,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,10三菱商事がマルイチ産商(長野市)の全保有株を売却 筆頭株主から外れる,https://www.shinmai.co.jp/news/article/gf01daub23tblj4h2lnc6hv0,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,長野,信濃毎日新聞,放送約2500回、長野県の各地を“ずく”出して探し歩いた10年の記録【ずくだせの日々】長野県文化・芸能くらし・話題主要ウェブオリジナルエンタメイブニング信毎09/27 06:02,https://www.shinmai.co.jp/news/article/gf01darhsg629c62qgij16q0,https://www.shinmai.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,静岡,静岡新聞,,,https://www.at-s.com/,error,405 Client Error: Not Allowed for url: https://www.at-s.com/,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,速報北朝鮮ミサイルは約680キロ飛翔と防衛省,https://www.kyoto-np.co.jp/articles/-/1801667,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,【独自】京都市上京区の女子大学が男女共学化へ 校名も変更、単科大学に再編方針4:50地域京都市上京区の女子大学が2028年度から男女共学となり、名称も変更する方針であることが2日、判明した。,https://www.kyoto-np.co.jp/articles/-/1801459,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,京都府南部、最先端のまちに残る「圧倒的に美しい」集落 河井寛次郎絶賛のコースで和菓子も堪能5:00地域関西文化学術研究都市(けいはんな学研都市)の中心に位置する京都府精華町は、高度な研究施設やものづくりを担う開発型企業が集まる一方、まちを歩...,https://www.kyoto-np.co.jp/articles/-/1798179,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,滋賀県が「公益通報」に適切対応せず 知事が県議会で陳謝「反省すべきところが多々あった」5:10地域滋賀県は2日、県に寄せられた公益通報に適切に対応せず、受理が遅れる事案があったと明らかにした。三日月大造知事は県議会9月定例会議の一般質問...,https://www.kyoto-np.co.jp/articles/-/1801486,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,10-FEETが京都ハンナリーズの公式応援ソングを作曲 「ニャ、ニャ」仰天フレーズにファン喝采5:00市内バスケットボールの人気アニメを題材にした映画「THE FIRST SLAM DUNK」の主題歌「第ゼロ感」の大ヒットで、人気ロックバンドの...,https://www.kyoto-np.co.jp/articles/-/1799547,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,京都市中心部に「二郎系ラーメン」新店オープン 行列人気店が10年ぶりの挑戦、さらに増店の野望も6:00市内京都市中京区の河原町通近くに10月3日、大盛りの極太麺が特徴的な「二郎系ラーメン」の新店がオープンする。京都の人気ブランドによる約10年ぶ...,https://www.kyoto-np.co.jp/articles/-/1801358,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,京都府福知山市にある洋菓子店併設のカフェを営む姉妹、SNSフォロワーに支えられ念願の店舗構える5:25地域クッキー缶を開けると、まるで宝石のようにきらめく焼き菓子の数々が現れる。コンセプトは「見ているだけで可愛(かわい)くて、心トキメクお菓子」...,https://www.kyoto-np.co.jp/articles/-/1800298,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,滋賀県内で増加の一途「特殊詐欺」2025年は過去最悪、被害を未然に防ぐには?5:20地域滋賀県内で増加の一途をたどる特殊詐欺被害は昨年、過去最悪の約46億円となった。一方、銀行やコンビニが最後のとりでとなって現金の受け渡しを未...,https://www.kyoto-np.co.jp/articles/-/1801233,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,「関東の大手コメ卸が越境して安値販売」滋賀県産米を扱う大阪の業者が語る危機的状況とは4:55大阪,https://www.kyoto-np.co.jp/articles/-/1801509,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,京都,京都新聞,「中道は政党交付金の返還も検討すべき」立憲代表から、たった2人の会派へ 泉健太元代表の胸中とは4:30市内,https://www.kyoto-np.co.jp/articles/-/1801349,https://www.kyoto-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,お値段1.2億円、20年で出番28回の「能舞台」は必要だったか? 老朽化で屋根廃棄,https://www.kobe-np.co.jp/news/society/202610/0020885947.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,三宮・暴走死傷 運転男性、体調急変か 同乗者「体が震え、急発進」,https://www.kobe-np.co.jp/news/society/202610/0020886594.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,県立淡路医療センター、3年連続の経常赤字 経費増で厳しい経営変わらず 25年度決算,https://www.kobe-np.co.jp/news/awaji/202610/0020886099.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,古江、地元の声援を力に3位浮上 ゴルフ日本女子オープン 国内メジャー初制覇目指す,https://www.kobe-np.co.jp/news/sports/202610/0020885807.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,祭りの秋、ブレイバーズがアシスト 担い手確保へ東区自治会と協定,https://www.kobe-np.co.jp/news/sanda/202610/0020885851.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,世界基準を知るGK権田が語ったこと A代表に見劣りしない神戸の武器<航跡VISSEL>,https://www.kobe-np.co.jp/news/sports/202610/0020885933.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,ミント神戸20年祝って乾杯 記念のクラフトビール、飲食店で提供 4日まで数量限定で振る舞い,https://www.kobe-np.co.jp/news/society/202610/0020886762.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,丹波の昔話集出版記念で朗読会 「西竹林のけいさんぞく」含む13話披露,https://www.kobe-np.co.jp/news/tanba/202610/0020886202.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,「因縁対決」一力4連覇か、井山奪冠か 天元戦5番勝負、7日開幕 12月に洲本で第4局,https://www.kobe-np.co.jp/news/culture/202610/0020886266.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,介護保険調査員が市民18人分の書類を紛失 尼崎市 調査終え帰宅後に気付く,https://www.kobe-np.co.jp/news/hanshin/202610/0020885862.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,県社総合庁舎、老朽化で工事 旧社小に事務所を仮移転,https://www.kobe-np.co.jp/news/hokuban/202610/0020886025.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,<そこにいつも音楽が 松方ホール30年>(下)次世代育成 困難越え「地元」大切に,https://www.kobe-np.co.jp/news/culture/202610/0020886264.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,「銀の馬車道」150年の逸話を,https://www.kobe-np.co.jp/news/tajima/202610/0020885841.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,団員減の消防団、防災力維持へ模索 アプリで事務軽減、女性の参加促進、出動状況を衛星で把握<ローカル+α>,https://www.kobe-np.co.jp/news/society/202610/0020885037.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,兵庫,神戸新聞,生涯学習講座、中学生も受講OK 多可町 部活地域展開を補完「放課後の選択肢広げて」,https://www.kobe-np.co.jp/news/hokuban/202610/0020886027.shtml,https://www.kobe-np.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,広島,中国新聞,,,,skipped,利用規約でAI開発目的のディープラーニング等の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,福岡,西日本新聞,,,,skipped,公式RSSはあるが、利用規約でAI学習目的の情報処理・解析利用を明示的に禁止しているため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,高額介護合算療養費2023万円未支給 システム設定ミス 熊本市,https://kumanichi.com/node/2042515,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,宇土市議選、4日投開票 定数18に21人立候補,https://kumanichi.com/node/2042513,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,元県職員の廣川氏が出馬表明 11月の荒尾市長選,https://kumanichi.com/node/2042512,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,多良木町と熊本県キッチンカー協会が災害協定,https://kumanichi.com/node/2042510,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,「県民の期待に応える強い警察官に」 熊本県警初任科短期課程の46人卒業,https://kumanichi.com/node/2042509,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,教員採用試験249人合格 熊本市教委 不足は9人,https://kumanichi.com/node/2042508,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,仮設入居1299人 建設型整備が本格化 熊本県発表 <2026年熊本地震>,https://kumanichi.com/node/2042507,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,10年前に劣らぬ規模を」 知事、官房長官に要請 復興基金の財政措置 <2026年熊本地震>,https://kumanichi.com/node/2042506,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,【独自】雇用維持へ「産雇金」活用検討 能登地震で「特例」運用 出向先の賃金も助成 <2026年熊本地震>,https://kumanichi.com/node/2042505,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,熊本,熊本日日新聞,熊本地震で解雇や雇い止め260人 熊本労働局 一時離職も70人 県央、県南で目立つ,https://kumanichi.com/node/2042503,https://kumanichi.com/rss.xml,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,鹿児島の栄養士「月267時間」残業――過労死ライン、47事業所で超える実態が明らかに...鹿児島労働局公表鹿児島労働局は2日、2025年度に長時間労働の疑いで立ち入り調査した企業・団体のうち、47事業所で「過労死ライン」とされる月80時間以上の時間外労働があったと公表した。最長は福祉事業所で、栄養士の1人について月267時間の時間外労働が確認された。 調査は管内の労働基準監督署が、過重労働による労災請求や情報提供のあった259事業所を対象に実施した。違法と判断されたのは100事業所で、保健衛10月3日 07:00,https://373news.com/news/local/detail/240461/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,「労災は家族の幸せまで奪ってしまう」 鹿児島市で開かれた防止協議会、見える化が鍵と強調10月3日 08:00,https://373news.com/news/local/detail/240457/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,鹿児島の法令違反1252事業所を確認―労働基準関係法令の立ち入り調査...安全基準関連が最多367件 鹿児島労働局発表10月3日 07:30,https://373news.com/news/local/detail/240460/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,鹿児島の公立高、定員1万1850人...過去最少5年連続更新――明桜館・文理科学科と鹿児島女子・ビジネスデザイン科が1学級減10月3日 07:15,https://373news.com/news/local/detail/240458/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,【愛知・名古屋アジア大会】水球男子決勝へ 荻原(鹿児島南高出身)チーム最多7得点10月3日 06:45,https://373news.com/news/local/detail/240454/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,【愛知・名古屋アジア大会】ラグビー7人制男子 時任(加治木工高出身)勝負どころで3トライ 日本、準決勝へ10月3日 06:30,https://373news.com/news/local/detail/240453/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,全国高校サッカー鹿児島県予選26日開幕 前回日本一の神村学園が軸10月3日 06:30,https://373news.com/news/local/detail/240451/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,鹿児島「南日本文化賞」に3者――画家で二科会理事の祝迫氏、奄美の海を25年撮り続けた写真家の興氏、乳がん手術「全国トップクラス」の相良病院10月3日 06:00,https://373news.com/news/local/detail/240462/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,秋の九州高校野球鹿児島県予選 大島、国分中央、れいめい、鹿児島実8強入り10月3日 06:00,https://373news.com/news/local/detail/240450/,https://373news.com/,ok,,local
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,鹿児島,南日本新聞,G7、備蓄1億バレル放出合意 燃料高対策でIEAと協調10月3日 08:54,https://373news.com/news/national/detail/2026100301000376/,https://373news.com/,ok,,national
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,琉球新報,,,,skipped,利用規約で複製・複写・送信・頒布・蓄積・転載等を会社の承認なく行うことを広範に禁止しているため自動取得の対象外とする。,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,陸上・重量挙げなど注目多数 「あおもり国スポ」県選手団が那覇で結団式 10月10日に開幕10月3日 5:31国民スポーツ大会[国スポ 2026 AOMORI] 青森県を中心に開かれる第80回国民スポーツ大会「青の煌めきあおもり国スポ」の県選手団結団式が2日、那覇市の県立武道館であり、約100人が健闘を誓った。,https://www.okinawatimes.co.jp/articles/-/1937002,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,与那国町に対艦装置を初展開 日米演習、南西諸島で過去最大規模 石垣島・宮古島にも多数展開 10月19日から実施5:20有料#与那国島,https://www.okinawatimes.co.jp/articles/-/1937000,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,応援ない自治体は「予算カット」 簗農相、発言認める 辞任は否定、野党は追及へ5:25有料#自民党,https://www.okinawatimes.co.jp/articles/-/1937001,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,カーシェア「タイムズカー」の免許画像流出 訴訟サイトに1万5000人超登録5:38有料#不正アクセス,https://www.okinawatimes.co.jp/articles/-/1937003,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,[大弦小弦]落とした魂取り戻す 首里城の文化財復元6:03有料#大弦小弦,https://www.okinawatimes.co.jp/articles/-/1937004,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,「生活への影響、最小限に」 地元自治体からは懸念の声 日米演習「キーン・ソード」 防衛省は「安保の厳しさ」強調6:08有料#日米共同統合演習,https://www.okinawatimes.co.jp/articles/-/1936989,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,ピーマンへの感染は国内初 「ToCV」ウイルス、沖縄本島南部で確認 県が防除呼びかけ6:43有料#沖縄の経済,https://www.okinawatimes.co.jp/articles/-/1936914,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,インフル患者が1定点42.50人超に 沖縄県で約1年7カ月ぶりの警報発令 12校で学年・学級閉鎖も7:42有料#インフルエンザ,https://www.okinawatimes.co.jp/articles/-/1936977,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,「再建だけでなく文物の復元も」 被災文化財93点の修理完了 首里城正殿完成記念の特別展が那覇で開幕8:29有料#首里城,https://www.okinawatimes.co.jp/articles/-/1937020,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,渡久地大綱引き 12年ぶりに開催 港周辺に1000人 東が勝利 本部 300年の歴史誇る4:00有料#地域,https://www.okinawatimes.co.jp/articles/-/1936873,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,28市町村議会 議長顔触れ4:00有料#地域,https://www.okinawatimes.co.jp/articles/-/1936888,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,[愛知・名古屋 アジア大会2026]4:00有料#スポーツ,https://www.okinawatimes.co.jp/articles/-/1936952,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,[国スポ 2026 AOMORI]沖縄の誇り胸に 選手団いざ青森 208人闘志 「全力尽くす」4:00有料#スポーツ,https://www.okinawatimes.co.jp/articles/-/1936960,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,トランプ氏の支持率低迷 共和劣勢 上院も危機 中間選挙へ1カ月4:00有料#国際,https://www.okinawatimes.co.jp/articles/-/1936926,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,首里織や久米島紬の“蔵出し品”が集結! 沖縄の伝統染織品 「秋の蔵市2026」、那覇市首里で開幕8:58有料#首里織,https://www.okinawatimes.co.jp/articles/-/1936808,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,地方紙,沖縄,沖縄タイムス,G7、備蓄1億バレル放出合意 燃料高対策でIEAと協調8:54#イラン情勢,https://www.okinawatimes.co.jp/articles/-/1937106,https://www.okinawatimes.co.jp/,ok,,
+2026-10-03,2026-10-03T09:02:07.712701+09:00,その他メディア,,フジテレビ,学童元施設長を逮捕 男子小学生にわいせつ行為か 東京・足立区,https://www.fnn.jp/articles/-/1125852,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,その他メディア,,フジテレビ,「東海汽船」飲酒乗務で使用停止 元日に飲酒が長年の慣例,https://www.fnn.jp/articles/-/1125851,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,その他メディア,,フジテレビ,狭くて車等は通行できないJRの踏切で軽自動車と列車が衝突 車の運転手とみられる高齢男性が意識不明の重体,https://www.fnn.jp/articles/-/1125850,https://news.ceek.jp/search.cgi?category_id=national&feed=1,ok,,社会
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,日本経済新聞,米航空当局、ボーイング新型機のソフト不具合「安全上の懸念ない」,https://www.nikkei.com/article/DGXZQOGN02CGD0S6A001C2000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,全国紙,全国,日本経済新聞,マンチェスターC、プレミアLからの財務違反認定に不服申し立て,https://www.nikkei.com/article/DGXZQOUC02BCP0S6A001C2000000/,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
+2026-10-03,2026-10-03T09:02:07.712701+09:00,その他メディア,,フジテレビ,【速報】G7が石油やディーゼル燃料などの備蓄「1億バレル」協調放出へ,https://www.fnn.jp/articles/-/1125848,https://news.ceek.jp/search.cgi?category_id=world&feed=1,ok,,国際
