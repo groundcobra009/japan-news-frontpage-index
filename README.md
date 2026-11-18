@@ -4,11 +4,11 @@
 
 Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-frontpage-index/
 
-最終更新：2026年11月18日 11:38
+最終更新：2026年11月18日 20:26
 
 ## 本日のまとめ
 
-高市首相がトランプ大統領と短時間懇談し、インド太平洋情勢での日米の連携を確認した。米中ロ首脳会談を前に認識の擦り合わせが図られたとみられる。同首相はASEANとの首脳会議でエネルギーや食料安保の強化、石油共同備蓄の提唱、AI脅威対処での新枠組み構築を掲げた。日韓首脳会談ではシャトル外交の継続が確認され、韓国大統領の来年1月訪日が示唆された。日米豪印首脳は対潜哨戒演習を27年に実施することで中国を念頭に合意し、防衛品増産体制の整備も進められている。
+高市首相が中国・深圳に到着しAPEC首脳会議に出席します。トランプ大統領も現地入りし、習主席が空港で出迎えるなど異例の対応を見せました。高市首相はトランプ大統領と短時間の懇談を行い、日米の認識擦り合わせを図りました。19日には史上初となる米中ロ首脳会談が開催される予定で、高市首相とロシアのプーチン大統領との接触も調整されています。日本はASEAN各国との連携を強化し、石油共同備蓄の提唱やエネルギー供給と食料安保強化を掲げています。
 
 ## 本日の主要ニュース
 
@@ -17,12 +17,12 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 | 新聞社 | 一面・主要見出し | URL |
 |---|---|---|
 | 朝日新聞 | 高市首相、日本主導の石油共同備蓄を提唱 ASEANとの連携強化 | [記事を読む](http://www.asahi.com/articles/ASVCK3JX6VCKUTFK01QM.html) |
-| 毎日新聞 | 高市首相、トランプ氏と短時間懇談 インド太平洋情勢で連携確認 | [記事を読む](https://mainichi.jp/articles/20261118/k00/00m/010/013000c) |
-| 産経新聞 | 米グーグル、最先端の防御AI提供を発表 日本政府や金融機関のサイバー攻撃対応で | [記事を読む](https://www.sankei.com/article/20261117-DGSWP66KPVP4HJC4X447ITEEUE/) |
-| 東京新聞 | フアン前CEOの復帰なしと明言 米エヌビディア取締役会長 | [記事を読む](https://www.tokyo-np.co.jp/article/528832) |
+| 毎日新聞 | トランプ氏、比大統領と会談 防衛協力は「地域の安保支える柱」 | [記事を読む](https://mainichi.jp/articles/20261118/k00/00m/030/307000c) |
+| 産経新聞 | トランプ氏が中国・深圳に到着 習氏が異例の空港出迎え APEC首脳会議開催地 | [記事を読む](https://www.sankei.com/article/20261118-RV7BRJABSJIDTDTPVZCPE5EJWM/) |
+| 東京新聞 | 中国政府のメンツ優先...街はひっそり、配達ドローンも消えた APEC開催の深圳厳戒 | [記事を読む](https://www.tokyo-np.co.jp/article/528779) |
 | 中日新聞 | 米朝首脳会談構想「真剣なもの」 ルビオ国務長官、対話の意義強調 | [記事を読む](https://www.chunichi.co.jp/article/1341056) |
-| 日本経済新聞 | 日メコン首脳会議6年ぶりに開催 首相、特殊詐欺対策の強化呼びかけ | [記事を読む](https://www.nikkei.com/article/DGXZQOUA17B9C0X11C26A1000000/) |
-| 読売新聞 | 高市首相、米中露首脳会談後にトランプ氏と電話会談へ...日米の連携確認 | [記事を読む](https://www.yomiuri.co.jp/politics/20261118-GYT1T00077/) |
+| 日本経済新聞 | 高市首相、中国・深圳に到着 APEC首脳会議に出席へ | [記事を読む](https://www.nikkei.com/article/DGXZQOUA1846X0Y6A111C2000000/) |
+| 読売新聞 | 高市首相、就任後初めて中国に到着...APEC首脳会議に出席へ | [記事を読む](https://www.yomiuri.co.jp/politics/20261118-GYT1T00258/) |
 
 ### 地方紙
 
@@ -31,7 +31,7 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 | 新聞社 | 地域 | 一面・主要見出し | URL |
 |---|---|---|---|
 | 北海道新聞 | 北海道 | 【独自】勤務先の学習塾で生徒盗撮疑い 元講師を再逮捕へ 札幌中央署 | [記事を読む](https://www.hokkaido-np.co.jp/article/1410108/) |
-| 河北新報 | 宮城 | (取得できませんでした) | - |
+| 河北新報 | 宮城 | 藤崎のオンライン会員情報が最大7万5000件流出 | [記事を読む](https://kahoku.news/articles/JY72WT2AFBKHN.html) |
 
 #### 甲信越・東海
 
@@ -46,13 +46,13 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 | 新聞社 | 地域 | 一面・主要見出し | URL |
 |---|---|---|---|
 | 京都新聞 | 京都 | 速報ロ大統領が中国・深セン入り | [記事を読む](https://www.kyoto-np.co.jp/articles/-/1828044) |
-| 神戸新聞 | 兵庫 | 神戸・北野の貸会場で違法なポーカー大会を開いた風営法違反容疑 男4人逮捕 全国初 兵庫県警 | [記事を読む](https://www.kobe-np.co.jp/news/jiken/202611/0021045776.shtml) |
+| 神戸新聞 | 兵庫 | 3歳娘に暴行、死なせた疑いで父親逮捕 双子の妹も4年前死亡 | [記事を読む](https://www.kobe-np.co.jp/news/jiken/202611/0021047266.shtml) |
 
 #### 中国
 
 | 新聞社 | 地域 | 一面・主要見出し | URL |
 |---|---|---|---|
-| 中国新聞 | 広島 | 米エヌビディア前CEOが復帰に意欲 | [記事を読む](https://www.chugoku-np.co.jp/articles/-/926087) |
+| 中国新聞 | 広島 | APECで高市首相と習主席が握手 | [記事を読む](https://www.chugoku-np.co.jp/articles/-/926635) |
 
 #### 九州・沖縄
 
@@ -66,24 +66,24 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 ## 本日の重要ニュースTOP10
 
-1. **テレビ朝日**: 高市総理 トランプ大統領と短時間の懇談 米中ロ首脳会談を前に連携を確認 ([記事を読む](https://news.tv-asahi.co.jp/news_politics/articles/000548601.html))
-2. **読売新聞**: 高市首相、米中露首脳会談後にトランプ氏と電話会談へ...日米の連携確認 ([記事を読む](https://www.yomiuri.co.jp/politics/20261118-GYT1T00077/))
-3. **朝日新聞**: 高市首相、日本主導の石油共同備蓄を提唱 ASEANとの連携強化 ([記事を読む](http://www.asahi.com/articles/ASVCK3JX6VCKUTFK01QM.html))
-4. **共同通信**: 【速報】高市首相とトランプ大統領が懇談 ([記事を読む](https://www.47news.jp/15246751.html))
-5. **読売新聞**: 高市首相が中国の農業農村相と握手し立ち話...ASEANプラス3、エネルギー供給と食料安保強化掲げる首脳声明採択 ([記事を読む](https://www.yomiuri.co.jp/politics/20261117-GYT1T00392/))
-6. **newsclip.be**: 日ASEAN首脳会議、タイ首相が連携強化へ3方針を提唱 インド太平洋戦略の統合やAI協力など ([記事を読む](https://newsclip.be/thai-news/thai-politics/44452))
-7. **読売新聞**: 高市首相、夕食会場でトランプ氏と短時間懇談...米中・米中露首脳会談を前に日米の認識擦り合わせか ([記事を読む](https://www.yomiuri.co.jp/politics/20261118-GYT1T00101/))
-8. **ベトナムの声**: トランプ大統領、ロシアと朝鮮の首脳との個別会談に含み ([記事を読む](https://vovworld.vn/ja-JP/niyusu/toranfudatonglingroshiatochaoxiannoshounaotonogebiehuitannihanmi-2481317.vov5))
-9. **産経新聞**: 米グーグル、最先端の防御AI提供を発表 日本政府や金融機関のサイバー攻撃対応で ([記事を読む](https://www.sankei.com/article/20261117-DGSWP66KPVP4HJC4X447ITEEUE/))
-10. **熊本日日新聞**: 高市首相とトランプ大統領が懇談 ([記事を読む](https://kumanichi.com/articles/2058981))
+1. **フジテレビ**: 【速報】中国到着の高市総理を出迎えた女性は儀典大使 章啓月氏 トランプ大統領は習主席が出迎え ([記事を読む](https://www.fnn.jp/articles/-/1154798))
+2. **TBSテレビ**: 【速報】トランプ大統領が中国に到着 史上初の米中ロ首脳会談に出席へ ([記事を読む](https://newsdig.tbs.co.jp/articles/-/3095656?display=1))
+3. **日本テレビ**: 高市首相、APEC首脳会議出席のため中国に到着 中国側との接触は... 注目は習主席出迎えの夕食会 ([記事を読む](https://news.ntv.co.jp/category/politics/9f3385db5d5d4f4380a552fe6bd38681))
+4. **日本テレビ**: 【速報】高市首相が中国・深センに到着 各国首脳と“接触"は ([記事を読む](https://news.ntv.co.jp/category/politics/3fd8859456f040ddbc7ce7f8f526260e))
+5. **読売新聞**: 高市首相、就任後初めて中国に到着...APEC首脳会議に出席へ ([記事を読む](https://www.yomiuri.co.jp/politics/20261118-GYT1T00258/))
+6. **日本経済新聞**: 高市首相、中国・深圳に到着 APEC首脳会議に出席へ ([記事を読む](https://www.nikkei.com/article/DGXZQOUA1846X0Y6A111C2000000/))
+7. **TBSテレビ**: トランプ大統領が中国・深センに到着 習主席と抱き合うシーンも 空港での出迎えは初 あすプーチン氏を交え米中ロ首脳会談へ ([記事を読む](https://newsdig.tbs.co.jp/articles/-/3095950?display=1))
+8. **フジテレビ**: 高市総理が中国到着も歓迎は“控えめ" 史上初の米中露首脳会談前に現地は厳戒態勢 APECまもなく開幕 ([記事を読む](https://www.fnn.jp/articles/-/1154780))
+9. **フジテレビ**: トランプ大統領が中国・深センに到着へ あす初の米中露首脳会談へ ([記事を読む](https://www.fnn.jp/articles/-/1154778))
+10. **テレビ朝日**: 高市総理 トランプ大統領と短時間の懇談 米中ロ首脳会談を前に連携を確認 ([記事を読む](https://news.tv-asahi.co.jp/news_politics/articles/000548601.html))
 
 ## 今日の主要キーワード
 
 - 首脳
 - 逮捕
+- 中国
 - 日本
 - 会談
-- 情報
 
 ## アーカイブ
 
@@ -106,8 +106,8 @@ Web版(過去ニュース検索): https://groundcobra009.github.io/japan-news-fr
 
 ## 取得状況
 
-- 成功：16紙
-- スキップ：3紙
+- 成功：17紙
+- スキップ：2紙
 - 失敗：1紙
 
 ## 定期実行スケジュール
